@@ -30,14 +30,14 @@
 ## 🙏 贊助商 &nbsp;<sub>想出現在這裡？聯絡 [jnMetaCode@qq.com](mailto:jnMetaCode@qq.com)</sub>
 
 <p align="center">
-  <a href="https://apinebula.com/V6ekjG">
+  <a href="https://apinebula.ai/V6ekjG">
     <img src="assets/sponsor-apinebula.jpeg" alt="APINEBULA — 企業級 AI 聚合平台，聚合 Claude / GPT / Gemini 滿血模型，一個接口接入全球頂尖大模型，價格低至 1 折起" width="100%">
   </a>
 </p>
 
-感謝 [APINEBULA](https://apinebula.com/V6ekjG) 大屏贊助本專案！APINEBULA 是銀河錄像局旗下的企業級 AI 聚合平台，背靠大平台資源，面向開發者、團隊與企業用戶提供穩定、高性價比的大模型 API 接入服務。平台聚合 Claude、GPT、Gemini 等主流滿血模型，一個接口即可接入全球頂尖 AI 大模型，各大模型價格低至 1 折起，支持企業級高併發、正式合同、對公打款與開票服務，適合 AI 編程、Agent 開發、業務系統集成等多種場景！
+感謝 [APINEBULA](https://apinebula.ai/V6ekjG) 大屏贊助本專案！APINEBULA 是銀河錄像局旗下的企業級 AI 聚合平台，背靠大平台資源，面向開發者、團隊與企業用戶提供穩定、高性價比的大模型 API 接入服務。平台聚合 Claude、GPT、Gemini 等主流滿血模型，一個接口即可接入全球頂尖 AI 大模型，各大模型價格低至 1 折起，支持企業級高併發、正式合同、對公打款與開票服務，適合 AI 編程、Agent 開發、業務系統集成等多種場景！
 
-🎁 **點擊[此連結](https://apinebula.com/V6ekjG)註冊並在充值時填寫「agent」優惠碼，即可享九折優惠！**
+🎁 **點擊[此連結](https://apinebula.ai/V6ekjG)註冊並在充值時填寫「agent」優惠碼，即可享九折優惠！**
 
 <hr>
 
