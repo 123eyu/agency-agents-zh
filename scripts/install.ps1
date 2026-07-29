@@ -4,7 +4,7 @@
 # 请先运行 scripts\convert.ps1 生成集成文件。
 #
 # 用法：
-#   .\scripts\install.ps1 [-Tool <名称>] [-Help]
+#   .\scripts\install.ps1 [-Tool <名称>] [-Profile <名称>] [-Help]
 #
 # 支持的工具：
 #   claude-code  — 复制到 %USERPROFILE%\.claude\agents\
@@ -30,10 +30,19 @@
 #                                Discord 模式下 Hermes 会把每个 skill 注册为斜杠命令，
 #                                总 JSON 超过 8000 字符会被 Discord API 拒绝 (error 50035)，
 #                                若需要在 Discord 中使用建议按分类分批安装。
+#   -Profile <名称>              多 profile 环境下指定安装到哪个 profile（issue #102）。
+#                                Hermes 每个 profile 有独立 skill 库，路径为
+#                                  <base>\profiles\<名称>\skills\
+#                                其中 <base> = HERMES_HOME > $LOCALAPPDATA\hermes > ~\.hermes。
+#                                未指定 -Profile 却检测到已存在 profile 目录时会报错退出，
+#                                避免静默装到根目录。例如：-Tool hermes -Profile work
 
 param(
     [string]$Tool = "all",
     [string[]]$Category = @(),
+    # 用 $HermesProfile 而非 $Profile：$Profile 是 PowerShell 自动变量，避免遮蔽（issue #102）
+    [Alias('Profile')]
+    [string]$HermesProfile = "",
     [switch]$Help
 )
 
@@ -60,7 +69,7 @@ function Write-Dim    { param($msg) Write-Host "      $msg" -ForegroundColor Dar
 
 # --- 用法 ---
 if ($Help) {
-    Get-Content $MyInvocation.MyCommand.Path | Select-Object -Skip 2 -First 22 |
+    Get-Content $MyInvocation.MyCommand.Path | Select-Object -Skip 2 -First 36 |
         ForEach-Object { $_ -replace '^# ?','' }
     exit 0
 }
@@ -103,7 +112,9 @@ function Detect-Tool {
         "workbuddy"   { (Get-Command workbuddy -ErrorAction SilentlyContinue) -or
                         (Test-Path (Join-Path $Home_ ".workbuddy")) }
         "hermes"      { (Get-Command hermes -ErrorAction SilentlyContinue) -or
-                        (Test-Path (Join-Path $Home_ ".hermes")) }
+                        (Test-Path (Join-Path $Home_ ".hermes")) -or
+                        ($env:HERMES_HOME -and (Test-Path $env:HERMES_HOME)) -or
+                        ($env:LOCALAPPDATA -and (Test-Path (Join-Path $env:LOCALAPPDATA "hermes"))) }
         "kiro"        { (Get-Command kiro -ErrorAction SilentlyContinue) -or
                         (Get-Command kiro-cli -ErrorAction SilentlyContinue) -or
                         (Test-Path (Join-Path $Home_ ".kiro")) }
@@ -339,10 +350,53 @@ function Install-WorkBuddy {
     Write-OK "WorkBuddy: $count 个 skills -> $dest"
 }
 
+# Hermes 安装根目录（不含 profile）：HERMES_HOME > $LOCALAPPDATA\hermes > ~\.hermes（issue #82/#102）
+function Get-HermesBaseDir {
+    if ($env:HERMES_HOME) { return $env:HERMES_HOME }
+    if ($env:LOCALAPPDATA -and (Test-Path (Join-Path $env:LOCALAPPDATA "hermes"))) {
+        return (Join-Path $env:LOCALAPPDATA "hermes")
+    }
+    return (Join-Path $Home_ ".hermes")
+}
+# 现有 profile 名称（<base>\profiles\<name>\）
+function Get-HermesProfileNames {
+    param($base)
+    $pdir = Join-Path $base "profiles"
+    if (-not (Test-Path $pdir)) { return @() }
+    @(Get-ChildItem -Path $pdir -Directory -ErrorAction SilentlyContinue | ForEach-Object Name)
+}
+
 function Install-Hermes {
     $src  = Join-Path $Integrations "hermes"
-    $dest = Join-Path $Home_ ".hermes\skills"
-    if (-not (Test-Path $src)) { Write-Err "integrations\hermes 不存在，请先运行 convert.ps1 -Tool hermes"; return }
+    if (-not (Test-Path $src)) { Write-Err "integrations\hermes 不存在，请先运行 convert.ps1 -Tool hermes"; $script:FailedTools += "hermes"; return }
+
+    # 安装目录解析（issue #82 / #102）：
+    #   1. -Profile <name>                       -> <base>\profiles\<name>\skills
+    #   2. 存在 profile 目录但未指定 -Profile     -> 报错退出（避免静默装到根目录）
+    #   3. 默认                                    -> <base>\skills
+    $base = Get-HermesBaseDir
+    $profileNote = ""
+    if ($HermesProfile) {
+        $profileDir = Join-Path (Join-Path $base "profiles") $HermesProfile
+        $dest = Join-Path $profileDir "skills"
+        $profileNote = " [profile: $HermesProfile]"
+        if (-not (Test-Path $profileDir)) {
+            $existing = (Get-HermesProfileNames $base) -join ", "
+            Write-Warn "profile '$HermesProfile' 尚不存在，将新建目录 $base\profiles\$HermesProfile\。"
+            Write-Warn "请确认名称无误（现有 profile: $existing）。"
+        }
+    } else {
+        $names = @(Get-HermesProfileNames $base)
+        if ($names.Count -gt 0) {
+            Write-Err "检测到 Hermes profile 目录（$base\profiles\），但未指定 -Profile。"
+            Write-Err "为避免装错位置，请用 -Profile <名称> 指定目标 profile。"
+            Write-Err "现有 profile: $($names -join ', ')"
+            Write-Err "或设置 HERMES_HOME 指向单一 profile 根目录后重试。"
+            $script:FailedTools += "hermes"
+            return
+        }
+        $dest = Join-Path $base "skills"
+    }
 
     $filterNote = ""
     if ($Category.Count -gt 0) {
@@ -350,6 +404,7 @@ function Install-Hermes {
             if (-not (Test-Path (Join-Path $src $c))) {
                 $avail = (Get-ChildItem -Path $src -Directory | ForEach-Object Name) -join ", "
                 Write-Err "hermes 分类不存在: $c（可选: $avail）"
+                $script:FailedTools += "hermes"
                 return
             }
         }
@@ -371,7 +426,7 @@ function Install-Hermes {
             }
         }
     }
-    Write-OK "Hermes Agent: $count 个 skills -> $dest$filterNote"
+    Write-OK "Hermes Agent: $count 个 skills -> $dest$filterNote$profileNote"
     if ($Category.Count -eq 0 -and $count -gt 80) {
         Write-Warn "Hermes Discord 模式对斜杠命令总长有 8000 字符上限（error 50035）。"
         Write-Warn "若要在 Discord 中使用，建议用 -Category <名称> 按分类分批安装。"
@@ -420,6 +475,10 @@ if ($Category.Count -gt 0 -and $Tool -ne "hermes") {
     Write-Warn "-Category 仅对 -Tool hermes 生效，已忽略。"
     $Category = @()
 }
+if ($HermesProfile -and $Tool -ne "hermes") {
+    Write-Warn "-Profile 仅对 -Tool hermes 生效，已忽略。"
+    $HermesProfile = ""
+}
 
 $selectedTools = @()
 
@@ -455,12 +514,22 @@ Write-Host "  仓库:     $RepoRoot"
 Write-Host "  安装到:   $($selectedTools -join ', ')"
 Write-Host ""
 
+# 单个工具失败（如 Hermes 多 profile 未指定 -Profile）不应中断其余工具的安装（issue #102）
+$script:FailedTools = @()
 foreach ($t in $selectedTools) {
     Install-Tool $t
 }
 
+$failedCount = @($script:FailedTools).Count
+$installedCount = $selectedTools.Count - $failedCount
+
 Write-Host ""
-Write-OK "完成！已安装 $($selectedTools.Count) 个工具。"
+if ($failedCount -gt 0) {
+    Write-Warn "完成：已安装 $installedCount 个工具，$failedCount 个未完成（见上方提示）。"
+} else {
+    Write-OK "完成！已安装 $installedCount 个工具。"
+}
 Write-Host ""
 Write-Dim "运行 .\scripts\convert.ps1 重新生成集成文件。"
 Write-Host ""
+if ($failedCount -gt 0) { exit 1 }
