@@ -6,7 +6,7 @@
 # 请先运行 scripts/convert.sh 生成集成文件。
 #
 # 用法：
-#   ./scripts/install.sh [--tool <name>] [--no-interactive] [--help]
+#   ./scripts/install.sh [--tool <name>] [--profile <name>] [--no-interactive] [--help]
 #
 # 支持的工具：
 #   claude-code  -- 复制到 ~/.claude/agents/
@@ -37,6 +37,14 @@
 #                      Discord 模式下 Hermes 会把每个 skill 注册为斜杠命令，
 #                      总 JSON 超过 8000 字符会被 Discord API 拒绝 (error 50035)，
 #                      若需要在 Discord 中使用建议按分类分批安装。
+#   --profile <名称>   多 profile 环境下指定安装到哪个 profile（issue #102）。
+#                      Hermes 每个 profile 有独立的 skill 库，路径为
+#                        <base>/profiles/<名称>/skills/
+#                      其中 <base> = HERMES_HOME > $LOCALAPPDATA/hermes > ~/.hermes。
+#                      未指定 --profile 却检测到已存在多 profile 时，脚本会报错
+#                      退出而非静默装到根目录，避免装错位置。例如：
+#                        --tool hermes --profile work
+#                        --tool hermes --profile personal --category marketing
 
 set -euo pipefail
 
@@ -63,7 +71,7 @@ ALL_TOOLS=(claude-code copilot antigravity gemini-cli opencode openclaw cursor t
 
 # --- 用法 ---
 usage() {
-  sed -n '3,26p' "$0" | sed 's/^# \{0,1\}//'
+  sed -n '3,47p' "$0" | sed 's/^# \{0,1\}//'
   exit 0
 }
 
@@ -91,7 +99,33 @@ detect_codex()        { command -v codex >/dev/null 2>&1 || [[ -d "${HOME}/.code
 detect_deerflow()     { command -v deerflow >/dev/null 2>&1 || [[ -d "${HOME}/.deerflow" ]] || docker ps --format '{{.Names}}' 2>/dev/null | grep -q deerflow; }
 detect_workbuddy()    { command -v workbuddy >/dev/null 2>&1 || [[ -d "${HOME}/.workbuddy" ]]; }
 detect_codewhale()    { command -v codewhale >/dev/null 2>&1 || [[ -d "${HOME}/.codewhale" ]] || [[ -d "${HOME}/.deepseek" ]]; }
-detect_hermes()       { command -v hermes >/dev/null 2>&1 || [[ -d "${HOME}/.hermes" ]]; }
+# Hermes 安装根目录（不含 profile）：HERMES_HOME > Windows($LOCALAPPDATA/hermes) > ~/.hermes（issue #82/#102）
+hermes_base_dir() {
+  if [[ -n "${HERMES_HOME:-}" ]]; then
+    printf '%s' "${HERMES_HOME}"
+  elif [[ -n "${LOCALAPPDATA:-}" && -d "${LOCALAPPDATA}/hermes" ]]; then
+    printf '%s' "${LOCALAPPDATA}/hermes"
+  else
+    printf '%s' "${HOME}/.hermes"
+  fi
+}
+# 根目录下是否存在多 profile（<base>/profiles/<name>/）
+hermes_has_profiles() {
+  local base="$1" d
+  [[ -d "$base/profiles" ]] || return 1
+  for d in "$base/profiles"/*/; do [[ -d "$d" ]] && return 0; done
+  return 1
+}
+# 打印现有 profile 名称，逗号分隔（与 install.ps1 保持一致）
+hermes_profile_names() {
+  local base="$1" d out=""
+  for d in "$base/profiles"/*/; do
+    [[ -d "$d" ]] || continue
+    out+="${out:+, }$(basename "$d")"
+  done
+  printf '%s' "$out"
+}
+detect_hermes()       { command -v hermes >/dev/null 2>&1 || [[ -d "${HOME}/.hermes" ]] || [[ -n "${HERMES_HOME:-}" && -d "${HERMES_HOME}" ]] || { [[ -n "${LOCALAPPDATA:-}" && -d "${LOCALAPPDATA}/hermes" ]]; }; }
 detect_kiro()         { command -v kiro >/dev/null 2>&1 || command -v kiro-cli >/dev/null 2>&1 || [[ -d "${HOME}/.kiro" ]]; }
 detect_qoder()        { command -v qoder >/dev/null 2>&1 || [[ -d "${HOME}/.qoder" ]]; }
 
@@ -427,18 +461,33 @@ install_codewhale() {
 
 install_hermes() {
   local src="$INTEGRATIONS/hermes"
-  # 安装目录优先级（issue #82）：官方环境变量 HERMES_HOME > Windows 新版默认位置 > 传统位置
-  local dest
-  if [[ -n "${HERMES_HOME:-}" ]]; then
-    dest="${HERMES_HOME}/skills"
-  elif [[ -n "${LOCALAPPDATA:-}" && -d "${LOCALAPPDATA}/hermes" ]]; then
-    dest="${LOCALAPPDATA}/hermes/skills"
-  else
-    dest="${HOME}/.hermes/skills"
-  fi
-  local count=0
 
   [[ -d "$src" ]] || { err "integrations/hermes 不存在。请先运行 convert.sh --tool hermes"; return 1; }
+
+  # 安装目录解析（issue #82 / #102）：
+  #   <base> = HERMES_HOME > Windows($LOCALAPPDATA/hermes) > ~/.hermes
+  #   1. --profile <name>                       -> <base>/profiles/<name>/skills
+  #   2. 存在 profile 目录但未指定 --profile    -> 报错退出（避免静默装到根目录）
+  #   3. 默认                                    -> <base>/skills
+  local base; base="$(hermes_base_dir)"
+  local dest profile_note=""
+  if [[ -n "${HERMES_PROFILE:-}" ]]; then
+    dest="${base}/profiles/${HERMES_PROFILE}/skills"
+    profile_note=" [profile: ${HERMES_PROFILE}]"
+    if [[ ! -d "${base}/profiles/${HERMES_PROFILE}" ]]; then
+      warn "profile '${HERMES_PROFILE}' 尚不存在，将新建目录 ${base}/profiles/${HERMES_PROFILE}/。"
+      warn "请确认名称无误（现有 profile: $(hermes_profile_names "$base")）。"
+    fi
+  elif hermes_has_profiles "$base"; then
+    err "检测到 Hermes profile 目录（${base}/profiles/），但未指定 --profile。"
+    err "为避免装错位置，请用 --profile <名称> 指定目标 profile。"
+    err "现有 profile: $(hermes_profile_names "$base")"
+    err "或设置 HERMES_HOME 指向单一 profile 根目录后重试。"
+    return 1
+  else
+    dest="${base}/skills"
+  fi
+  local count=0
 
   # 若指定了 --category，只安装命中的分类；否则安装全部
   local filter_note=""
@@ -471,7 +520,7 @@ install_hermes() {
     done < <(find "$catdir" -mindepth 1 -maxdepth 1 -type d -print0)
   done < <(find "$src" -mindepth 1 -maxdepth 1 -type d -print0)
 
-  ok "Hermes Agent: $count 个 skills -> $dest$filter_note"
+  ok "Hermes Agent: $count 个 skills -> $dest$filter_note$profile_note"
   if [[ ${#HERMES_CATEGORIES[@]} -eq 0 && $count -gt 80 ]]; then
     warn "Hermes Discord 模式对斜杠命令总长有 8000 字符上限（error 50035）。"
     warn "若要在 Discord 中使用，建议用 --category <名称> 按分类分批安装。"
@@ -546,11 +595,13 @@ install_tool() {
 main() {
   local tool="all"
   HERMES_CATEGORIES=()
+  HERMES_PROFILE=""
 
   while [[ $# -gt 0 ]]; do
     case "$1" in
       --tool)            tool="${2:?'--tool 需要一个值'}"; shift 2 ;;
       --category)        HERMES_CATEGORIES+=("${2:?'--category 需要一个值'}"); shift 2 ;;
+      --profile|-p)      HERMES_PROFILE="${2:?'--profile 需要一个值'}"; shift 2 ;;
       --no-interactive)  shift ;;
       --help|-h)         usage ;;
       *)                 err "未知选项: $1"; usage ;;
@@ -560,6 +611,10 @@ main() {
   if [[ ${#HERMES_CATEGORIES[@]} -gt 0 && "$tool" != "hermes" ]]; then
     warn "--category 仅对 --tool hermes 生效，已忽略。"
     HERMES_CATEGORIES=()
+  fi
+  if [[ -n "$HERMES_PROFILE" && "$tool" != "hermes" ]]; then
+    warn "--profile 仅对 --tool hermes 生效，已忽略。"
+    HERMES_PROFILE=""
   fi
 
   check_integrations
@@ -605,17 +660,27 @@ main() {
   printf "  安装到:   %s\n" "${SELECTED_TOOLS[*]}"
   printf "\n"
 
-  local installed=0 t
+  local installed=0 failed=0 t
   for t in "${SELECTED_TOOLS[@]}"; do
-    install_tool "$t"
-    (( installed++ )) || true
+    # 单个工具失败（如 Hermes 多 profile 未指定 --profile）不应中断其余工具的安装
+    if install_tool "$t"; then
+      (( installed++ )) || true
+    else
+      (( failed++ )) || true
+      warn "$(tool_label "$t") 安装未完成（见上方提示）。"
+    fi
   done
 
   printf "\n"
-  ok "完成！已安装 $installed 个工具。"
+  if [[ $failed -gt 0 ]]; then
+    warn "完成：已安装 $installed 个工具，$failed 个未完成。"
+  else
+    ok "完成！已安装 $installed 个工具。"
+  fi
   printf "\n"
   dim "  运行 ./scripts/convert.sh 重新生成集成文件。"
   printf "\n"
+  [[ $failed -eq 0 ]]
 }
 
 main "$@"

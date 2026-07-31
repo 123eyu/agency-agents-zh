@@ -121,12 +121,12 @@
 
 <table>
 <tr>
-<td width="55%">
+<td width="25%">
   <a href="https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents">
     <img src="assets/sponsor-compshare.jpeg" alt="優雲智算 — 熱門國產模型按次調用套餐包，低至 49 元/月起" width="100%">
   </a>
 </td>
-<td width="45%" valign="middle">
+<td width="75%" valign="middle">
 
 感謝[優雲智算](https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents)贊助了本專案！優雲智算是 UCloud 旗下 AI 雲平台，主打包月、按次的高性價比國模 Agent Plan 套餐，低至 49 元/月起。同時提供官轉穩定海外模型。支持接入 Claude Code、Codex 及 API 調用。支持企業高併發、7*24 技術支持、自助開票。
 
