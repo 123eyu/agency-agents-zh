@@ -137,6 +137,23 @@
 </tr>
 </table>
 
+<table>
+<tr>
+<td width="25%">
+  <a href="https://www.aicodemirror.ai/register?invitecode=XO5L7R">
+    <img src="assets/sponsor-aicodemirror.jpeg" alt="AICodeMirror — Claude / Codex / Gemini 官方高稳定中转服务，Codex 官方渠道低至 0.7 折" width="100%">
+  </a>
+</td>
+<td width="75%" valign="middle">
+
+感谢 [AICodeMirror](https://www.aicodemirror.ai/register?invitecode=XO5L7R) 赞助了本项目！AICodeMirror 提供 Claude / Codex / Gemini 官方高稳定中转服务，支持企业级高并发、极速开票、7×24 专属技术支持。Codex 官方渠道低至 0.7 折，充值更有折上折！
+
+🎁 **AICodeMirror 为 agency-agents-zh 项目的用户提供了特别福利，通过[此链接](https://www.aicodemirror.ai/register?invitecode=XO5L7R)注册的用户，可享受首充 8 折！**
+
+</td>
+</tr>
+</table>
+
 ---
 
 ## 🚀 让角色库跑起来 · Agency Orchestrator
