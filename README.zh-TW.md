@@ -145,9 +145,7 @@
 </td>
 <td width="75%" valign="middle">
 
-感謝 [AICodeMirror](https://www.aicodemirror.ai/register?invitecode=XO5L7R) 贊助了本專案！AICodeMirror 提供 Claude / Codex / Gemini 官方高穩定中轉服務，支持企業級高併發、極速開票、7×24 專屬技術支持。Codex 官方渠道低至 0.7 折，儲值更有折上折！
-
-🎁 **AICodeMirror 為 agency-agents-zh 專案的用戶提供了特別福利，通過[此連結](https://www.aicodemirror.ai/register?invitecode=XO5L7R)註冊的用戶，可享受首儲 8 折！**
+感謝 [AICodeMirror](https://www.aicodemirror.ai/register?invitecode=XO5L7R) 贊助了本專案！AICodeMirror 提供 Claude / Codex / Gemini 官方高穩定中轉服務，支持企業級高併發、極速開票、7×24 專屬技術支持。Codex 官方渠道低至 0.7 折，儲值更有折上折！🎁 **AICodeMirror 為 agency-agents-zh 專案的用戶提供了特別福利，通過[此連結](https://www.aicodemirror.ai/register?invitecode=XO5L7R)註冊的用戶，可享受首儲 8 折！**
 
 </td>
 </tr>
