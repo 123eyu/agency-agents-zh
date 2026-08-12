@@ -77,13 +77,13 @@
 <table>
 <tr>
 <td width="25%">
-  <a href="https://cubence.com/signup?code=SCW29JP9&source=agency">
+  <a href="https://cubence.com/signup?code=SCW29JP9">
     <img src="assets/sponsor-cubence.jpeg" alt="Cubence — 专业 AI API 网关，稳定高效的 API 中转服务，支持 Claude Code、Codex、Gemini 等多种模型" width="100%">
   </a>
 </td>
 <td width="75%" valign="middle">
 
-感谢 [Cubence](https://cubence.com/signup?code=SCW29JP9&source=agency) 对本项目的支持。Cubence 是一家致力为客户提供稳定、高效的 API 中转服务商。从 25 年 9 月运营至今，提供了 Claude Code、Codex、Gemini 等多种模型支持。🎁 **通过[此链接](https://cubence.com/signup?code=SCW29JP9&source=agency)注册的用户，首次购买时填写专属优惠码 `AGENCY` 即可享受 9 折优惠！**
+感谢 [Cubence](https://cubence.com/signup?code=SCW29JP9) 对本项目的支持。Cubence 是一家致力为客户提供稳定、高效的 API 中转服务商。从 25 年 9 月运营至今，提供了 Claude Code、Codex、Gemini 等多种模型支持。🎁 **通过[此链接](https://cubence.com/signup?code=SCW29JP9)注册的用户，首次购买时填写专属优惠码 `AGENCY` 即可享受 9 折优惠！**
 
 </td>
 </tr>
