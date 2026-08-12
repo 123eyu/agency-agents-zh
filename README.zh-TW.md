@@ -61,13 +61,13 @@
 <table>
 <tr>
 <td width="25%">
-  <a href="https://rootflowai.com/?utm_source=agency-agents-zh&utm_medium=sponsor&utm_campaign=github-readme">
-    <img src="assets/sponsor-rootflowai.jpeg" alt="RootFlowAI — 絕不摻水的純粹算力源，一站式大模型 API 聚合平台，聚合 Claude / GPT / Gemini / 繪圖 / 影片 / 多模態" width="100%">
+  <a href="https://www.aicodemirror.ai/register?invitecode=XO5L7R">
+    <img src="assets/sponsor-aicodemirror.jpeg" alt="AICodeMirror — Claude / Codex / Gemini 官方高穩定中轉服務，Codex 官方渠道低至 0.7 折" width="100%">
   </a>
 </td>
 <td width="75%" valign="middle">
 
-感謝 [RootFlowAI](https://rootflowai.com/?utm_source=agency-agents-zh&utm_medium=sponsor&utm_campaign=github-readme) 贊助本專案！RootFlowAI 是面向開發者、團隊與企業的大模型 API 聚合平台，聚合 Claude、GPT、Gemini、繪圖、影片與多模態模型，支持價格比較、調用日誌、服務狀態監控與餘額帳單管理。提供企業級高併發保障、7×24 技術支持、合約簽約、對公匯款與開票服務，適用於 AI 編程、Agent 開發、業務系統集成與企業採購場景。🎁 **[註冊](https://rootflowai.com/register?utm_source=agency-agents-zh&utm_medium=sponsor&utm_campaign=github-readme)成功後，加入企業微信服務群即可領取 $10 免費體驗額度！**
+感謝 [AICodeMirror](https://www.aicodemirror.ai/register?invitecode=XO5L7R) 贊助了本專案！AICodeMirror 提供 Claude / Codex / Gemini 官方高穩定中轉服務，支持企業級高併發、極速開票、7×24 專屬技術支持。Codex 官方渠道低至 0.7 折，儲值更有折上折！🎁 **AICodeMirror 為 agency-agents-zh 專案的用戶提供了特別福利，通過[此連結](https://www.aicodemirror.ai/register?invitecode=XO5L7R)註冊的用戶，可享受首儲 8 折！**
 
 </td>
 </tr>
@@ -83,21 +83,6 @@
 <td width="75%" valign="middle">
 
 感謝 [Cubence](https://cubence.com/signup?code=SCW29JP9&source=agency) 對本專案的支持。Cubence 是一家致力為客戶提供穩定、高效的 API 中轉服務商。從 25 年 9 月營運至今，提供了 Claude Code、Codex、Gemini 等多種模型支持。Cubence 為本開源專案多用戶提供了特別的**專屬優惠 `AGENCY`，在首次購買時享受 9 折優惠！**
-
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td width="25%">
-  <a href="https://www.ccsub.net/register?ref=8G5W4JK4">
-    <img src="assets/sponsor-ccsub.jpeg" alt="CCSub — 穩定、實惠的 AI API 中轉平台，一個 Key 涵蓋 Claude / GPT / Gemini 全系列模型，價格約為官方直連的 1/3" width="100%">
-  </a>
-</td>
-<td width="75%" valign="middle">
-
-感謝 [CCSub](https://www.ccsub.net/register?ref=8G5W4JK4) 贊助本專案！CCSub 是穩定、實惠的 AI API 中轉平台，是 Claude Code 官方訂閱的超強平替。一個 API Key 即可調用 Claude Opus 4.8、Sonnet 4.6、Haiku 4.5、GPT-5、Gemini 全系列模型，價格約為官方直連的 1/3，全球直連無需翻牆。相容 Claude Code、Codex、Cursor、Cline、Continue、Windsurf 等所有主流 AI 編程工具。🎁 **前往 [www.ccsub.net](https://www.ccsub.net/register?ref=8G5W4JK4) 註冊即送 $5 體驗額度！**
 
 </td>
 </tr>
@@ -129,21 +114,6 @@
 <td width="75%" valign="middle">
 
 感謝[優雲智算](https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents)贊助了本專案！優雲智算是 UCloud 旗下 AI 雲平台，主打包月、按次的高性價比國模 Agent Plan 套餐，低至 49 元/月起。同時提供官轉穩定海外模型。支持接入 Claude Code、Codex 及 API 調用。支持企業高併發、7*24 技術支持、自助開票。🎁 **通過[此連結](https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents)註冊的用戶，可得免費 5 元平台體驗金！**
-
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td width="25%">
-  <a href="https://www.aicodemirror.ai/register?invitecode=XO5L7R">
-    <img src="assets/sponsor-aicodemirror.jpeg" alt="AICodeMirror — Claude / Codex / Gemini 官方高穩定中轉服務，Codex 官方渠道低至 0.7 折" width="100%">
-  </a>
-</td>
-<td width="75%" valign="middle">
-
-感謝 [AICodeMirror](https://www.aicodemirror.ai/register?invitecode=XO5L7R) 贊助了本專案！AICodeMirror 提供 Claude / Codex / Gemini 官方高穩定中轉服務，支持企業級高併發、極速開票、7×24 專屬技術支持。Codex 官方渠道低至 0.7 折，儲值更有折上折！🎁 **AICodeMirror 為 agency-agents-zh 專案的用戶提供了特別福利，通過[此連結](https://www.aicodemirror.ai/register?invitecode=XO5L7R)註冊的用戶，可享受首儲 8 折！**
 
 </td>
 </tr>
