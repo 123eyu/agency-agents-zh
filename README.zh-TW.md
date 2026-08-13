@@ -119,6 +119,21 @@
 </tr>
 </table>
 
+<table>
+<tr>
+<td width="25%">
+  <a href="https://lanox.ai/?c=X3RD38F7&inviteCode=A3HRUB6M">
+    <img src="assets/sponsor-lanox.jpeg" alt="LanoX AI — 全球模型接入服務，聚合 GPT / Claude / Gemini / Qwen / Grok 及多模態模型，頂級模型低至官方價 1 折起" width="100%">
+  </a>
+</td>
+<td width="75%" valign="middle">
+
+感謝 [LanoX AI](https://lanox.ai/?c=X3RD38F7&inviteCode=A3HRUB6M) 贊助了本專案！LanoX AI 為開發者、團隊與企業提供穩定、高性價比的全球模型接入服務，涵蓋 GPT、Claude、Gemini、Qwen、Grok 等主流模型，以及 Seedance 2.0、GPT Image、Gemini Nano Banana 等多模態創作能力。高可用、原生能力輸出、不降智、不混模、調用與計費透明，頂級模型低至官方價 1 折起，文檔清晰、接入簡單，支援開票與企業批量調用，適用於 AI 產品、Agent、內容平台與研發團隊。🎁 **通過[此連結](https://lanox.ai/?c=X3RD38F7&inviteCode=A3HRUB6M)註冊的用戶，可獲贈 5 美金體驗額度與百萬免費 Token，另有 500+ 免費模型可用！**
+
+</td>
+</tr>
+</table>
+
 ---
 
 ## 🚀 讓角色庫跑起來 · Agency Orchestrator
