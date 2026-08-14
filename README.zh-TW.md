@@ -134,6 +134,21 @@
 </tr>
 </table>
 
+<table>
+<tr>
+<td width="25%">
+  <a href="https://www.shengsuanyun.com/?from=CH_QKH696UI">
+    <img src="assets/sponsor-shengsuanyun.jpeg" alt="勝算雲 — 面向 AI 原生團隊的模型 API 聚合平台，匯集 Claude / ChatGPT / Gemini 等海內外大模型，提供企業級定制網關" width="100%">
+  </a>
+</td>
+<td width="75%" valign="middle">
+
+感謝[勝算雲](https://www.shengsuanyun.com/?from=CH_QKH696UI)對本專案的贊助！勝算雲是面向 AI 原生團隊的模型 API 聚合平台，匯集 Claude、ChatGPT、Gemini 等海內外大語言模型及多媒體模型，支援統一接入與按量調用。平台堅持合規 API 服務，杜絕逆向工程與資源稀釋。此外平台提供企業級定制網關，包括團隊成本與權限管理、智能路由、安全防護及 BYOK 金鑰託管，並提供發票服務。🎁 **新用戶通過[此連結](https://www.shengsuanyun.com/?from=CH_QKH696UI)註冊，即可領取 5 元 Token 體驗額度！**
+
+</td>
+</tr>
+</table>
+
 ---
 
 ## 🚀 讓角色庫跑起來 · Agency Orchestrator
