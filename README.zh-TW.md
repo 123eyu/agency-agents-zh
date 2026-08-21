@@ -147,6 +147,21 @@
 </tr>
 </table>
 
+<table>
+<tr>
+<td width="25%">
+  <a href="https://metaso.cn/minimax-h3/?s=gt533367">
+    <img src="assets/sponsor-metaso.jpeg" alt="秘塔科技 — 高性價比 MiniMax H3 影片生成 API 服務，768P 0.09 元/秒、2K 0.15 元/秒，相容 OpenAI 協議、支援 ComfyUI" width="100%">
+  </a>
+</td>
+<td width="75%" valign="middle">
+
+感謝[秘塔科技](https://metaso.cn/minimax-h3/?s=gt533367)贊助了本專案！秘塔科技提供高性價比的 MiniMax H3 影片生成 API 服務，適合漫劇、行銷影片及批量影片生成：768P 低至 0.09 元/秒、2K 0.15 元/秒，原生 2K 畫質，支援音畫同步。API 相容 OpenAI 協議，支援 ComfyUI，無需自行部署模型與 GPU，開箱即用。🎁 **通過[此連結](https://metaso.cn/minimax-h3/?s=gt533367)註冊，即可享有贈送額度及專屬優惠！**
+
+</td>
+</tr>
+</table>
+
 ---
 
 ## 🚀 讓角色庫跑起來 · Agency Orchestrator
