@@ -133,6 +133,21 @@
 </tr>
 </table>
 
+<table>
+<tr>
+<td width="25%">
+  <a href="https://go.apimart.ai/gh-agency-agents-zh">
+    <img src="assets/sponsor-apimart.jpeg" alt="APIMart — 专注 AI 图片/视频生成的低价 API 平台，GPT-Image-2 低至 $0.006/张，图片与视频共用一套异步 API" width="100%">
+  </a>
+</td>
+<td width="75%" valign="middle">
+
+感谢 [APIMart](https://go.apimart.ai/gh-agency-agents-zh) 赞助了本项目！APIMart 是专注 AI 图片/视频生成的低价 API 平台，GPT-Image-2 低至 $0.006/张，1 美元可出图 160+ 张。图片、视频共用一套异步 API，提交任务拿 ID、轮询或回调取结果，跑批万张不超时、换模型不改代码。按量付费、无月费。🎁 **通过[此链接](https://go.apimart.ai/gh-agency-agents-zh)注册即可开用！**
+
+</td>
+</tr>
+</table>
+
 ---
 
 ## 🚀 让角色库跑起来 · Agency Orchestrator
