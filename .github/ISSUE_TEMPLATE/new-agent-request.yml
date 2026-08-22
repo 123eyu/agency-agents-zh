@@ -15,6 +15,7 @@ body:
     attributes:
       label: Category
       options:
+        - company
         - engineering
         - design
         - marketing

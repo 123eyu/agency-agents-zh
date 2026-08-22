@@ -13,6 +13,7 @@ set -euo pipefail
 # 与 scripts/convert.sh 中的 AGENT_DIRS 保持同步
 AGENT_DIRS=(
   academic
+  company
   design
   engineering
   finance

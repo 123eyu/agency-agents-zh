@@ -51,7 +51,7 @@ OUT_DIR="$REPO_ROOT/integrations"
 TODAY="$(date +%Y-%m-%d)"
 
 AGENT_DIRS=(
-  academic design engineering finance game-development gis hr legal marketing paid-media sales product
+  academic company design engineering finance game-development gis hr legal marketing paid-media sales product
   project-management security supply-chain testing support spatial-computing specialized
 )
 

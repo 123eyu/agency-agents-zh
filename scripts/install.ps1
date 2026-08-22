@@ -151,7 +151,7 @@ function Install-ClaudeCode {
     $dest = Join-Path $Home_ ".claude\agents"
     New-Item -ItemType Directory -Force -Path $dest | Out-Null
     $count = 0
-    foreach ($dir in @("academic","design","engineering","finance","game-development","hr","legal",
+    foreach ($dir in @("academic","company","design","engineering","finance","game-development","hr","legal",
                         "marketing","paid-media","sales","product","project-management",
                         "supply-chain","testing","support","spatial-computing","specialized")) {
         $dirPath = Join-Path $RepoRoot $dir
@@ -170,7 +170,7 @@ function Install-Copilot {
     New-Item -ItemType Directory -Force -Path $dest1 | Out-Null
     New-Item -ItemType Directory -Force -Path $dest2 | Out-Null
     $count = 0
-    foreach ($dir in @("academic","design","engineering","finance","game-development","hr","legal",
+    foreach ($dir in @("academic","company","design","engineering","finance","game-development","hr","legal",
                         "marketing","paid-media","sales","product","project-management",
                         "supply-chain","testing","support","spatial-computing","specialized")) {
         $dirPath = Join-Path $RepoRoot $dir

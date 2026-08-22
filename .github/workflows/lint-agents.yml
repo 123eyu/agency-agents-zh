@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'academic/**'
+      - 'company/**'
       - 'design/**'
       - 'engineering/**'
       - 'finance/**'
@@ -35,7 +36,7 @@ jobs:
         id: changed
         run: |
           FILES=$(git diff --name-only --diff-filter=ACMR origin/${{ github.base_ref }}...HEAD -- \
-            'academic/**/*.md' 'design/**/*.md' 'engineering/**/*.md' 'finance/**/*.md' \
+            'academic/**/*.md' 'company/**/*.md' 'design/**/*.md' 'engineering/**/*.md' 'finance/**/*.md' \
             'game-development/**/*.md' 'hr/**/*.md' 'legal/**/*.md' 'marketing/**/*.md' \
             'paid-media/**/*.md' 'product/**/*.md' 'project-management/**/*.md' 'sales/**/*.md' \
             'spatial-computing/**/*.md' 'specialized/**/*.md' 'strategy/**/*.md' \
