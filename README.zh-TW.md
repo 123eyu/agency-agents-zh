@@ -2,9 +2,9 @@
 
 🌐 [簡體中文](README.md) | **繁體中文** | [English (upstream)](https://github.com/msitarzewski/agency-agents)
 
-> **275 個即插即用的 AI 專家角色** — 覆蓋公司經營（CEO/CTO/CMO/COO/CPO/CFO）、工程、設計、行銷、產品、遊戲、安全、GIS、金融等 20 個部門。不是通用提示詞範本，每個智能體都有獨立的人設、專業流程和可交付成果。支援 Claude Code / Cursor / Copilot 等 18 種 AI 程式設計工具。
+> **276 個即插即用的 AI 專家角色** — 覆蓋公司經營（CEO/CTO/CMO/COO/CPO/CFO）、工程、設計、行銷、產品、遊戲、安全、GIS、金融等 20 個部門。不是通用提示詞範本，每個智能體都有獨立的人設、專業流程和可交付成果。支援 Claude Code / Cursor / Copilot 等 18 種 AI 程式設計工具。
 
-[agency-agents](https://github.com/msitarzewski/agency-agents) 的中文社群版。在完整翻譯上游的基礎上，新增了 62 個中國市場原創智能體（小紅書、抖音、微信、B站、飛書、釘釘等平台運營，以及跨境電商、政務ToG、醫療合規、Qt 工業上位機、機械設計、畜禽養殖檔案核對等垂直領域）。
+[agency-agents](https://github.com/msitarzewski/agency-agents) 的中文社群版。在完整翻譯上游的基礎上，新增了 63 個中國市場原創智能體（小紅書、抖音、微信、B站、飛書、釘釘等平台運營，以及跨境電商、政務ToG、醫療合規、Qt 工業上位機、機械設計、畜禽養殖檔案核對等垂直領域）。
 
 想更好地用起來，或想為團隊打造統一的智能體工作台？[下載桌面客戶端](https://github.com/jnMetaCode/agency-orchestrator/releases/latest)（原生 App，免裝 Node，macOS / Windows / Linux），或線上體驗 [ao.aiolaola.com/experts](https://ao.aiolaola.com/experts)。
 
@@ -21,7 +21,7 @@
 
 | 🤖 AI 智能體 | 🌏 英文版翻譯 | 🇨🇳 中國市場原創 | 🧠 支援工具 | 🏢 部門 |
 |:---:|:---:|:---:|:---:|:---:|
-| **275** | **213** | **62** | **18 種** | **20 個** |
+| **276** | **213** | **63** | **18 種** | **20 個** |
 
 > 📖 **免費配套學習** → [從零學會 AI 程式設計](https://aiolaola.com/?utm_source=github&utm_campaign=agents)：180 節免費實操課 + 《AI 程式設計實戰三卷書》線上閱讀 + 實戰社群 · 把這個倉的 216 個角色裝進 Claude Code / Cursor / Codex 後配合方法論更高效 · 永久免費
 
@@ -181,7 +181,7 @@ ao compose "幫我寫一篇關於 AI Agent 的深度分析文章" --run
 
 ## 🖼️ 線上瀏覽全部專家（無需安裝）
 
-搜尋 / 按部門篩選 / 查看與**複製每位專家的完整提示詞** —— 全部 275 位，直接在瀏覽器裡看：
+搜尋 / 按部門篩選 / 查看與**複製每位專家的完整提示詞** —— 全部 276 位，直接在瀏覽器裡看：
 
 <p align="center">
   <a href="https://ao.aiolaola.com/experts">
@@ -990,7 +990,7 @@ DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool 
 
 ## 🇨🇳 中國市場原創智能體
 
-除翻譯外，本專案包含 **62 個原創智能體**，專為中國平臺和業務場景打造：
+除翻譯外，本專案包含 **63 個原創智能體**，專為中國平臺和業務場景打造：
 
 - **平臺運營**：小紅書、抖音、微信公眾號/視頻號/小程序、B站、快手、微博、知乎
 - **企業協作**：飛書、釘釘整合開發
