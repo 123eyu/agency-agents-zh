@@ -75,13 +75,13 @@
 <tr>
 <td width="25%">
   <a href="https://www.volcengine.com/activity/ai618?utm_campaign=hw&utm_content=hw&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=agency-agents-zh">
-    <img src="assets/sponsor-volcengine.jpeg" alt="火山引擎 — 豆包大模型限時 5 折起，程式設計模型套餐 2.5 折訂閱，支援 Kimi-K2.7、GLM-5.2 等主流模型" width="100%">
+    <img src="assets/sponsor-volcengine.jpeg" alt="火山引擎 — 火山方舟 Agent/Coding Plan 國模套餐首購 9.9 元起，支援 GLM-5.3、Kimi-K3、DeepSeek、MiniMax、豆包等主流模型" width="100%">
   </a>
 </td>
 <td width="75%" valign="middle">
 
-感謝 [火山引擎](https://www.volcengine.com/activity/ai618?utm_campaign=hw&utm_content=hw&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=agency-agents-zh) 贊助了本專案！火山引擎AI巔峰盛惠來襲！豆包大模型限時5折起，19元即可入手約440萬Tokens文本模型，新客首單再享AI統一節省計劃。從文本生成、圖像創作到視頻合成、語音複刻，全模態AI能力一站式配齊。開發者專屬編程模型套餐2.5折訂閱，支持Kimi-K2.7、GLM-5.2等主流模型。
-🎁 **[註冊](https://www.volcengine.com/activity/ai618?utm_campaign=hw&utm_content=hw&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=agency-agents-zh)即領2500萬Tokens，立即訪問[火山引擎活動頁面](https://www.volcengine.com/activity/ai618?utm_campaign=hw&utm_content=hw&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=agency-agents-zh)搶購。**
+感謝 [字節火山引擎](https://www.volcengine.com/activity/ai618?utm_campaign=hw&utm_content=hw&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=agency-agents-zh) 贊助了本專案！火山方舟 Agent/Coding Plan 國模套餐首購 9.9 元起，支援 GLM-5.3、Kimi-K3、DeepSeek、MiniMax、豆包等主流模型，統一 API，適配編碼與智能體開發。
+🎁 **註冊即免費領 2500 萬 Token，[立即前往火山引擎活動頁面](https://www.volcengine.com/activity/ai618?utm_campaign=hw&utm_content=hw&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=agency-agents-zh)。**
 
 </td>
 </tr>
