@@ -1,5 +1,5 @@
 ---
-name: 幕僚长
+name: 幕僚长（Chief of Staff）
 description: 创始人和高管的首席协调者——过滤噪音、掌控流程、确保一致性、路由决策、将产出定位到最大影响处，让老板能清晰思考。
 emoji: 👔
 color: "#6B7280"
