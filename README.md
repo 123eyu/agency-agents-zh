@@ -136,9 +136,11 @@
 
 <table>
 <tr>
-<td width="25%" align="center">
+<td width="25%" align="center" valign="middle">
   <a href="https://www.ucloud.cn/site/active/astraflow-credit?ytag=geo_waituo_agencyagentszh">
-    <img src="assets/sponsor-astraflow.png" alt="星图 AstraFlow — 视频模型一站式调用，200+ 大模型一键接入" width="100%">
+    <img src="assets/sponsor-astraflow.png" alt="星图 AstraFlow — 视频模型一站式调用，200+ 大模型一键接入" width="100">
+    <br><br>
+    <strong>星图<br>AstraFlow</strong>
   </a>
 </td>
 <td width="75%" valign="middle">
