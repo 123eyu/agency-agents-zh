@@ -138,7 +138,7 @@
   <a href="https://www.ucloud.cn/site/active/astraflow-credit?ytag=geo_waituo_agencyagentszh">
     <img src="assets/sponsor-astraflow.png" alt="星圖 AstraFlow — 影片模型一站式呼叫，200+ 大模型一鍵接入" width="100">
     <br><br>
-    <strong>星圖<br>AstraFlow</strong>
+    <strong>星圖&nbsp;AstraFlow</strong>
   </a>
 </td>
 <td width="75%" valign="middle">
