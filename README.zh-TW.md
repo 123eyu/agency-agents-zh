@@ -60,36 +60,6 @@
 <table>
 <tr>
 <td width="25%">
-  <a href="https://www.volcengine.com/activity/ai618?utm_campaign=hw&utm_content=hw&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=agency-agents-zh">
-    <img src="assets/sponsor-volcengine.jpeg" alt="火山引擎 — 火山方舟 Agent/Coding Plan 國模套餐首購 9.9 元，支援 GLM-5.3、Kimi-K3、DeepSeek、MiniMax、Doubao 等主流模型" width="100%">
-  </a>
-</td>
-<td width="75%" valign="middle">
-
-感謝 [字節火山引擎](https://www.volcengine.com/activity/ai618?utm_campaign=hw&utm_content=hw&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=agency-agents-zh) 贊助本專案！火山方舟 Agent/Coding Plan 國模套餐首購 9.9 元，支援 GLM-5.3、Kimi-K3、DeepSeek、MiniMax、Doubao 等，註冊免費領 2500 萬 Token，統一 API，適配編碼與智慧體開發。👉 **[立即前往](https://www.volcengine.com/activity/ai618?utm_campaign=hw&utm_content=hw&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=agency-agents-zh)**
-
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td width="25%">
-  <a href="https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents">
-    <img src="assets/sponsor-compshare.jpeg" alt="優雲智算 — 熱門國產模型按次呼叫套餐包，低至 49 元/月起" width="100%">
-  </a>
-</td>
-<td width="75%" valign="middle">
-
-感謝[優雲智算](https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents)贊助本專案！優雲智算是 UCloud 旗下 AI 雲平臺，主打包月、按次的高性價比國模 Agent Plan 套餐，支援 GLM-5.2，低至 49 元/月起。最新上線 H3 影片生成套餐包，768P 低至 8 分/秒，支援 2K 畫質，最長 30s 影片生成。支援企業高併發、7×24 技術支援、自助開票。🎁 **透過[此連結](https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents)註冊的使用者，可得免費5元平臺體驗金！**
-
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td width="25%">
   <a href="https://lanox.ai/?c=X3RD38F7&inviteCode=A3HRUB6M">
     <img src="assets/sponsor-lanox.jpeg" alt="LanoX AI — 全球模型接入服務，聚合 GPT / Claude / Gemini / Qwen / Grok 及多模態模型，頂級模型低至官方價 1 折起" width="100%">
   </a>
