@@ -1,6 +1,6 @@
 # Agency Agents 智能体完整名单
 
-> 本文档最后更新于 2026-10-17，记录项目中所有 295 个 AI 智能体的完整信息。
+> 本文档最后更新于 2026-10-17，记录项目中所有 298 个 AI 智能体的完整信息。
 
 ---
 
@@ -12,13 +12,13 @@
 │                  AI 智能体专家团队                                │
 ├─────────────────────────────────────────────────────────────────┤
 │  项目规模                                                       │
-│  ├── AI 智能体：295 个                                          │
-│  ├── 英文版翻译：229 个                                         │
+│  ├── AI 智能体：298 个                                          │
+│  ├── 英文版翻译：232 个                                         │
 │  ├── 中国市场原创：66 个                                        │
 │  └── 支持工具：20 种                                            │
 ├─────────────────────────────────────────────────────────────────┤
 │  部门分类：20 个                                                │
-│  ├── 公司经营部 (7)        工程部 (57)                          │
+│  ├── 公司经营部 (7)        工程部 (60)                          │
 │  ├── 设计部 (10)           营销部 (43)                          │
 │  ├── 付费媒体部 (7)        销售部 (9)                           │
 │  ├── 金融部 (9)            人力资源部 (2)                       │
@@ -82,6 +82,9 @@
 | `engineering-i18n-engineer` | 国际化工程师 | ICU MessageFormat、CLDR 复数规则、RTL 布局、区域设置格式化与伪本地化测试 | 翻译 |
 | `engineering-knowledge-graph-engineer` | 知识图谱工程师 | 实体-关系建模、Neo4j/LangGraph 摄入管线、来源追溯与矛盾检测、图增强 RAG | 翻译 |
 | `engineering-search-relevance-engineer` | 搜索相关性工程师 | Elasticsearch/OpenSearch 分析器与查询调优、混合检索、基于标注集的 nDCG 评估 | 翻译 |
+| `engineering-llm-post-training-engineer` | LLM 后训练工程师 | SFT、偏好优化、RLHF/RLVR、MoE 后训练，以及检查点完整性与发布关卡 | 翻译 |
+| `engineering-realtime-collaboration-engineer` | 实时协作工程师 | WebSocket/SSE、在线状态、CRDT/OT 协同编辑、离线优先同步与扇出扩展 | 翻译 |
+| `engineering-webassembly-engineer` | WebAssembly 工程师 | Rust/C++/Go 编译为 Wasm、JS 边界编组、WASI 与服务端运行时、组件模型 | 翻译 |
 | `engineering-rag-pipeline-engineer` | RAG 管线工程师 | 文档切分、混合检索、重排与检索质量评测 | 翻译 |
 | `engineering-identity-access-engineer` | 身份与访问工程师 | OAuth/OIDC、SSO、SCIM、会话与多租户授权 | 翻译 |
 | `engineering-payments-billing-engineer` | 支付与计费工程师 | 幂等支付、可靠回调、订阅计费与对账 | 翻译 |
@@ -553,35 +556,35 @@
 
 | 部门 | 数量 | 占比 |
 |------|------|------|
-| 专项部 (Specialized) | 58 | 19.7% |
-| 工程部 (Engineering) | 57 | 19.3% |
-| 营销部 (Marketing) | 43 | 14.6% |
-| 游戏开发部 (Game Development) | 20 | 6.8% |
+| 工程部 (Engineering) | 60 | 20.1% |
+| 专项部 (Specialized) | 58 | 19.5% |
+| 营销部 (Marketing) | 43 | 14.4% |
+| 游戏开发部 (Game Development) | 20 | 6.7% |
 | GIS 部 (GIS) | 13 | 4.4% |
-| 安全部 (Security) | 12 | 4.1% |
+| 安全部 (Security) | 12 | 4.0% |
 | 设计部 (Design) | 10 | 3.4% |
 | 测试部 (Testing) | 10 | 3.4% |
-| 金融部 (Finance) | 9 | 3.1% |
-| 销售部 (Sales) | 9 | 3.1% |
-| 公司经营部 (Company) | 7 | 2.4% |
-| 付费媒体部 (Paid Media) | 7 | 2.4% |
-| 项目管理部 (Project Management) | 7 | 2.4% |
-| 支持部 (Support) | 7 | 2.4% |
+| 金融部 (Finance) | 9 | 3.0% |
+| 销售部 (Sales) | 9 | 3.0% |
+| 公司经营部 (Company) | 7 | 2.3% |
+| 付费媒体部 (Paid Media) | 7 | 2.3% |
+| 项目管理部 (Project Management) | 7 | 2.3% |
+| 支持部 (Support) | 7 | 2.3% |
 | 学术部 (Academic) | 6 | 2.0% |
 | 空间计算部 (Spatial Computing) | 6 | 2.0% |
 | 产品部 (Product) | 5 | 1.7% |
 | 供应链部 (Supply Chain) | 5 | 1.7% |
 | 人力资源部 (HR) | 2 | 0.7% |
 | 法务部 (Legal) | 2 | 0.7% |
-| **总计** | **295** | **100%** |
+| **总计** | **298** | **100%** |
 
 ### 按来源统计
 
 | 来源 | 数量 | 占比 |
 |------|------|------|
-| 英文版翻译 | 229 | 77.6% |
-| 中国市场原创 | 66 | 22.4% |
-| **总计** | **295** | **100%** |
+| 英文版翻译 | 232 | 77.9% |
+| 中国市场原创 | 66 | 22.1% |
+| **总计** | **298** | **100%** |
 
 ---
 
