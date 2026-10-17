@@ -31,7 +31,7 @@
 | 视觉叙事师 | `design/design-visual-storyteller.md` |
 | 趣味注入师 | `design/design-whimsy-injector.md` |
 
-## 🛠️ 工程部 (47)
+## 🛠️ 工程部 (48)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -44,6 +44,7 @@
 | AI 数据修复工程师 | `engineering/engineering-ai-data-remediation-engineer.md` |
 | AI 工程师 | `engineering/engineering-ai-engineer.md` |
 | 自主优化架构师 | `engineering/engineering-autonomous-optimization-architect.md` |
+| 桌面应用工程师 | `engineering/engineering-desktop-app-engineer.md` |
 | 后端架构师 | `engineering/engineering-backend-architect.md` |
 | CMS 开发者 | `engineering/engineering-cms-developer.md` |
 | 代码库入职引导工程师 | `engineering/engineering-codebase-onboarding-engineer.md` |
@@ -361,10 +362,11 @@
 | 技术顾问 | `gis/gis-technical-consultant.md` |
 | Web GIS 开发工程师 | `gis/gis-web-gis-developer.md` |
 
-## 🛡️ 安全部 (10)
+## 🛡️ 安全部 (12)
 
 | 中文名 | 文件路径 |
 |--------|----------|
+| AI 生成代码安全审计师 | `security/security-ai-generated-code-auditor.md` |
 | 应用安全工程师 | `security/security-appsec-engineer.md` |
 | 安全架构师 | `security/security-architect.md` |
 | 区块链安全审计师 | `security/security-blockchain-security-auditor.md` |
@@ -372,6 +374,7 @@
 | 合规审计师 | `security/security-compliance-auditor.md` |
 | 事件响应专家 | `security/security-incident-responder.md` |
 | 渗透测试员 | `security/security-penetration-tester.md` |
+| 密钥与凭据治理工程师 | `security/security-secrets-credential-engineer.md` |
 | 高级安全运营工程师 | `security/security-senior-secops.md` |
 | 威胁检测工程师 | `security/security-threat-detection-engineer.md` |
 | 威胁情报分析师 | `security/security-threat-intelligence-analyst.md` |
