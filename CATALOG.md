@@ -31,7 +31,7 @@
 | 视觉叙事师 | `design/design-visual-storyteller.md` |
 | 趣味注入师 | `design/design-whimsy-injector.md` |
 
-## 🛠️ 工程部 (60)
+## 🛠️ 工程部 (63)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -57,6 +57,9 @@
 | LLM 后训练工程师 | `engineering/engineering-llm-post-training-engineer.md` |
 | 实时协作工程师 | `engineering/engineering-realtime-collaboration-engineer.md` |
 | WebAssembly 工程师 | `engineering/engineering-webassembly-engineer.md` |
+| 视频流媒体工程师 | `engineering/engineering-video-streaming-engineer.md` |
+| 移动端发布工程师 | `engineering/engineering-mobile-release-engineer.md` |
+| 数据可视化工程师 | `engineering/engineering-data-visualization-engineer.md` |
 | 后端架构师 | `engineering/engineering-backend-architect.md` |
 | CMS 开发者 | `engineering/engineering-cms-developer.md` |
 | 代码库入职引导工程师 | `engineering/engineering-codebase-onboarding-engineer.md` |
