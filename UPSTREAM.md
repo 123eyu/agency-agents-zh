@@ -6,7 +6,7 @@
 
 - **上游仓库**：https://github.com/msitarzewski/agency-agents
 - **历史同步基线**：2026-06-16，`3f78a30`；上一次批量同步记录为 2026-06-18。
-- **本地实际角色数**：**286**，其中目录标注翻译 **220**、原创 **66**。来源分类以 [AGENT-LIST.md](AGENT-LIST.md) 为准，不等同于当前上游覆盖数。
+- **本地实际角色数**：**289**，其中目录标注翻译 **223**、原创 **66**。来源分类以 [AGENT-LIST.md](AGENT-LIST.md) 为准，不等同于当前上游覆盖数。
 - **覆盖状态**：**尚未追平当前上游**。上游 README 已出现本地缺少的角色、新部门与安装能力，详见 [本次差异审计](UPSTREAM-AUDIT.md)。历史“全部覆盖”结论只适用于当时基线。
 - **核对限制**：本次通过上游公开页面核对，未获取完整 Git tree 与固定 commit，不能据此证明文件内容一致，也不更新历史同步 commit。
 - **本次完成**：根据 [issue #97](https://github.com/jnMetaCode/agency-agents-zh/issues/97) 标题补充嵌入式算法、嵌入式应用两个原创角色；同步简繁 README、名单、速查表与包描述，修正部门和来源计数，并将计数检查接入 CI。
@@ -15,9 +15,9 @@
 
 | 本地来源分类 | 数量 |
 |-------------|------|
-| 翻译 | 220 |
+| 翻译 | 223 |
 | 原创 | 66 |
-| **合计** | **286** |
+| **合计** | **289** |
 
 新增或改名的上游角色需要先检查路径映射与职责重叠，再决定翻译、合并或保留本地原创。不能只比较上下游总数判断是否同步。
 
@@ -65,12 +65,15 @@
 | `engineering/engineering-payments-billing-engineer.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/main/engineering/engineering-payments-billing-engineer.md) |
 | `testing/testing-test-automation-engineer.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/main/testing/testing-test-automation-engineer.md) |
 
-## 2026-10-17 第三批完整翻译
+## 2026-10-17 第三、四批完整翻译
 
-逐段完整翻译 3 个上游角色（保留代码示例，注释译为中文；省略本地不使用的 `vibe` 字段）。原文固定于上游 commit [`652b269`](https://github.com/msitarzewski/agency-agents/tree/652b2692f8d8ec2b1f1a38e559073e287dfdc469)，可按此版本复核。
+逐段完整翻译 6 个上游角色（保留代码示例，注释译为中文；省略本地不使用的 `vibe` 字段）。原文固定于上游 commit [`652b269`](https://github.com/msitarzewski/agency-agents/tree/652b2692f8d8ec2b1f1a38e559073e287dfdc469)，可按此版本复核。
 
 | 本地文件 | 上游来源 |
 |----------|----------|
 | `engineering/engineering-desktop-app-engineer.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/engineering/engineering-desktop-app-engineer.md) |
 | `security/security-ai-generated-code-auditor.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/security/security-ai-generated-code-auditor.md) |
 | `security/security-secrets-credential-engineer.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/security/security-secrets-credential-engineer.md) |
+| `engineering/engineering-api-platform-engineer.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/engineering/engineering-api-platform-engineer.md) |
+| `engineering/engineering-database-reliability-engineer.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/engineering/engineering-database-reliability-engineer.md) |
+| `engineering/engineering-platform-engineer.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/engineering/engineering-platform-engineer.md) |
