@@ -1,6 +1,6 @@
 # Agency Agents 智能体完整名单
 
-> 本文档最后更新于 2026-08-23，记录项目中所有 277 个 AI 智能体的完整信息。
+> 本文档最后更新于 2026-10-17，记录项目中所有 283 个 AI 智能体的完整信息。
 
 ---
 
@@ -12,19 +12,19 @@
 │                  AI 智能体专家团队                                │
 ├─────────────────────────────────────────────────────────────────┤
 │  项目规模                                                       │
-│  ├── AI 智能体：277 个                                          │
-│  ├── 英文版翻译：213 个                                         │
-│  ├── 中国市场原创：64 个                                        │
+│  ├── AI 智能体：283 个                                          │
+│  ├── 英文版翻译：217 个                                         │
+│  ├── 中国市场原创：66 个                                        │
 │  └── 支持工具：20 种                                            │
 ├─────────────────────────────────────────────────────────────────┤
 │  部门分类：20 个                                                │
-│  ├── 公司经营部 (7)        工程部 (42)                          │
-│  ├── 设计部 (10)           营销部 (42)                          │
+│  ├── 公司经营部 (7)        工程部 (47)                          │
+│  ├── 设计部 (10)           营销部 (43)                          │
 │  ├── 付费媒体部 (7)        销售部 (9)                           │
 │  ├── 金融部 (9)            人力资源部 (2)                       │
 │  ├── 法务部 (2)            供应链部 (5)                         │
 │  ├── 产品部 (5)            项目管理部 (7)                       │
-│  ├── 测试部 (9)            支持部 (7)                           │
+│  ├── 测试部 (10)           支持部 (7)                           │
 │  ├── 专项部 (58)           空间计算部 (6)                       │
 │  ├── 游戏开发部 (20)       学术部 (6)                           │
 │  └── GIS 部 (13)           安全部 (10)                          │
@@ -72,6 +72,11 @@
 | `engineering-data-engineer` | 数据工程师 | 专注于构建可靠数据管线、湖仓架构和可扩展数据基础设施的数据工程专家 | 翻译 |
 | `engineering-technical-writer` | 技术文档工程师 | 专精于开发者文档、API 参考、README 和教程的技术写作专家 | 翻译 |
 | `engineering-autonomous-optimization-architect` | 自主优化架构师 | 智能系统治理专家，持续对 API 进行影子测试以优化性能，同时严格执行财务和安全护栏 | 翻译 |
+| `engineering-rag-pipeline-engineer` | RAG 管线工程师 | 文档切分、混合检索、重排与检索质量评测 | 翻译 |
+| `engineering-identity-access-engineer` | 身份与访问工程师 | OAuth/OIDC、SSO、SCIM、会话与多租户授权 | 翻译 |
+| `engineering-payments-billing-engineer` | 支付与计费工程师 | 幂等支付、可靠回调、订阅计费与对账 | 翻译 |
+| `engineering-embedded-algorithm-engineer` | 嵌入式算法工程师 | MCU/DSP 算法落地，数字信号处理、传感器融合、定点化与 TinyML 板端验证 | 原创 |
+| `engineering-embedded-application-engineer` | 嵌入式应用工程师 | RTOS/Linux 设备应用，业务状态机、任务通信、协议、配置与升级恢复 | 原创 |
 | `engineering-embedded-firmware-engineer` | 嵌入式固件工程师 | 裸机和 RTOS 固件开发专家——精通 ESP32/ESP-IDF、PlatformIO、ARM Cortex-M、STM32 | 翻译 |
 | `engineering-embedded-linux-driver-engineer` | 嵌入式 Linux 驱动工程师 | 嵌入式 Linux 内核驱动与 BSP 开发专家——精通 Linux 内核模块、设备树、Platform/I2C/SPI/USB 驱动 | 原创 |
 | `engineering-fpga-digital-design-engineer` | FPGA/ASIC 数字设计工程师 | FPGA 与 ASIC 数字前端设计专家——精通 Verilog/SystemVerilog、Vivado/Quartus、AXI/AHB 总线 | 原创 |
@@ -315,6 +320,7 @@
 | `testing-test-results-analyzer` | 测试结果分析师 | 专注测试结果评估和质量度量分析的测试分析专家 | 翻译 |
 | `testing-tool-evaluator` | 工具评估师 | 专注工具评测和选型的技术评估专家，通过全面的功能对比、性能测试和成本分析 | 翻译 |
 | `testing-workflow-optimizer` | 工作流优化师 | 专注流程分析和优化的效率专家，通过消除瓶颈、精简流程和引入自动化 | 翻译 |
+| `testing-test-automation-engineer` | 测试自动化工程师 | Playwright/Cypress、数据隔离、CI 与失败诊断 | 翻译 |
 | `testing-embedded-qa-engineer` | 嵌入式测试工程师 | 嵌入式系统质量保障专家——精通硬件在环测试、固件自动化测试、OTA 回归、EMC/ESD 测试 | 原创 |
 
 ---
@@ -535,35 +541,35 @@
 
 | 部门 | 数量 | 占比 |
 |------|------|------|
-| 专项部 (Specialized) | 58 | 20.9% |
-| 营销部 (Marketing) | 43 | 15.5% |
-| 工程部 (Engineering) | 42 | 15.2% |
-| 游戏开发部 (Game Development) | 20 | 7.2% |
-| GIS 部 (GIS) | 13 | 4.7% |
-| 设计部 (Design) | 10 | 3.6% |
-| 安全部 (Security) | 10 | 3.6% |
+| 专项部 (Specialized) | 58 | 20.5% |
+| 工程部 (Engineering) | 47 | 16.6% |
+| 营销部 (Marketing) | 43 | 15.2% |
+| 游戏开发部 (Game Development) | 20 | 7.1% |
+| GIS 部 (GIS) | 13 | 4.6% |
+| 设计部 (Design) | 10 | 3.5% |
+| 安全部 (Security) | 10 | 3.5% |
 | 金融部 (Finance) | 9 | 3.2% |
 | 销售部 (Sales) | 9 | 3.2% |
-| 测试部 (Testing) | 9 | 3.2% |
+| 测试部 (Testing) | 10 | 3.5% |
 | 公司经营部 (Company) | 7 | 2.5% |
 | 付费媒体部 (Paid Media) | 7 | 2.5% |
 | 项目管理部 (Project Management) | 7 | 2.5% |
 | 支持部 (Support) | 7 | 2.5% |
-| 学术部 (Academic) | 6 | 2.2% |
-| 空间计算部 (Spatial Computing) | 6 | 2.2% |
+| 学术部 (Academic) | 6 | 2.1% |
+| 空间计算部 (Spatial Computing) | 6 | 2.1% |
 | 产品部 (Product) | 5 | 1.8% |
 | 供应链部 (Supply Chain) | 5 | 1.8% |
 | 人力资源部 (HR) | 2 | 0.7% |
 | 法务部 (Legal) | 2 | 0.7% |
-| **总计** | **277** | **100%** |
+| **总计** | **283** | **100%** |
 
 ### 按来源统计
 
 | 来源 | 数量 | 占比 |
 |------|------|------|
-| 英文版翻译 | 213 | 76.9% |
-| 中国市场原创 | 64 | 23.1% |
-| **总计** | **277** | **100%** |
+| 英文版翻译 | 217 | 76.7% |
+| 中国市场原创 | 66 | 23.3% |
+| **总计** | **283** | **100%** |
 
 ---
 

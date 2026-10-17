@@ -31,7 +31,7 @@
 | 视觉叙事师 | `design/design-visual-storyteller.md` |
 | 趣味注入师 | `design/design-whimsy-injector.md` |
 
-## 🛠️ 工程部 (42)
+## 🛠️ 工程部 (47)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -53,6 +53,11 @@
 | 数据库优化师 | `engineering/engineering-database-optimizer.md` |
 | DevOps 自动化师 | `engineering/engineering-devops-automator.md` |
 | 钉钉集成开发工程师 | `engineering/engineering-dingtalk-integration-developer.md` |
+| RAG 管线工程师 | `engineering/engineering-rag-pipeline-engineer.md` |
+| 身份与访问工程师 | `engineering/engineering-identity-access-engineer.md` |
+| 支付与计费工程师 | `engineering/engineering-payments-billing-engineer.md` |
+| 嵌入式算法工程师 | `engineering/engineering-embedded-algorithm-engineer.md` |
+| 嵌入式应用工程师 | `engineering/engineering-embedded-application-engineer.md` |
 | 嵌入式固件工程师 | `engineering/engineering-embedded-firmware-engineer.md` |
 | 上位机工程师 | `engineering/engineering-pc-host-engineer.md` |
 | Filament 优化专家 | `engineering/engineering-filament-optimization-specialist.md` |
@@ -131,7 +136,7 @@
 | 合同审查专家 | `legal/legal-contract-reviewer.md` |
 | 制度文件撰写专家 | `legal/legal-policy-writer.md` |
 
-## 📢 营销部 (42)
+## 📢 营销部 (43)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -323,12 +328,13 @@
 | 招聘运营专家 | `support/support-recruitment-specialist.md` |
 | 客服响应者 | `support/support-support-responder.md` |
 
-## 🧪 测试部 (9)
+## 🧪 测试部 (10)
 
 | 中文名 | 文件路径 |
 |--------|----------|
 | 无障碍审核员 | `testing/testing-accessibility-auditor.md` |
 | API 测试员 | `testing/testing-api-tester.md` |
+| 测试自动化工程师 | `testing/testing-test-automation-engineer.md` |
 | 嵌入式测试工程师 | `testing/testing-embedded-qa-engineer.md` |
 | 证据收集者 | `testing/testing-evidence-collector.md` |
 | 性能基准师 | `testing/testing-performance-benchmarker.md` |

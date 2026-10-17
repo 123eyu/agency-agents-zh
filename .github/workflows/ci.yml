@@ -13,6 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check documented agent counts
+        run: npm run check:counts
+
       - name: Count agents
         run: |
           TOTAL=$(find . -path './.github' -prune -o -path './scripts' -prune -o -path './examples' -prune -o -path './integrations' -prune -o -name '*.md' -print | grep -c '/')

@@ -11,6 +11,8 @@ const SKIP = new Set(["node_modules", "scripts", "integrations", "examples", ".g
 
 function countAgents(dir) {
   let n = 0;
+  const byDepartment = new Map();
+  const agentIds = new Set();
   const walk = (d) => {
     for (const e of readdirSync(d, { withFileTypes: true })) {
       if (e.name.startsWith(".") || SKIP.has(e.name)) continue;
@@ -18,17 +20,22 @@ function countAgents(dir) {
       if (e.isDirectory()) walk(f);
       else if (e.name.endsWith(".md")) {
         const m = readFileSync(f, "utf8").match(/^---\n([\s\S]*?)\n---/);
-        if (m && /^\s*name\s*:/m.test(m[1])) n++;
+        if (m && /^\s*name\s*:/m.test(m[1])) {
+          n++;
+          agentIds.add(e.name.slice(0, -3));
+          const department = f.slice(dir.length + 1).split(/[\\/]/)[0];
+          byDepartment.set(department, (byDepartment.get(department) || 0) + 1);
+        }
       }
     }
   };
   for (const c of readdirSync(dir, { withFileTypes: true })) {
     if (c.isDirectory() && !c.name.startsWith(".") && !SKIP.has(c.name)) walk(join(dir, c.name));
   }
-  return n;
+  return { total: n, byDepartment, agentIds };
 }
 
-const actual = countAgents(root);
+const { total: actual, byDepartment, agentIds } = countAgents(root);
 const problems = [];
 const checkFile = (file, regex, label) => {
   const p = join(root, file);
@@ -39,7 +46,33 @@ const checkFile = (file, regex, label) => {
 
 checkFile("AGENT-LIST.md", /记录项目中所有\s*(\d+)\s*个/, "头部总数");
 checkFile("README.md", /(\d+)\s*个即插即用/, "项目规模");
+checkFile("README.zh-TW.md", /(\d+)\s*個即插即用/, "项目规模");
 checkFile("package.json", /(\d+)\s*个即插即用/, "包描述");
+
+// 名单条目必须与真实文件一一对应；来源统计不能只验证总数之和。
+const list = readFileSync(join(root, "AGENT-LIST.md"), "utf8");
+const rows = [...list.matchAll(/^\| `([^`]+)` \|[^\n]*\| (翻译|原创) \|$/gm)];
+const ids = rows.map((m) => m[1]);
+if (rows.length !== actual || new Set(ids).size !== actual) {
+  problems.push(`AGENT-LIST.md 条目数或唯一 ID 数与实际 ${actual} 个不一致`);
+}
+for (const id of ids) {
+  if (!agentIds.has(id)) {
+    problems.push(`AGENT-LIST.md 角色不存在：${id}`);
+  }
+}
+for (const [source, label] of [["翻译", "英文版翻译"], ["原创", "中国市场原创"]]) {
+  const expected = rows.filter((m) => m[2] === source).length;
+  const m = list.match(new RegExp(`\\| ${label} \\| (\\d+) \\|`));
+  if (!m || Number(m[1]) !== expected) problems.push(`AGENT-LIST.md ${label} 应为 ${expected}`);
+}
+const stats = list.slice(list.indexOf("### 按部门统计"), list.indexOf("### 按来源统计"));
+for (const m of stats.matchAll(/^\| [^|]+ \(([^)]+)\) \| (\d+) \|/gm)) {
+  const department = m[1].toLowerCase().replaceAll(" ", "-");
+  if (byDepartment.get(department) !== Number(m[2])) {
+    problems.push(`AGENT-LIST.md ${department} 部门数量应为 ${byDepartment.get(department)}`);
+  }
+}
 
 if (problems.length) {
   console.error(`❌ 角色计数不一致（实际 ${actual} 个）：`);

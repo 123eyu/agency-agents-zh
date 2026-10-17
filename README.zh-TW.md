@@ -2,9 +2,9 @@
 
 🌐 [簡體中文](README.md) | **繁體中文** | [English (upstream)](https://github.com/msitarzewski/agency-agents)
 
-> **277 個即插即用的 AI 專家角色** — 覆蓋公司經營（CEO/CTO/CMO/COO/CPO/CFO）、工程、設計、營銷、產品、遊戲、安全、GIS、金融等 20 個部門。不是通用提示詞模板，每個智能體都有獨立的人設、專業流程和可交付成果。支援 Claude Code / Cursor / Copilot 等 20 種 AI 程式設計工具。
+> **283 個即插即用的 AI 專家角色** — 覆蓋公司經營（CEO/CTO/CMO/COO/CPO/CFO）、工程、設計、營銷、產品、遊戲、安全、GIS、金融等 20 個部門。不是通用提示詞模板，每個智能體都有獨立的人設、專業流程和可交付成果。支援 Claude Code / Cursor / Copilot 等 20 種 AI 程式設計工具。
 
-[agency-agents](https://github.com/msitarzewski/agency-agents) 的中文社群版。在完整翻譯上游的基礎上，新增了 63 箇中國市場原創智能體（小紅書、抖音、微信、B站、飛書、釘釘等平臺運營，以及跨境電商、政務ToG、醫療合規、Qt 工業上位機、機械設計、畜禽養殖檔案核對等垂直領域）。
+[agency-agents](https://github.com/msitarzewski/agency-agents) 的中文社群版。在已有上游翻譯的基礎上，新增了 66 個中國市場原創智能體（小紅書、抖音、微信、B站、飛書、釘釘等平臺運營，以及跨境電商、政務ToG、醫療合規、Qt 工業上位機、機械設計、畜禽養殖檔案核對等垂直領域）。
 
 想更好地用起來，或想給團隊打造統一的智能體工作臺？[下載桌面客戶端](https://github.com/jnMetaCode/agency-orchestrator/releases/latest)（原生 App，免裝 Node，macOS / Windows / Linux），或線上體驗 [ao.aiolaola.com/experts](https://ao.aiolaola.com/experts)。
 
@@ -20,9 +20,9 @@
 
 | 🤖 AI 智能體 | 🌏 英文版翻譯 | 🇨🇳 中國市場原創 | 🧠 支援工具 | 🏢 部門 |
 |:---:|:---:|:---:|:---:|:---:|
-| **277** | **213** | **64** | **20 種** | **20 個** |
+| **283** | **217** | **66** | **20 種** | **20 個** |
 
-> 📖 **官方配套課程** → [AI 專家團隊實戰](https://aiolaola.com/course/ai-agency?utm_source=github&utm_campaign=agents)（35 節，免費）：手把手把這倉 277 位專家用成一支團隊——單兵點名、自動組隊、一人公司全流程，桌面端零程式碼教學。另有 [從零學會 AI 程式設計](https://aiolaola.com/?utm_source=github&utm_campaign=agents)（182 節）＋ [從零構建 AI 智能體](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=agents)（40 節）（站上共 13 門課、648 節，**全部 ¥0**——另有 AI 繪畫 / 寫小說 / 漫劇 / 量化 / DeepSeek / 深度專注 等）
+> 📖 **官方配套課程** → [AI 專家團隊實戰](https://aiolaola.com/course/ai-agency?utm_source=github&utm_campaign=agents)（35 節，免費）：手把手把這倉 283 位專家用成一支團隊——單兵點名、自動組隊、一人公司全流程，桌面端零程式碼教學。另有 [從零學會 AI 程式設計](https://aiolaola.com/?utm_source=github&utm_campaign=agents)（182 節）＋ [從零構建 AI 智能體](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=agents)（40 節）（站上共 13 門課、648 節，**全部 ¥0**——另有 AI 繪畫 / 寫小說 / 漫劇 / 量化 / DeepSeek / 深度專注 等）
 >
 > 🌍 Also available in [English](https://aiolaola.com/en?utm_source=github&utm_campaign=agents) · [日本語](https://aiolaola.com/ja?utm_source=github&utm_campaign=agents) · [Español](https://aiolaola.com/es?utm_source=github&utm_campaign=agents) · [한국어](https://aiolaola.com/ko?utm_source=github&utm_campaign=agents) · [繁體中文](https://aiolaola.com/zh-Hant?utm_source=github&utm_campaign=agents)
 
@@ -168,7 +168,7 @@ ao compose "幫我寫一篇關於 AI Agent 的深度分析文章" --run
 
 ## 🖼️ 線上瀏覽全部專家（無需安裝）
 
-搜尋 / 按部門篩選 / 檢視與**複製每位專家的完整提示詞** —— 全部 268 位，直接在瀏覽器裡看：
+搜尋 / 按部門篩選 / 檢視與**複製每位專家的完整提示詞**，直接在瀏覽器裡看（線上收錄數量以頁面為準）：
 
 <p align="center">
   <a href="https://ao.aiolaola.com/experts">
@@ -284,6 +284,11 @@ cp -r marketing/*.md ~/.claude/agents/
 | [資料工程師](engineering/engineering-data-engineer.md) | ETL/ELT、資料湖、Spark/dbt | 資料管線、資料倉庫 |
 | [技術文件工程師](engineering/engineering-technical-writer.md) | API 文件、開發者文件、docs-as-code | 技術文件、知識庫 |
 | [自主最佳化架構師](engineering/engineering-autonomous-optimization-architect.md) | 自適應系統、自動調優 | 智慧運維、自愈系統 |
+| [RAG 管線工程師](engineering/engineering-rag-pipeline-engineer.md) | 文件切分、混合檢索、重排與評測 | 知識庫問答、證據檢索 |
+| [身分與存取工程師](engineering/engineering-identity-access-engineer.md) | OAuth/OIDC、SSO、SCIM、工作階段與多租戶授權 | 登入系統、企業身分與權限隔離 |
+| [支付與計費工程師](engineering/engineering-payments-billing-engineer.md) | 冪等支付、可靠回呼、訂閱與對帳 | 支付整合、訂閱和退款 |
+| [嵌入式演算法工程師](engineering/engineering-embedded-algorithm-engineer.md) ⭐ | DSP、感測器融合、定點化、TinyML | 演算法移植、精度與板端資源驗證 |
+| [嵌入式應用工程師](engineering/engineering-embedded-application-engineer.md) ⭐ | RTOS/Linux 應用、狀態機、裝置協定、恢復 | 裝置業務開發、整機聯調與升級恢復 |
 | [嵌入式韌體工程師](engineering/engineering-embedded-firmware-engineer.md) | RTOS、外設驅動、低功耗設計 | IoT、嵌入式系統 |
 | [上位機工程師](engineering/engineering-pc-host-engineer.md) ⭐ | Qt/QML、QSerialPort、Modbus/CAN、QChart 即時視覺化 | 工業上位機、檢測裝置、HMI |
 | [機械設計工程師](engineering/engineering-mechanical-design-engineer.md) ⭐ | 傳動選型、強度剛度疲勞振動校核、DFMA、GB/ISO 標準件 | 工業裝備、自動化產線、檢測儀器 |
@@ -489,6 +494,7 @@ cp -r marketing/*.md ~/.claude/agents/
 | [測試結果分析師](testing/testing-test-results-analyzer.md) | 測試資料分析、質量度量 | 質量趨勢、釋出決策 |
 | [工具評估師](testing/testing-tool-evaluator.md) | 工具選型、功能對比 | 技術選型、工具採購 |
 | [工作流最佳化師](testing/testing-workflow-optimizer.md) | 流程分析、自動化 | 效率提升、流程改進 |
+| [測試自動化工程師](testing/testing-test-automation-engineer.md) | Playwright/Cypress、資料隔離、CI 與失敗診斷 | 端到端測試、回歸與偶發失敗治理 |
 | [嵌入式測試工程師](testing/testing-embedded-qa-engineer.md) ⭐ | HIL 測試、韌體自動化測試、EMC 測試 | 嵌入式質量保障、量產測試 |
 
 ### 🤝 支援部
@@ -1060,7 +1066,7 @@ DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool 
 
 ## 🇨🇳 中國市場原創智能體
 
-除翻譯外，本專案包含 **63 個原創智能體**，專為中國平臺和業務場景打造：
+除翻譯外，本專案包含 **66 個原創智能體**，專為中國平臺和業務場景打造：
 
 - **平臺運營**：小紅書、抖音、微信公眾號/影片號/小程式、B站、快手、微博、知乎
 - **企業協作**：飛書、釘釘整合開發
@@ -1126,7 +1132,7 @@ DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool 
 
 | 專案 | 定位 | 一句話 |
 |------|------|-------|
-| **本專案**（agency-agents-zh） ![](https://img.shields.io/github/stars/jnMetaCode/agency-agents-zh?style=flat&label=⭐) | 🎭 專家角色庫 | 277 個**即插即用** AI 專家，含 64 中國原創（小紅書 / 抖音 / 飛書 / 釘釘 / Qt 上位機 / 機械設計） |
+| **本專案**（agency-agents-zh） ![](https://img.shields.io/github/stars/jnMetaCode/agency-agents-zh?style=flat&label=⭐) | 🎭 專家角色庫 | 283 個**即插即用** AI 專家，含 66 中國原創（小紅書 / 抖音 / 飛書 / 釘釘 / Qt 上位機 / 機械設計） |
 | [agency-orchestrator](https://github.com/jnMetaCode/agency-orchestrator) ![](https://img.shields.io/github/stars/jnMetaCode/agency-orchestrator?style=flat&label=⭐) | 🚀 編排引擎 | 一句話 → 276 專家協作，**幾分鐘出方案**（15 種大模型 / 11 種免 key） |
 | [superpowers-zh](https://github.com/jnMetaCode/superpowers-zh) ![](https://img.shields.io/github/stars/jnMetaCode/superpowers-zh?style=flat&label=⭐) | 🧠 工作方法論 | 20 個 skills 教 AI 怎麼幹活（TDD / 除錯 / 程式碼審查等） |
 | [ai-coding-guide](https://github.com/jnMetaCode/ai-coding-guide) ![](https://img.shields.io/github/stars/jnMetaCode/ai-coding-guide?style=flat&label=⭐) | 📖 實戰教程 | 66 個 Claude Code 技巧 + 10 款工具最佳實踐 + 配置模板 |
@@ -1153,7 +1159,7 @@ MIT License — 自由使用，商業或個人均可。
 
 <div align="center">
 
-**277 個 AI 專家角色，20 種工具支援，即裝即用**
+**283 個 AI 專家角色，20 種工具支援，即裝即用**
 
 [⭐ Star 本專案](https://github.com/jnMetaCode/agency-agents-zh) · [提交 Issue](https://github.com/jnMetaCode/agency-agents-zh/issues) · [貢獻程式碼](https://github.com/jnMetaCode/agency-agents-zh/pulls)
 
