@@ -20,6 +20,7 @@
 - 第三批完整翻译桌面应用工程师、AI 生成代码安全审计师、密钥与凭据治理工程师三个角色，原文固定于上游 commit `652b269`（`652b2692f8d8ec2b1f1a38e559073e287dfdc469`）。本地规模更新为 286（翻译 220 / 原创 66）；工程部 48、安全部 12。
 - 第四批完整翻译 API 平台工程师、数据库可靠性工程师、平台工程师三个角色，原文同样固定于 `652b269`。本地规模更新为 289（翻译 223 / 原创 66）；工程部 51。
 - 第五批完整翻译开发者工具工程师、FinOps 工程师、隐私工程师三个角色，原文同样固定于 `652b269`。本地规模更新为 292（翻译 226 / 原创 66）；工程部 54。
+- 第六批完整翻译国际化工程师、知识图谱工程师、搜索相关性工程师三个角色，原文同样固定于 `652b269`。本地规模更新为 295（翻译 229 / 原创 66）；工程部 57。
 
 ## 后续优先级
 
@@ -27,7 +28,7 @@
 
 本批 4 个角色已通过 AO 现有 `dist/cli/install.js` 收集器识别；工程部 Cursor dry-run 返回 47 个且未写入配置。角色库自身计数与 Cursor 转换均为 283 个。
 
-AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，尚未发版）：说明文档按完整文件名匹配，跳过隐藏文件与隐藏目录，并新增安全分类与 dry-run 回归用例。7 项安装器测试与测试类型检查通过；修复版扫描本库识别 292 个角色，包含全部 12 个安全角色。
+AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，尚未发版）：说明文档按完整文件名匹配，跳过隐藏文件与隐藏目录，并新增安全分类与 dry-run 回归用例。7 项安装器测试与测试类型检查通过；修复版扫描本库识别 295 个角色，包含全部 12 个安全角色。
 
 修复前，AO 收集器排除文件的正则是 `/^(README|CONTRIBUTING|LICENSE|SECURITY)/i`，会误伤全部 `security-*` 角色，且未跳过全部隐藏目录。已发布的 App / npm 包在 AO 下次发版前仍是旧行为。README 生态表中 AO 的"276 专家"待 AO 发版后再更新。
 
@@ -51,16 +52,13 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 - `engineering/engineering-data-visualization-engineer.md`
 - `engineering/engineering-drupal-performance.md`
 - `engineering/engineering-gaussdb-expert.md`
-- `engineering/engineering-i18n-engineer.md`
 - `engineering/engineering-iot-fleet-engineer.md`
-- `engineering/engineering-knowledge-graph-engineer.md`
 - `engineering/engineering-llm-post-training-engineer.md`
 - `engineering/engineering-mobile-release-engineer.md`
 - `engineering/engineering-network-engineer.md`
 - `engineering/engineering-pdf-engine-architect.md`
 - `engineering/engineering-realtime-collaboration-engineer.md`
 - `engineering/engineering-rust-refactoring-specialist.md`
-- `engineering/engineering-search-relevance-engineer.md`
 - `engineering/engineering-section-508-specialist.md`
 - `engineering/engineering-servicenow-developer-mentor.md`
 - `engineering/engineering-universal-document-compiler.md`
