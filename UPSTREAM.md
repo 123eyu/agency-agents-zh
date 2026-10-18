@@ -6,7 +6,7 @@
 
 - **上游仓库**：https://github.com/msitarzewski/agency-agents
 - **历史同步基线**：2026-06-16，`3f78a30`；上一次批量同步记录为 2026-06-18。
-- **本地实际角色数**：**312**，其中目录标注翻译 **246**、原创 **66**。来源分类以 [AGENT-LIST.md](AGENT-LIST.md) 为准，不等同于当前上游覆盖数。
+- **本地实际角色数**：**314**，其中目录标注翻译 **248**、原创 **66**。来源分类以 [AGENT-LIST.md](AGENT-LIST.md) 为准，不等同于当前上游覆盖数。
 - **覆盖状态**：**尚未追平当前上游**。上游 README 已出现本地缺少的角色、新部门与安装能力，详见 [本次差异审计](UPSTREAM-AUDIT.md)。历史“全部覆盖”结论只适用于当时基线。
 - **核对限制**：本次通过上游公开页面核对，未获取完整 Git tree 与固定 commit，不能据此证明文件内容一致，也不更新历史同步 commit。
 - **本次完成**：根据 [issue #97](https://github.com/jnMetaCode/agency-agents-zh/issues/97) 标题补充嵌入式算法、嵌入式应用两个原创角色；同步简繁 README、名单、速查表与包描述，修正部门和来源计数，并将计数检查接入 CI。
@@ -15,9 +15,9 @@
 
 | 本地来源分类 | 数量 |
 |-------------|------|
-| 翻译 | 246 |
+| 翻译 | 248 |
 | 原创 | 66 |
-| **合计** | **312** |
+| **合计** | **314** |
 
 新增或改名的上游角色需要先检查路径映射与职责重叠，再决定翻译、合并或保留本地原创。不能只比较上下游总数判断是否同步。
 
@@ -65,9 +65,9 @@
 | `engineering/engineering-payments-billing-engineer.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/main/engineering/engineering-payments-billing-engineer.md) |
 | `testing/testing-test-automation-engineer.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/main/testing/testing-test-automation-engineer.md) |
 
-## 2026-10-17 起第三至十二批完整翻译
+## 2026-10-17 起第三至十三批完整翻译
 
-逐段完整翻译 29 个上游角色（保留代码示例，注释译为中文；省略本地不使用的 `vibe` 字段）。`ats-validator-architect` 原文中的葡萄牙语示例（评分表用词与导出提示词）已译为中文；`product-dx-engineer` 中作为英文 API 示例的错误信息保留英文原文，并附中文释义；`gaussdb-expert` 原文连接示例中缺失的主机、密码、数据库名占位符（疑被当作 HTML 标签吞掉）已补为中文占位符；`network-engineer`（国外厂商设备）开头增加了指向本地原创国内网络工程师的说明。原文固定于上游 commit [`652b269`](https://github.com/msitarzewski/agency-agents/tree/652b2692f8d8ec2b1f1a38e559073e287dfdc469)，可按此版本复核。
+逐段完整翻译 31 个上游角色（保留代码示例，注释译为中文；省略本地不使用的 `vibe` 字段）。`ats-validator-architect` 原文中的葡萄牙语示例（评分表用词与导出提示词）已译为中文；`product-dx-engineer` 中作为英文 API 示例的错误信息保留英文原文，并附中文释义；`gaussdb-expert` 原文连接示例中缺失的主机、密码、数据库名占位符（疑被当作 HTML 标签吞掉）已补为中文占位符；`network-engineer`（国外厂商设备）开头增加了指向本地原创国内网络工程师的说明。原文固定于上游 commit [`652b269`](https://github.com/msitarzewski/agency-agents/tree/652b2692f8d8ec2b1f1a38e559073e287dfdc469)，可按此版本复核。
 
 | 本地文件 | 上游来源 |
 |----------|----------|
@@ -100,3 +100,5 @@
 | `engineering/engineering-network-engineer.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/engineering/engineering-network-engineer.md) |
 | `engineering/engineering-gaussdb-expert.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/engineering/engineering-gaussdb-expert.md) |
 | `engineering/engineering-wordpress-performance.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/engineering/engineering-wordpress-performance.md) |
+| `engineering/engineering-drupal-performance.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/engineering/engineering-drupal-performance.md) |
+| `research/research-synthesist.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/research/research-synthesist.md) |

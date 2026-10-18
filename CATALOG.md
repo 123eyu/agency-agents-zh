@@ -29,6 +29,12 @@
 | 首席财务官 | `company/chief-financial-officer.md` |
 | 幕僚长 | `company/chief-of-staff.md` |
 
+## 🔍 研究部 (1)
+
+| 中文名 | 文件路径 |
+|--------|----------|
+| 研究综合专家 | `research/research-synthesist.md` |
+
 ## 🎨 设计部 (11)
 
 | 中文名 | 文件路径 |
@@ -45,7 +51,7 @@
 | 视频提示词工程师 | `design/design-video-prompt-engineer.md` |
 | UI 收尾审查员 | `design/design-ui-finish-gate-reviewer.md` |
 
-## 🛠️ 工程部 (71)
+## 🛠️ 工程部 (72)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -81,6 +87,7 @@
 | ATS 校验架构师 | `engineering/engineering-ats-validator-architect.md` |
 | 网络工程师 | `engineering/engineering-network-engineer.md` |
 | GaussDB 专家 | `engineering/engineering-gaussdb-expert.md` |
+| Drupal 性能工程师 | `engineering/engineering-drupal-performance.md` |
 | WordPress 性能工程师 | `engineering/engineering-wordpress-performance.md` |
 | 后端架构师 | `engineering/engineering-backend-architect.md` |
 | CMS 开发者 | `engineering/engineering-cms-developer.md` |

@@ -54,7 +54,7 @@ TODAY="$(date +%Y-%m-%d)"
 
 AGENT_DIRS=(
   academic company design engineering finance game-development gis hr legal marketing paid-media sales product
-  project-management security supply-chain testing support spatial-computing specialized
+  project-management research security supply-chain testing support spatial-computing specialized
 )
 
 # --- 用法 ---
@@ -442,6 +442,7 @@ get_qoder_tools() {
     paid-media)         echo "Read, Write, WebSearch" ;;
     product)            echo "Read, Write, WebSearch, WebFetch" ;;
     project-management) echo "Read, Write, Bash" ;;
+    research)           echo "Read, Write, WebSearch, WebFetch" ;;
     sales)              echo "Read, Write, WebFetch, WebSearch" ;;
     security)           echo "Read, Grep, Glob, Bash, Edit, Write" ;;
     spatial-computing)  echo "Read, Bash, Edit, Write" ;;

@@ -192,7 +192,7 @@ install_claude_code() {
   mkdir -p "$dest"
   local dir f first_line
   for dir in academic company design engineering finance game-development gis hr legal marketing paid-media sales product \
-              project-management security supply-chain testing support spatial-computing specialized; do
+              project-management research security supply-chain testing support spatial-computing specialized; do
     [[ -d "$REPO_ROOT/$dir" ]] || continue
     while IFS= read -r -d '' f; do
       first_line="$(head -1 "$f")"
@@ -211,7 +211,7 @@ install_copilot() {
   mkdir -p "$dest1" "$dest2"
   local dir f first_line
   for dir in academic company design engineering finance game-development gis hr legal marketing paid-media sales product \
-              project-management security supply-chain testing support spatial-computing specialized; do
+              project-management research security supply-chain testing support spatial-computing specialized; do
     [[ -d "$REPO_ROOT/$dir" ]] || continue
     while IFS= read -r -d '' f; do
       first_line="$(head -1 "$f")"
