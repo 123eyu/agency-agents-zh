@@ -1,6 +1,6 @@
 # Agency Agents 智能体完整名单
 
-> 本文档最后更新于 2026-10-17，记录项目中所有 309 个 AI 智能体的完整信息。
+> 本文档最后更新于 2026-10-17，记录项目中所有 312 个 AI 智能体的完整信息。
 
 ---
 
@@ -12,13 +12,13 @@
 │                  AI 智能体专家团队                                │
 ├─────────────────────────────────────────────────────────────────┤
 │  项目规模                                                       │
-│  ├── AI 智能体：309 个                                          │
-│  ├── 英文版翻译：243 个                                         │
+│  ├── AI 智能体：312 个                                          │
+│  ├── 英文版翻译：246 个                                         │
 │  ├── 中国市场原创：66 个                                        │
 │  └── 支持工具：20 种                                            │
 ├─────────────────────────────────────────────────────────────────┤
 │  部门分类：20 个                                                │
-│  ├── 公司经营部 (7)        工程部 (68)                          │
+│  ├── 公司经营部 (7)        工程部 (71)                          │
 │  ├── 设计部 (11)           营销部 (44)                          │
 │  ├── 付费媒体部 (7)        销售部 (9)                           │
 │  ├── 金融部 (9)            人力资源部 (2)                       │
@@ -93,6 +93,9 @@
 | `engineering-pdf-engine-architect` | PDF 引擎架构师 | 确定性 HTML 转 PDF、Playwright 上下文池、动态页面尺寸、带标签 PDF/UA 与 PDF/A | 翻译 |
 | `engineering-universal-document-compiler` | 通用文档编译器 | 与 schema 无关的文档 AST、按数据形态推断布局、代码与画布双向同步、确定性分页 | 翻译 |
 | `engineering-ats-validator-architect` | ATS 校验架构师 | 简历可解析性审计、BM25 关键词匹配、X-Y-Z 量化要点评分、招聘算法合规 | 翻译 |
+| `engineering-network-engineer` | 网络工程师 | Cisco IOS/ASA、Juniper Junos、Palo Alto PAN-OS 的路由、交换、防火墙配置与排障 | 翻译 |
+| `engineering-gaussdb-expert` | GaussDB 专家 | 华为 GaussDB OLTP 的分布键与分布表设计、UStore/AStore、分布式执行计划与金融级高可用 | 翻译 |
+| `engineering-wordpress-performance` | WordPress 性能工程师 | Core Web Vitals、对象/页面缓存、WP_Query 与 autoload 优化、插件开销审计与 PHP-FPM 调优 | 翻译 |
 | `engineering-rag-pipeline-engineer` | RAG 管线工程师 | 文档切分、混合检索、重排与检索质量评测 | 翻译 |
 | `engineering-identity-access-engineer` | 身份与访问工程师 | OAuth/OIDC、SSO、SCIM、会话与多租户授权 | 翻译 |
 | `engineering-payments-billing-engineer` | 支付与计费工程师 | 幂等支付、可靠回调、订阅计费与对账 | 翻译 |
@@ -567,35 +570,35 @@
 
 | 部门 | 数量 | 占比 |
 |------|------|------|
-| 工程部 (Engineering) | 68 | 22.0% |
-| 专项部 (Specialized) | 58 | 18.8% |
-| 营销部 (Marketing) | 44 | 14.2% |
-| 游戏开发部 (Game Development) | 20 | 6.5% |
+| 工程部 (Engineering) | 71 | 22.8% |
+| 专项部 (Specialized) | 58 | 18.6% |
+| 营销部 (Marketing) | 44 | 14.1% |
+| 游戏开发部 (Game Development) | 20 | 6.4% |
 | GIS 部 (GIS) | 13 | 4.2% |
-| 安全部 (Security) | 12 | 3.9% |
-| 设计部 (Design) | 11 | 3.6% |
+| 安全部 (Security) | 12 | 3.8% |
+| 设计部 (Design) | 11 | 3.5% |
 | 测试部 (Testing) | 10 | 3.2% |
 | 金融部 (Finance) | 9 | 2.9% |
 | 销售部 (Sales) | 9 | 2.9% |
-| 公司经营部 (Company) | 7 | 2.3% |
-| 付费媒体部 (Paid Media) | 7 | 2.3% |
-| 项目管理部 (Project Management) | 7 | 2.3% |
-| 支持部 (Support) | 7 | 2.3% |
+| 公司经营部 (Company) | 7 | 2.2% |
+| 付费媒体部 (Paid Media) | 7 | 2.2% |
+| 项目管理部 (Project Management) | 7 | 2.2% |
+| 支持部 (Support) | 7 | 2.2% |
 | 学术部 (Academic) | 6 | 1.9% |
 | 空间计算部 (Spatial Computing) | 6 | 1.9% |
 | 产品部 (Product) | 6 | 1.9% |
 | 供应链部 (Supply Chain) | 5 | 1.6% |
 | 人力资源部 (HR) | 2 | 0.6% |
 | 法务部 (Legal) | 2 | 0.6% |
-| **总计** | **309** | **100%** |
+| **总计** | **312** | **100%** |
 
 ### 按来源统计
 
 | 来源 | 数量 | 占比 |
 |------|------|------|
-| 英文版翻译 | 243 | 78.6% |
-| 中国市场原创 | 66 | 21.4% |
-| **总计** | **309** | **100%** |
+| 英文版翻译 | 246 | 78.8% |
+| 中国市场原创 | 66 | 21.2% |
+| **总计** | **312** | **100%** |
 
 ---
 

@@ -45,7 +45,7 @@
 | 视频提示词工程师 | `design/design-video-prompt-engineer.md` |
 | UI 收尾审查员 | `design/design-ui-finish-gate-reviewer.md` |
 
-## 🛠️ 工程部 (68)
+## 🛠️ 工程部 (71)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -79,6 +79,9 @@
 | PDF 引擎架构师 | `engineering/engineering-pdf-engine-architect.md` |
 | 通用文档编译器 | `engineering/engineering-universal-document-compiler.md` |
 | ATS 校验架构师 | `engineering/engineering-ats-validator-architect.md` |
+| 网络工程师 | `engineering/engineering-network-engineer.md` |
+| GaussDB 专家 | `engineering/engineering-gaussdb-expert.md` |
+| WordPress 性能工程师 | `engineering/engineering-wordpress-performance.md` |
 | 后端架构师 | `engineering/engineering-backend-architect.md` |
 | CMS 开发者 | `engineering/engineering-cms-developer.md` |
 | 代码库入职引导工程师 | `engineering/engineering-codebase-onboarding-engineer.md` |

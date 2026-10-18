@@ -26,6 +26,7 @@
 - 第九批（2026-10-18）完整翻译 IoT 设备群工程师、Rust 重构专家、PDF 引擎架构师三个角色，原文同样固定于 `652b269`。IoT 设备群工程师侧重已上线设备群的运维，与本地原创的 IoT 方案架构师（整体方案设计）分工不同。本地规模更新为 304（翻译 238 / 原创 66）；工程部 66。
 - 第十批完整翻译通用文档编译器、ATS 校验架构师、UI 收尾审查员三个角色，原文同样固定于 `652b269`。本地规模更新为 307（翻译 241 / 原创 66）；工程部 68、设计部 11。同时修正 CATALOG 历史遗漏：补齐公司经营部 7 个角色及 3 个原创角色、改正 2 个已迁移的旧路径、金融部计数改为 9，并将 CATALOG 一致性接入计数检查。
 - 第十一批完整翻译开发者社区建设专家（营销部）、DX 工程师（产品部）两个角色，原文同样固定于 `652b269`。两者与本地已有的开发者布道师有部分交集，但分别聚焦社区运营与上手摩擦；上游三者并存。本地规模更新为 309（翻译 243 / 原创 66）；营销部 44、产品部 6。通用类候选至此全部完成。
+- 第十二批完整翻译网络工程师（Cisco/Juniper/Palo Alto，与本地原创的华为/华三版国内网络工程师互补）、GaussDB 专家、WordPress 性能工程师三个角色，原文同样固定于 `652b269`。本地规模更新为 312（翻译 246 / 原创 66）；工程部 71。
 
 ## 后续优先级
 
@@ -33,7 +34,7 @@
 
 本批 4 个角色已通过 AO 现有 `dist/cli/install.js` 收集器识别；工程部 Cursor dry-run 返回 47 个且未写入配置。角色库自身计数与 Cursor 转换均为 283 个。
 
-AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，尚未发版）：说明文档按完整文件名匹配，跳过隐藏文件与隐藏目录，并新增安全分类与 dry-run 回归用例。7 项安装器测试与测试类型检查通过；修复版扫描本库识别 309 个角色，包含全部 12 个安全角色。
+AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，尚未发版）：说明文档按完整文件名匹配，跳过隐藏文件与隐藏目录，并新增安全分类与 dry-run 回归用例。7 项安装器测试与测试类型检查通过；修复版扫描本库识别 312 个角色，包含全部 12 个安全角色。
 
 修复前，AO 收集器排除文件的正则是 `/^(README|CONTRIBUTING|LICENSE|SECURITY)/i`，会误伤全部 `security-*` 角色，且未跳过全部隐藏目录。已发布的 App / npm 包在 AO 下次发版前仍是旧行为。README 生态表中 AO 的"276 专家"待 AO 发版后再更新。
 
@@ -53,12 +54,9 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 以下路径出现在本次读取的上游 README 中，本地没有同路径文件，且已排除 5 个已知映射。仍需人工检查是否存在其他同义角色；这不是完整上游文件清单。
 
 - `engineering/engineering-drupal-performance.md`
-- `engineering/engineering-gaussdb-expert.md`
-- `engineering/engineering-network-engineer.md`
 - `engineering/engineering-section-508-specialist.md`
 - `engineering/engineering-servicenow-developer-mentor.md`
 - `engineering/engineering-uswds-developer.md`
-- `engineering/engineering-wordpress-performance.md`
 - `healthcare/healthcare-clinical-evidence-agent.md`
 - `healthcare/healthcare-innovation-strategist.md`
 - `healthcare/healthcare-sovereign-health-systems-agent.md`
