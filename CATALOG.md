@@ -17,7 +17,19 @@
 | 心理学家 | `academic/academic-psychologist.md` |
 | 学习规划师 | `academic/academic-study-planner.md` |
 
-## 🎨 设计部 (9)
+## 🏢 公司经营部 (7)
+
+| 中文名 | 文件路径 |
+|--------|----------|
+| 首席执行官 | `company/chief-executive-officer.md` |
+| 首席技术官 | `company/chief-technology-officer.md` |
+| 首席产品官 | `company/chief-product-officer.md` |
+| 首席营销官 | `company/chief-marketing-officer.md` |
+| 首席运营官 | `company/chief-operating-officer.md` |
+| 首席财务官 | `company/chief-financial-officer.md` |
+| 幕僚长 | `company/chief-of-staff.md` |
+
+## 🎨 设计部 (11)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -30,8 +42,10 @@
 | UX 研究员 | `design/design-ux-researcher.md` |
 | 视觉叙事师 | `design/design-visual-storyteller.md` |
 | 趣味注入师 | `design/design-whimsy-injector.md` |
+| 视频提示词工程师 | `design/design-video-prompt-engineer.md` |
+| UI 收尾审查员 | `design/design-ui-finish-gate-reviewer.md` |
 
-## 🛠️ 工程部 (66)
+## 🛠️ 工程部 (68)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -63,6 +77,8 @@
 | IoT 设备群工程师 | `engineering/engineering-iot-fleet-engineer.md` |
 | Rust 重构专家 | `engineering/engineering-rust-refactoring-specialist.md` |
 | PDF 引擎架构师 | `engineering/engineering-pdf-engine-architect.md` |
+| 通用文档编译器 | `engineering/engineering-universal-document-compiler.md` |
+| ATS 校验架构师 | `engineering/engineering-ats-validator-architect.md` |
 | 后端架构师 | `engineering/engineering-backend-architect.md` |
 | CMS 开发者 | `engineering/engineering-cms-developer.md` |
 | 代码库入职引导工程师 | `engineering/engineering-codebase-onboarding-engineer.md` |
@@ -102,7 +118,7 @@
 | 国内网络工程师 | `engineering/engineering-network-engineer-china.md` |
 | 微信小程序开发者 | `engineering/engineering-wechat-mini-program-developer.md` |
 
-## 🏦 金融部 (8)
+## 🏦 金融部 (9)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -268,7 +284,7 @@
 |--------|----------|
 | 商业战略家 | `specialized/business-strategist.md` |
 | 变革管理顾问 | `specialized/change-management-consultant.md` |
-| 首席财务官 | `specialized/chief-financial-officer.md` |
+| 鉴定评估师 | `specialized/authenticity-appraiser.md` |
 | 客户成功经理 | `specialized/customer-success-manager.md` |
 | 数据隐私官 | `specialized/data-privacy-officer.md` |
 | ESG 与可持续发展官 | `specialized/esg-sustainability-officer.md` |
@@ -320,7 +336,7 @@
 | 企业风险评估师 | `specialized/specialized-risk-assessor.md` |
 | Salesforce 架构师 | `specialized/specialized-salesforce-architect.md` |
 | 工作流架构师 | `specialized/specialized-workflow-architect.md` |
-| 幕僚长 | `specialized/specialized-chief-of-staff.md` |
+| 旅行规划师 | `specialized/travel-planner.md` |
 | 留学规划顾问 | `specialized/study-abroad-advisor.md` |
 | 技术翻译专家 | `specialized/technical-translator-agent.md` |
 | ZK 管家 | `specialized/zk-steward.md` |

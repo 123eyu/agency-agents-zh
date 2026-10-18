@@ -13,6 +13,7 @@ function countAgents(dir) {
   let n = 0;
   const byDepartment = new Map();
   const agentIds = new Set();
+  const agentPaths = new Set();
   const walk = (d) => {
     for (const e of readdirSync(d, { withFileTypes: true })) {
       if (e.name.startsWith(".") || SKIP.has(e.name)) continue;
@@ -23,6 +24,7 @@ function countAgents(dir) {
         if (m && /^\s*name\s*:/m.test(m[1])) {
           n++;
           agentIds.add(e.name.slice(0, -3));
+          agentPaths.add(f.slice(dir.length + 1).split(/[\\/]/).join("/"));
           const department = f.slice(dir.length + 1).split(/[\\/]/)[0];
           byDepartment.set(department, (byDepartment.get(department) || 0) + 1);
         }
@@ -32,10 +34,10 @@ function countAgents(dir) {
   for (const c of readdirSync(dir, { withFileTypes: true })) {
     if (c.isDirectory() && !c.name.startsWith(".") && !SKIP.has(c.name)) walk(join(dir, c.name));
   }
-  return { total: n, byDepartment, agentIds };
+  return { total: n, byDepartment, agentIds, agentPaths };
 }
 
-const { total: actual, byDepartment, agentIds } = countAgents(root);
+const { total: actual, byDepartment, agentIds, agentPaths } = countAgents(root);
 const problems = [];
 const checkFile = (file, regex, label) => {
   const p = join(root, file);
@@ -74,10 +76,24 @@ for (const m of stats.matchAll(/^\| [^|]+ \(([^)]+)\) \| (\d+) \|/gm)) {
   }
 }
 
+// 速查表须收录全部角色、路径真实存在，且每个部门标题的数量与所列行数一致。
+const catalog = readFileSync(join(root, "CATALOG.md"), "utf8");
+const catalogPaths = [...catalog.matchAll(/^\| [^|]+ \| `([^`]+\.md)` \|$/gm)].map((m) => m[1]);
+for (const p of catalogPaths) {
+  if (!agentPaths.has(p)) problems.push(`CATALOG.md 路径不存在：${p}`);
+}
+for (const p of agentPaths) {
+  if (!catalogPaths.includes(p)) problems.push(`CATALOG.md 缺少角色：${p}`);
+}
+for (const m of catalog.matchAll(/^## (.+?) \((\d+)\)\n([\s\S]*?)(?=^## |(?![\s\S]))/gm)) {
+  const listed = [...m[3].matchAll(/^\| [^|]+ \| `[^`]+\.md` \|$/gm)].length;
+  if (listed !== Number(m[2])) problems.push(`CATALOG.md「${m[1]}」标题写 ${m[2]}，实际列出 ${listed}`);
+}
+
 if (problems.length) {
   console.error(`❌ 角色计数不一致（实际 ${actual} 个）：`);
   problems.forEach((p) => console.error("   - " + p));
-  console.error("   请更新对应文档（AGENT-LIST.md / README.md）后再发布。");
+  console.error("   请更新对应文档（AGENT-LIST.md / CATALOG.md / README.md）后再发布。");
   process.exit(1);
 }
 console.log(`✅ 角色计数一致：${actual} 个`);
