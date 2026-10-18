@@ -171,7 +171,7 @@
 | 合同审查专家 | `legal/legal-contract-reviewer.md` |
 | 制度文件撰写专家 | `legal/legal-policy-writer.md` |
 
-## 📢 营销部 (43)
+## 📢 营销部 (44)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -204,6 +204,7 @@
 | 播客内容策略师 | `marketing/marketing-podcast-strategist.md` |
 | 私域流量运营师 | `marketing/marketing-private-domain-operator.md` |
 | Reddit 社区运营 | `marketing/marketing-reddit-community-builder.md` |
+| 开发者社区建设专家 | `marketing/marketing-developer-community-builder.md` |
 | SEO 与自然搜索增长专家 | `marketing/marketing-seo-specialist.md` |
 | 搜索增长编排器 | `marketing/marketing-search-growth-orchestrator.md` |
 | 短视频剪辑指导师 | `marketing/marketing-short-video-editing-coach.md` |
@@ -231,13 +232,14 @@
 | 搜索词分析师 | `paid-media/paid-media-search-query-analyst.md` |
 | 追踪与归因专家 | `paid-media/paid-media-tracking-specialist.md` |
 
-## 📦 产品部 (5)
+## 📦 产品部 (6)
 
 | 中文名 | 文件路径 |
 |--------|----------|
 | 行为助推引擎 | `product/product-behavioral-nudge-engine.md` |
 | 反馈分析师 | `product/product-feedback-synthesizer.md` |
 | 产品经理 | `product/product-manager.md` |
+| DX 工程师 | `product/product-dx-engineer.md` |
 | Sprint 排序师 | `product/product-sprint-prioritizer.md` |
 | 趋势研究员 | `product/product-trend-researcher.md` |
 
