@@ -23,6 +23,7 @@
 - 第六批完整翻译国际化工程师、知识图谱工程师、搜索相关性工程师三个角色，原文同样固定于 `652b269`。本地规模更新为 295（翻译 229 / 原创 66）；工程部 57。
 - 第七批完整翻译 LLM 后训练工程师、实时协作工程师、WebAssembly 工程师三个角色，原文同样固定于 `652b269`。本地规模更新为 298（翻译 232 / 原创 66）；工程部 60。
 - 第八批完整翻译视频流媒体工程师、移动端发布工程师、数据可视化工程师三个角色，原文同样固定于 `652b269`。本地规模更新为 301（翻译 235 / 原创 66）；工程部 63。
+- 第九批（2026-10-18）完整翻译 IoT 设备群工程师、Rust 重构专家、PDF 引擎架构师三个角色，原文同样固定于 `652b269`。IoT 设备群工程师侧重已上线设备群的运维，与本地原创的 IoT 方案架构师（整体方案设计）分工不同。本地规模更新为 304（翻译 238 / 原创 66）；工程部 66。
 
 ## 后续优先级
 
@@ -30,7 +31,7 @@
 
 本批 4 个角色已通过 AO 现有 `dist/cli/install.js` 收集器识别；工程部 Cursor dry-run 返回 47 个且未写入配置。角色库自身计数与 Cursor 转换均为 283 个。
 
-AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，尚未发版）：说明文档按完整文件名匹配，跳过隐藏文件与隐藏目录，并新增安全分类与 dry-run 回归用例。7 项安装器测试与测试类型检查通过；修复版扫描本库识别 301 个角色，包含全部 12 个安全角色。
+AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，尚未发版）：说明文档按完整文件名匹配，跳过隐藏文件与隐藏目录，并新增安全分类与 dry-run 回归用例。7 项安装器测试与测试类型检查通过；修复版扫描本库识别 304 个角色，包含全部 12 个安全角色。
 
 修复前，AO 收集器排除文件的正则是 `/^(README|CONTRIBUTING|LICENSE|SECURITY)/i`，会误伤全部 `security-*` 角色，且未跳过全部隐藏目录。已发布的 App / npm 包在 AO 下次发版前仍是旧行为。README 生态表中 AO 的"276 专家"待 AO 发版后再更新。
 
@@ -53,10 +54,7 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 - `engineering/engineering-ats-validator-architect.md`
 - `engineering/engineering-drupal-performance.md`
 - `engineering/engineering-gaussdb-expert.md`
-- `engineering/engineering-iot-fleet-engineer.md`
 - `engineering/engineering-network-engineer.md`
-- `engineering/engineering-pdf-engine-architect.md`
-- `engineering/engineering-rust-refactoring-specialist.md`
 - `engineering/engineering-section-508-specialist.md`
 - `engineering/engineering-servicenow-developer-mentor.md`
 - `engineering/engineering-universal-document-compiler.md`

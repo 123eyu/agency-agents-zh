@@ -31,7 +31,7 @@
 | 视觉叙事师 | `design/design-visual-storyteller.md` |
 | 趣味注入师 | `design/design-whimsy-injector.md` |
 
-## 🛠️ 工程部 (63)
+## 🛠️ 工程部 (66)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -60,6 +60,9 @@
 | 视频流媒体工程师 | `engineering/engineering-video-streaming-engineer.md` |
 | 移动端发布工程师 | `engineering/engineering-mobile-release-engineer.md` |
 | 数据可视化工程师 | `engineering/engineering-data-visualization-engineer.md` |
+| IoT 设备群工程师 | `engineering/engineering-iot-fleet-engineer.md` |
+| Rust 重构专家 | `engineering/engineering-rust-refactoring-specialist.md` |
+| PDF 引擎架构师 | `engineering/engineering-pdf-engine-architect.md` |
 | 后端架构师 | `engineering/engineering-backend-architect.md` |
 | CMS 开发者 | `engineering/engineering-cms-developer.md` |
 | 代码库入职引导工程师 | `engineering/engineering-codebase-onboarding-engineer.md` |
