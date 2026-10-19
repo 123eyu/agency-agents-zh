@@ -83,4 +83,13 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 - `marketing-private-domain-operator`：首次互动数改为按用户去重计数
 - `engineering-solidity-smart-contract-engineer`：链差异列表补上 XDC
 
-待同步（25 个）：`design-inclusive-visuals-specialist`、`design-ux-architect`、`design-whimsy-injector`、`engineering-autonomous-optimization-architect`、`engineering-backend-architect`、`engineering-data-engineer`、`engineering-database-optimizer`、`engineering-devops-automator`、`engineering-email-intelligence-engineer`、`engineering-embedded-firmware-engineer`、`engineering-feishu-integration-developer`、`engineering-git-workflow-master`、`engineering-prompt-engineer`、`engineering-rapid-prototyper`、`engineering-voice-ai-integration-engineer`、`engineering-wechat-mini-program-developer`、`blender-addon-engineer`、`unreal-multiplayer-architect`、`unreal-systems-engineer`、`marketing-agentic-search-optimizer`、`marketing-ai-citation-strategist`、`marketing-carousel-growth-engine`、`marketing-seo-specialist`、`product-behavioral-nudge-engine`、`project-management-jira-workflow-steward`。其中部分本地译文可能晚于上游改动、已包含新内容，需逐个核对后再改。
+- `design-inclusive-visuals-specialist`：视频提示词改用传入的参数，并新增"保留传入身份、不推断敏感属性"的约束
+- `product-behavioral-nudge-engine`：没有待办时直接返回 null
+- `project-management-jira-workflow-steward`：提交钩子接受 `codex/` 分支前缀，并在去掉前缀后校验
+- `engineering-rapid-prototyper`：A/B 测试 Hook 不再因内联数组每次渲染都重新分组，并拒绝空变体列表
+- `engineering-prompt-engineer`：少样本示例做 XML 转义，并说明转义不能防御提示词注入
+- `engineering-feishu-integration-developer`：OAuth 回调严格校验 code/state 并在首个 await 前消费 state
+- `engineering-wechat-mini-program-developer`（本地原创版本）：错误响应不是 JSON 时不再抛错导致 Promise 挂起；另外为本地独有的 401 刷新分支补上失败处理
+- `marketing-ai-citation-strategist`：上游只调整了标题层级，本地已整体重写为 v2，无需同步
+
+待同步（17 个）：`design-ux-architect`、`design-whimsy-injector`、`engineering-autonomous-optimization-architect`、`engineering-backend-architect`、`engineering-data-engineer`、`engineering-database-optimizer`、`engineering-devops-automator`、`engineering-email-intelligence-engineer`、`engineering-embedded-firmware-engineer`、`engineering-git-workflow-master`、`engineering-voice-ai-integration-engineer`、`blender-addon-engineer`、`unreal-multiplayer-architect`、`unreal-systems-engineer`、`marketing-agentic-search-optimizer`、`marketing-carousel-growth-engine`、`marketing-seo-specialist`。其中部分本地译文可能晚于上游改动、已包含新内容，需逐个核对后再改。
