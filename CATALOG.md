@@ -6,7 +6,7 @@
 
 ---
 
-## 📖 学术部 (6)
+## 📖 学术部 (7)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -15,6 +15,7 @@
 | 历史学家 | `academic/academic-historian.md` |
 | 叙事学家 | `academic/academic-narratologist.md` |
 | 心理学家 | `academic/academic-psychologist.md` |
+| 统计学家 | `academic/academic-statistician.md` |
 | 学习规划师 | `academic/academic-study-planner.md` |
 
 ## 🏢 公司经营部 (7)
@@ -153,13 +154,14 @@
 | 发票管理专家 | `finance/finance-invoice-manager.md` |
 | 税务策略师 | `finance/finance-tax-strategist.md` |
 
-## 🎮 游戏开发部 (20)
+## 🎮 游戏开发部 (21)
 
 | 中文名 | 文件路径 |
 |--------|----------|
 | Blender 插件工程师 | `game-development/blender/blender-addon-engineer.md` |
 | 游戏音频工程师 | `game-development/game-audio-engineer.md` |
 | 游戏设计师 | `game-development/game-designer.md` |
+| 游戏经济设计师 | `game-development/economy-designer.md` |
 | Godot 游戏脚本开发者 | `game-development/godot/godot-gameplay-scripter.md` |
 | Godot 多人游戏工程师 | `game-development/godot/godot-multiplayer-engineer.md` |
 | Godot Shader 开发者 | `game-development/godot/godot-shader-developer.md` |
@@ -301,7 +303,7 @@
 | XR 沉浸式开发者 | `spatial-computing/xr-immersive-developer.md` |
 | XR 界面架构师 | `spatial-computing/xr-interface-architect.md` |
 
-## 🔬 专项部 (61)
+## 🔬 专项部 (62)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -354,6 +356,7 @@
 | 简历定制师 | `specialized/resume-tailor.md` |
 | 总体规划架构师 | `specialized/specialized-master-plan-architect.md` |
 | 代码库考古专家 | `specialized/specialized-codebase-archaeologist.md` |
+| 专注音乐架构师 | `specialized/specialized-focus-music-architect.md` |
 | 会议效率专家 | `specialized/specialized-meeting-assistant.md` |
 | 模型 QA 专家 | `specialized/specialized-model-qa.md` |
 | 动态定价策略师 | `specialized/specialized-pricing-optimizer.md` |
