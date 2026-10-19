@@ -301,7 +301,7 @@
 | XR 沉浸式开发者 | `spatial-computing/xr-immersive-developer.md` |
 | XR 界面架构师 | `spatial-computing/xr-interface-architect.md` |
 
-## 🔬 专项部 (58)
+## 🔬 专项部 (61)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -351,6 +351,9 @@
 | 法国咨询市场专家 | `specialized/specialized-french-consulting-market.md` |
 | 韩国商务专家 | `specialized/specialized-korean-business-navigator.md` |
 | MCP 构建器 | `specialized/specialized-mcp-builder.md` |
+| 简历定制师 | `specialized/resume-tailor.md` |
+| 总体规划架构师 | `specialized/specialized-master-plan-architect.md` |
+| 代码库考古专家 | `specialized/specialized-codebase-archaeologist.md` |
 | 会议效率专家 | `specialized/specialized-meeting-assistant.md` |
 | 模型 QA 专家 | `specialized/specialized-model-qa.md` |
 | 动态定价策略师 | `specialized/specialized-pricing-optimizer.md` |

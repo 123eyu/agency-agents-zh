@@ -30,6 +30,7 @@
 - 第十三批完整翻译 Drupal 性能工程师和研究综合专家，原文同样固定于 `652b269`；新建 `research/` 部门，并同步转换、安装、lint、发布文件列表和 CI 触发范围。同时修正 Windows 版 `install.ps1`、`convert.ps1` 部门列表遗漏 `gis` 与 `security` 的问题（修复前 Windows 安装少 25 个角色）。本地规模更新为 314（翻译 248 / 原创 66），部门 21 个；工程部 72、研究部 1。
 - 第十四批完整翻译 healthcare 部门三个角色（临床证据专家、医疗创新战略师、主权卫生体系专家），原文同样固定于 `652b269`；新建 `healthcare/` 部门并同步转换、安装、lint、发布文件列表和 CI 触发范围。三个角色开头注明海外监管语境的适用范围，并指向本地原创的医疗健康营销合规师。本地规模更新为 317（翻译 251 / 原创 66），部门 22 个；医疗健康部 3。
 - 第十五批完整翻译 Section 508 无障碍专家、ServiceNow 开发导师、USWDS 开发工程师三个角色，原文同样固定于 `652b269`；两个美国联邦专属角色开头注明适用范围。本地规模更新为 320（翻译 254 / 原创 66）；工程部 75。至此本报告列出的路径候选已全部翻译完成。
+- 第十六批完整翻译全量比对新发现的简历定制师、总体规划架构师、代码库考古专家三个角色（前两者是 ATS 校验架构师的协作对象），原文同样固定于 `652b269`。本地规模更新为 323（翻译 257 / 原创 66）；专项部 61。
 
 ## 后续优先级
 
@@ -37,7 +38,7 @@
 
 本批 4 个角色已通过 AO 现有 `dist/cli/install.js` 收集器识别；工程部 Cursor dry-run 返回 47 个且未写入配置。角色库自身计数与 Cursor 转换均为 283 个。
 
-AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，尚未发版）：说明文档按完整文件名匹配，跳过隐藏文件与隐藏目录，并新增安全分类与 dry-run 回归用例。7 项安装器测试与测试类型检查通过；修复版扫描本库识别 320 个角色，包含全部 12 个安全角色。
+AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，尚未发版）：说明文档按完整文件名匹配，跳过隐藏文件与隐藏目录，并新增安全分类与 dry-run 回归用例。7 项安装器测试与测试类型检查通过；修复版扫描本库识别 323 个角色，包含全部 12 个安全角色。
 
 修复前，AO 收集器排除文件的正则是 `/^(README|CONTRIBUTING|LICENSE|SECURITY)/i`，会误伤全部 `security-*` 角色，且未跳过全部隐藏目录。已发布的 App / npm 包在 AO 下次发版前仍是旧行为。README 生态表中 AO 的"276 专家"待 AO 发版后再更新。
 
@@ -58,16 +59,13 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 
 ### 2026-10-19 全量文件树比对（固定 commit `652b269`）
 
-通过 GitHub API 获取上游 `652b269` 的完整文件树（未截断），逐个比对角色路径。上游 282 个角色路径中，本地缺少同路径文件的有 15 个：其中 5 个已在 UPSTREAM.md 记录为路径映射，`specialized/chief-financial-officer.md`、`specialized/specialized-chief-of-staff.md` 已迁移到本地 `company/`。真正缺失的有 8 个（此前的 README 摘录未覆盖到）：
+通过 GitHub API 获取上游 `652b269` 的完整文件树（未截断），逐个比对角色路径。上游 282 个角色路径中，本地缺少同路径文件的有 15 个：其中 5 个已在 UPSTREAM.md 记录为路径映射，`specialized/chief-financial-officer.md`、`specialized/specialized-chief-of-staff.md` 已迁移到本地 `company/`。真正缺失的有 8 个（此前的 README 摘录未覆盖到），已翻译的条目已从下表移除：
 
 - `academic/academic-statistician.md`
 - `game-development/economy-designer.md`
 - `specialized/healthcare-aging-parent-care-companion.md`
-- `specialized/resume-tailor.md`
-- `specialized/specialized-codebase-archaeologist.md`
 - `specialized/specialized-fedramp-rmf-compliance.md`
 - `specialized/specialized-focus-music-architect.md`
-- `specialized/specialized-master-plan-architect.md`
 
 反向比对：本地标为"翻译"的 254 个角色中，有 3 个在上游 `652b269` 中已找不到同名文件，需确认上游是否已删除或改名，再决定保留、改标原创或去重：
 
