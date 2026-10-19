@@ -325,7 +325,7 @@ cp -r marketing/*.md ~/.claude/agents/
 | [IoT 方案架構師](engineering/engineering-iot-solution-architect.md) ⭐ | MQTT/CoAP、邊緣計算、裝置管理、雲平臺 | 物聯網端到端方案設計 |
 | [國內網路工程師](engineering/engineering-network-engineer-china.md) ⭐ | 華為 VRP/華三 Comware/銳捷、VLAN/OSPF/BGP/VXLAN、信創國產化、等保組網 | 國產裝置園區網/資料中心/廣域網 |
 | [故障響應指揮官](engineering/engineering-incident-response-commander.md) | 故障處置、SLO 管理、事後覆盤 | 線上故障、應急響應 |
-| [威脅檢測工程師](engineering/engineering-threat-detection-engineer.md) | SIEM、威脅狩獵、檢測規則 | 安全運營、威脅檢測 |
+| [威脅檢測工程師（工程側）](engineering/engineering-threat-detection-engineer.md) | SIEM、威脅狩獵、檢測規則 | 安全運營、威脅檢測 |
 | [Solidity 智慧合約工程師](engineering/engineering-solidity-smart-contract-engineer.md) | Solidity、EVM、Gas 最佳化、DeFi | 智慧合約開發、Web3 |
 | [微信小程式開發者](engineering/engineering-wechat-mini-program-developer.md) ⭐ | WXML/WXSS、微信支付、雲開發 | 微信小程式全棧開發 |
 | [程式碼審查員](engineering/engineering-code-reviewer.md) | 程式碼審查、安全審計、質量把關 | PR 審查、程式碼質量 |
@@ -339,6 +339,15 @@ cp -r marketing/*.md ~/.claude/agents/
 | [CMS 開發者](engineering/engineering-cms-developer.md) | Drupal/WordPress、主題開發、自定義外掛 | CMS 站點開發與內容架構 |
 | [郵件智慧工程師](engineering/engineering-email-intelligence-engineer.md) | 郵件解析、結構化提取、AI 推理資料 | 智能體郵件整合 |
 | [Filament 最佳化專家](engineering/engineering-filament-optimization-specialist.md) | Filament PHP 後臺重構、高影響力改造 | PHP 後臺管理最佳化 |
+| [程式碼庫入職引導工程師](engineering/engineering-codebase-onboarding-engineer.md) | 讀原始碼、追蹤呼叫路徑、只講程式碼事實 | 新人上手陌生程式碼庫 |
+| [最小變更工程師](engineering/engineering-minimal-change-engineer.md) | 最小可行差異、拒絕範圍蔓延 | Bug 修復、需要小而穩的 PR |
+| [多智能體系統架構師](engineering/engineering-multi-agent-systems-architect.md) | 多智能體拓撲、上下文管理、人工審核關卡 | 生產級多智能體系統設計 |
+| [Prompt 工程師](engineering/engineering-prompt-engineer.md) | 提示詞打磨、測試與系統化最佳化 | 把 AI 功能做到可上線 |
+| [語音 AI 整合工程師](engineering/engineering-voice-ai-integration-engineer.md) | Whisper、雲端 ASR、說話人分離、字幕生成 | 影音轉錄與字幕流水線 |
+| [IT 服務經理](engineering/engineering-it-service-manager.md) | ITIL 4、事件/問題/變更管理、SLA、CMDB | 企業 IT 服務管理 |
+| [OrgScript 工程師](engineering/engineering-orgscript-engineer.md) | OrgScript 語法、解析器、AST 校驗 | 用 OrgScript 定義業務邏輯 |
+| [WordPress 購物車工程師](engineering/engineering-wordpress-shopping-cart.md) | WooCommerce、支付閘道、checkout 定製 | WordPress 電商店鋪搭建 |
+| [Drupal 購物車工程師](engineering/engineering-drupal-shopping-cart.md) | Drupal Commerce、支付閘道、checkout 流程 | Drupal 電商店鋪搭建 |
 
 ### 🎨 設計部
 
@@ -356,6 +365,7 @@ cp -r marketing/*.md ~/.claude/agents/
 | [趣味注入師](design/design-whimsy-injector.md) | 微互動、彩蛋、趣味元素 | 產品細節體驗提升 |
 | [UI 收尾審查員](design/design-ui-finish-gate-reviewer.md) | 設計契約、收尾關卡、反千篇一律 | 介面上線前審查 |
 | [包容性視覺專家](design/design-inclusive-visuals-specialist.md) | 多元化視覺、無障礙設計 | 包容性設計、全球化視覺 |
+| [Persona 走查專家](design/design-persona-walkthrough.md) | 畫像視角認知走查、LIFT/Cialdini/Fogg 框架 | 落地頁轉化診斷、CRO 報告 |
 
 ### 📢 營銷部
 
@@ -386,6 +396,13 @@ cp -r marketing/*.md ~/.claude/agents/
 | [知乎策略師](marketing/marketing-zhihu-strategist.md) | 知識型內容、思想領袖建設 | 知乎品牌權威 |
 | [中國市場本地化策略師](marketing/marketing-china-market-localization-strategist.md) ⭐ | 抖音/小紅書/微信/B站全棧本地化 | 中國市場進入策略 |
 | [新聞情報官](marketing/marketing-daily-news-briefing.md) ⭐ | 國內外多源新聞採集、交叉驗證、結構化簡報 | 內容生產線上遊素材供應 |
+| [AEO 基礎架構師](marketing/marketing-aeo-foundations.md) | AI 爬蟲訪問、robots.txt、索引與渲染可訪問性 | 讓 AI 搜尋能抓取和理解你的網站 |
+| [智能搜尋最佳化師](marketing/marketing-agentic-search-optimizer.md) | WebMCP、智能體任務完成率 | 讓 AI 智能體能在網站上完成預約、購買 |
+| [郵件營銷策略師](marketing/marketing-email-strategist.md) | 生命週期自動化、分群、可送達性 | 郵件營銷序列設計 |
+| [PR 與傳播經理](marketing/marketing-pr-communications-manager.md) | 媒體關係、新聞稿、危機傳播 | 品牌聲譽管理與公關活動 |
+| [全球播客策略師](marketing/marketing-global-podcast-strategist.md) | 節目定位、受眾增長、變現 | Spotify/Apple Podcasts/YouTube 播客運營 |
+| [X/Twitter 情報分析師](marketing/marketing-x-twitter-intelligence-analyst.md) | X/Twitter 調研、趨勢識別、帳號監測 | 海外社媒輿情與受眾洞察 |
+| [多平台發布編排官](marketing/marketing-multi-platform-publisher.md) | Wechatsync 多平台分發、草稿優先 | 一篇文章同步發到知乎/小紅書/公眾號等 |
 
 > ⭐ 標記的是本專案原創，更貼合國內實操。其餘為上游英文版翻譯。
 
@@ -445,6 +462,7 @@ cp -r marketing/*.md ~/.claude/agents/
 | [Outbound 策略師](sales/sales-outbound-strategist.md) | 外呼策略、Cold outreach | 新客戶開拓 |
 | [Pipeline 分析師](sales/sales-pipeline-analyst.md) | 銷售漏斗、預測分析 | 銷售資料分析、預測 |
 | [投標策略師](sales/sales-proposal-strategist.md) | 投標方案、提案撰寫 | 招投標、方案競標 |
+| [Offer 與 Lead Gen 策略師](sales/sales-offer-lead-gen-strategist.md) | Offer 設計、lead magnet、多渠道獲客 | 漏斗頂端獲客策略 |
 
 ### 🏦 金融部
 
@@ -455,6 +473,12 @@ cp -r marketing/*.md ~/.claude/agents/
 | [財務預測分析師](finance/finance-financial-forecaster.md) ⭐ | 收入預測、場景建模、現金流 | SaaS 財務規劃、融資對接 |
 | [發票管理專家](finance/finance-invoice-manager.md) ⭐ | 增值稅發票、金稅系統、三單匹配 | 發票全生命週期管理 |
 | [金融風控分析師](finance/finance-fraud-detector.md) ⭐ | 交易風控、反洗錢、電信詐騙 | 支付風控、合規審查 |
+| [簿記與財務總監](finance/finance-bookkeeper-controller.md) | 日常記帳、對帳、月末結帳、內控 | 帳務規範與審計準備 |
+| [財務分析師](finance/finance-financial-analyst.md) | 財務建模、估值、報表分析 | 經營分析與投資決策支援 |
+| [FP&A 分析師](finance/finance-fpa-analyst.md) | 預算編制、滾動預測、差異分析 | 年度預算與經營績效跟蹤 |
+| [投資研究員](finance/finance-investment-researcher.md) | 行業研究、盡職調查、估值 | 投資研究與組合分析 |
+| [稅務策略師](finance/finance-tax-strategist.md) | 稅務籌劃、跨境稅務結構、轉讓定價 | 企業稅務規劃與合規 |
+| [香港股市合規審查專家](finance/finance-hk-stock-compliance-reviewer.md) ⭐ | HKEX 上市規則、SFC 監管、關聯交易 | 港股上市與持續合規審查 |
 
 ### 👔 人力資源部
 
@@ -484,6 +508,7 @@ cp -r marketing/*.md ~/.claude/agents/
 | [供應商評估專家](supply-chain/supply-chain-vendor-evaluator.md) ⭐ | 1688供應商、驗廠、國標質檢 | 供應商准入與分級管理 |
 | [物流路線最佳化師](supply-chain/supply-chain-route-optimizer.md) ⭐ | 順豐/通達系、冷鏈、跨境物流 | 物流成本最佳化與路線規劃 |
 | [供應鏈採購策略師](supply-chain/supply-chain-strategist.md) ⭐ | 1688採購、質檢、供應商管理、ERP | 供應鏈與採購管理 |
+| [服裝工廠規劃工程師](supply-chain/supply-chain-garment-factory-planning-engineer.md) ⭐ | 牛仔/羽絨服/針織產線設計、產能測算、多國合規 | 服裝工廠新建與產線規劃 |
 
 ### 📦 產品部
 
@@ -510,6 +535,7 @@ cp -r marketing/*.md ~/.claude/agents/
 | [工作室製片人](project-management/project-management-studio-producer.md) | 創意專案管理、資源排程 | 內容/創意專案 |
 | [工作室運營](project-management/project-management-studio-operations.md) | 工作室日常運營管理 | 團隊運營效率 |
 | [Jira 工作流管家](project-management/project-management-jira-workflow-steward.md) | Jira 配置、工作流最佳化 | Jira 專案管理 |
+| [會議紀要專家](project-management/project-management-meeting-notes-specialist.md) | 決議、待辦、待解決問題提取 | 把會議記錄整理成紀要 |
 
 ### 🧪 測試部
 
@@ -555,16 +581,12 @@ cp -r marketing/*.md ~/.claude/agents/
 | [LSP 索引工程師](specialized/lsp-index-engineer.md) | 程式碼智慧、語義索引 | 程式碼導航、IDE 整合 |
 | [報告分發師](specialized/report-distribution-agent.md) | 報告分發、多渠道推送 | 自動化報告分發 |
 | [銷售資料提取師](specialized/sales-data-extraction-agent.md) | 銷售資料採集、結構化 | CRM 資料處理 |
-| [合規審計師](security/security-compliance-auditor.md) | SOC 2/ISO 27001/HIPAA 合規 | 合規審計、安全認證 |
 | [應付賬款智能體](specialized/accounts-payable-agent.md) | 發票處理、付款自動化 | 財務流程自動化 |
 | [身份圖譜操作員](specialized/identity-graph-operator.md) | 身份解析、多源匹配 | 使用者身份治理 |
 | [文化智慧策略師](specialized/specialized-cultural-intelligence-strategist.md) | 文化洞察、跨文化設計 | 全球化產品、本地化策略 |
 | [開發者佈道師](specialized/specialized-developer-advocate.md) | 開發者關係、DX 工程 | 開發者社群、技術推廣 |
 | [模型 QA 專家](specialized/specialized-model-qa.md) | ML 模型審計、質量驗證 | 模型上線前檢查 |
 | [ZK 管家](specialized/zk-steward.md) | Zettelkasten 知識管理 | 知識庫構建、筆記系統 |
-| [區塊鏈安全審計師](security/security-blockchain-security-auditor.md) | 智慧合約審計、漏洞檢測 | 合約安全、DeFi 審計 |
-| [AI 生成程式碼安全審計師](security/security-ai-generated-code-auditor.md) | 硬編碼金鑰、Supabase RLS、提示詞注入 | vibe coding 應用上線前安全審查 |
-| [金鑰與憑證治理工程師](security/security-secrets-credential-engineer.md) | 金鑰掃描、Vault 託管、動態憑證、洩露回應 | 金鑰治理、憑證輪換 |
 | [留學規劃顧問](specialized/study-abroad-advisor.md) ⭐ | 多國申請策略、選校定位 | 留學規劃、文書指導 |
 | [政務數字化售前顧問](specialized/government-digital-presales-consultant.md) ⭐ | 方案設計、標書、等保/信創 | 政務ToG專案售前 |
 | [企業培訓課程設計師](specialized/corporate-training-designer.md) ⭐ | ADDIE/SAM、企業學習平臺、TTT | 培訓體系搭建與課程開發 |
@@ -590,6 +612,71 @@ cp -r marketing/*.md ~/.claude/agents/
 | [韓國商務專家](specialized/specialized-korean-business-navigator.md) | 품의流程、KakaoTalk 禮儀、層級關係 | 韓國商務文化導航 |
 | [招聘專家](specialized/recruitment-specialist.md) ⭐ | 國內招聘平臺、人才評估、勞動法合規 | 招聘運營與僱主品牌 |
 | [技術翻譯專家](specialized/technical-translator-agent.md) ⭐ | 中英文雙向翻譯、程式設計/AI/雲計算術語 | 技術文件翻譯 |
+| [商業戰略家](specialized/business-strategist.md) | 競爭分析、市場進入、商業模式設計 | 戰略規劃與重大業務決策 |
+| [運營經理](specialized/operations-manager.md) | 精益/六西格瑪、產能規劃、KPI 治理 | 業務運營流程最佳化 |
+| [變革管理顧問](specialized/change-management-consultant.md) | ADKAR、Kotter、Prosci | 組織變革、新系統落地 |
+| [M&A 整合經理](specialized/ma-integration-manager.md) | Day 1 就緒、百日計劃、協同效應追蹤 | 併購後整合 |
+| [組織心理學家](specialized/organizational-psychologist.md) | 團隊動力、心理安全、倦怠風險 | 團隊診斷與組織文化建設 |
+| [客戶成功經理](specialized/customer-success-manager.md) | 新客導入、健康度評分、續約與擴張 | SaaS 客戶留存與增購 |
+| [定價分析師](specialized/specialized-pricing-analyst.md) | 競品定價、成本結構、利潤率最佳化 | 產品定價模型 |
+| [策略對決推演師](specialized/specialized-strategy-duel-agent.md) | 博弈論、三十六計 | 競爭對抗推演 |
+| [資料隱私官](specialized/data-privacy-officer.md) | GDPR/CCPA、隱私影響評估、同意管理 | 海外隱私合規體系建設 |
+| [ESG 與可持續發展官](specialized/esg-sustainability-officer.md) | ESG 披露、脫碳路徑、利益相關方溝通 | 可持續發展戰略與 ESG 報告 |
+| [資助申請撰稿人](specialized/grant-writer.md) | 資助方調研、申請書撰寫、預算說明 | 基金會與科研專案資助申請 |
+| [HR 入職管理專家](specialized/hr-onboarding.md) | 入職文件、合規追蹤、文化融入 | 新員工入職全流程 |
+| [律所客戶接案專家](specialized/legal-client-intake.md) | 資質審核、利益衝突篩查、接案摘要 | 律所新案件接待 |
+| [法律文書審查專家](specialized/legal-document-review.md) | 合同摘要、風險條款標記、版本比對 | 合同與法律文件審查 |
+| [律所計費與工時專家](specialized/legal-billing-time-tracking.md) | 工時記錄、帳單生成、信託帳戶合規 | 律所計費與收款 |
+| [信貸經理助手](specialized/loan-officer-assistant.md) | 借款人資格預審、文件收集、合規追蹤 | 住宅、商業與消費信貸辦理 |
+| [房地產經紀助手](specialized/real-estate-buyer-seller.md) | 買賣方代理、報價談判、過戶協調 | 房產買賣交易支援 |
+| [醫療帳單與編碼專員](specialized/medical-billing-coding-specialist.md) | ICD-10/CPT 編碼、理賠提交、拒付管理 | 美國醫療機構收入週期管理 |
+| [醫療客服專家](specialized/healthcare-customer-service.md) | 預約、保險、帳單與投訴處理 | 醫療機構患者服務 |
+| [酒店賓客服務專家](specialized/hospitality-guest-services.md) | 預訂、禮賓、投訴處理、會員計劃 | 酒店與餐飲賓客服務 |
+| [零售退貨專家](specialized/retail-customer-returns.md) | 退換貨、防欺詐、客戶挽留 | 零售與電商售後 |
+| [語言翻譯專家](specialized/language-translator.md) | 西英互譯、方言與文化語境 | 西班牙語旅行與商務溝通 |
+| [個人成長導師](specialized/personal-growth-mentor.md) | 目標釐清、習慣設計、責任督促 | 個人成長規劃 |
+| [旅行規劃師](specialized/travel-planner.md) ⭐ | 逐日行程、交通住宿、簽證與預算 | 國內外旅行行程規劃 |
+| [鑑定評估師](specialized/authenticity-appraiser.md) ⭐ | 真偽要點、行情估值、交易避坑 | 二手與收藏品交易前的鑑定參考 |
+| [養殖檔案核對員](specialized/livestock-archive-auditor.md) ⭐ | 養殖檔案 Excel 核對、FIFO 批號複核 | 畜禽養殖檔案自查與整改 |
+
+### 🛡️ 安全部
+
+守住程式碼、雲和資料的每一道防線。
+
+| 智能體 | 專長 | 適用場景 |
+|--------|------|----------|
+| [安全架構師](security/security-architect.md) | 威脅建模、信任邊界、縱深防禦 | 系統安全架構設計與評審 |
+| [應用安全工程師](security/security-appsec-engineer.md) | 威脅建模、安全程式碼審查、SAST/DAST | 把安全融入研發流程 |
+| [雲安全架構師](security/security-cloud-security-architect.md) | 零信任、AWS/Azure/GCP 安全、IaC 安全 | 雲原生安全架構 |
+| [高階安全運營工程師](security/security-senior-secops.md) | 提交級金鑰掃描、認證授權、安全頭與限流 | 應用安全控制實施與審計 |
+| [滲透測試員](security/security-penetration-tester.md) | 授權滲透測試、紅隊行動、漏洞評估 | 上線前與定期的攻防測試 |
+| [威脅檢測工程師（安全運營）](security/security-threat-detection-engineer.md) | SIEM 規則、MITRE ATT&CK 覆蓋、檢測即程式碼 | 安全運營檢測體系建設 |
+| [威脅情報分析師](security/security-threat-intelligence-analyst.md) | 對手追蹤、ATT&CK 對映、情報報告 | 威脅情報研判與檢測規則 |
+| [事件響應專家](security/security-incident-responder.md) | 數位鑑識、威脅遏制、事後復盤 | 資料洩露與安全事件處置 |
+| [合規審計師](security/security-compliance-auditor.md) | SOC 2/ISO 27001/HIPAA 合規 | 合規審計、安全認證 |
+| [區塊鏈安全審計師](security/security-blockchain-security-auditor.md) | 智慧合約審計、漏洞檢測 | 合約安全、DeFi 審計 |
+| [AI 生成程式碼安全審計師](security/security-ai-generated-code-auditor.md) | 硬編碼金鑰、Supabase RLS、提示詞注入 | vibe coding 應用上線前安全審查 |
+| [金鑰與憑證治理工程師](security/security-secrets-credential-engineer.md) | 金鑰掃描、Vault 託管、動態憑證、洩露回應 | 金鑰治理、憑證輪換 |
+
+### 🗺️ GIS 部
+
+地理資訊系統全棧團隊：從製圖、空間分析到 Web GIS 與三維視覺化。
+
+| 智能體 | 專長 | 適用場景 |
+|--------|------|----------|
+| [GIS 分析師](gis/gis-analyst.md) | 製圖、圖層管理、空間查詢 | 日常 GIS 作業與資料維護 |
+| [地圖製圖設計師](gis/gis-cartography-designer.md) | 配色、字型排印、標註佈局、視覺層次 | 印刷與 Web 地圖設計 |
+| [空間資料工程師](gis/gis-spatial-data-engineer.md) | 格式轉換、重投影、屬性歸一化、ETL 管線 | 多源空間資料清洗入庫 |
+| [空間資料科學家](gis/gis-spatial-data-scientist.md) | 空間統計、空間計量、聚類與預測 | 選址分析、空間規律挖掘 |
+| [地理處理專家](gis/gis-geoprocessing-specialist.md) | ArcPy、.pyt 工具箱、Model Builder | ArcGIS Pro 工作流自動化 |
+| [GIS 質檢工程師](gis/gis-qa-engineer.md) | 拓撲檢查、元資料審計、座標系一致性、精度評估 | 空間資料質檢與驗收 |
+| [Web GIS 開發工程師](gis/gis-web-gis-developer.md) | MapLibre、ArcGIS JS API、Leaflet、即時儀表板 | 互動式 Web 地圖應用 |
+| [三維場景開發者](gis/gis-3d-scene-developer.md) | Cesium、ArcGIS 三維場景、點雲與地形 | 三維 Web 場景與數位孿生展示 |
+| [GeoAI/ML 工程師](gis/gis-geoai-ml-engineer.md) | 遙感影像目標檢測、分割、地表覆蓋分類 | 衛星與航拍影像智慧解譯 |
+| [無人機實景測繪專家](gis/gis-drone-reality-mapping.md) | 攝影測量、正射影像、點雲、三維網格 | 無人機航測成果生產 |
+| [BIM/GIS 專家](gis/gis-bim-specialist.md) | Revit/IFC 轉換、室內地圖、數位孿生 | BIM 與 GIS 資料打通 |
+| [技術顧問](gis/gis-technical-consultant.md) | 差距分析、技術路線圖、RFP 應答 | GIS 規劃與數位轉型諮詢 |
+| [解決方案工程師](gis/gis-solution-engineer.md) | Demo 與 PoC 搭建、Esri 與開源技術棧 | GIS 方案驗證與售前演示 |
 
 ### 🥽 空間計算部
 

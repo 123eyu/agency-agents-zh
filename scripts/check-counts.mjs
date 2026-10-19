@@ -90,6 +90,17 @@ for (const m of catalog.matchAll(/^## (.+?) \((\d+)\)\n([\s\S]*?)(?=^## |(?![\s\
   if (listed !== Number(m[2])) problems.push(`CATALOG.md「${m[1]}」标题写 ${m[2]}，实际列出 ${listed}`);
 }
 
+for (const file of ["README.md", "README.zh-TW.md"]) {
+  const readme = readFileSync(join(root, file), "utf8");
+  const linked = [...readme.matchAll(/^\| \[[^\]]+\]\(([^)]+\.md)\)/gm)].map((m) => m[1]).filter((p) => agentPaths.has(p));
+  for (const p of agentPaths) {
+    if (!linked.includes(p)) problems.push(`${file} 智能体阵容缺少角色：${p}`);
+  }
+  for (const p of new Set(linked)) {
+    if (linked.indexOf(p) !== linked.lastIndexOf(p)) problems.push(`${file} 智能体阵容重复列出：${p}`);
+  }
+}
+
 if (problems.length) {
   console.error(`❌ 角色计数不一致（实际 ${actual} 个）：`);
   problems.forEach((p) => console.error("   - " + p));
