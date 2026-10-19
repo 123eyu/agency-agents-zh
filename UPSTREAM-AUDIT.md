@@ -75,7 +75,7 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 用 GitHub 比较接口列出上游从历史同步基线 `3f78a30` 到 `652b269` 之间改过的角色文件（433 次提交）。结果：
 - 37 个只有文件属性变化、正文无改动，无需处理。
 - 11 个只把标题 "Role Definition" 改为 "Identity & Role Definition"，中文标题本就另行翻译，不同步：`marketing-content-creator`、`marketing-growth-hacker`、`paid-media-*`（7 个）、`product-feedback-synthesizer`、`product-trend-researcher`。
-- 32 个有实质改动，需要逐个对照中文版同步。
+- 30 个有实质改动，需要逐个对照中文版同步。
 
 已同步：
 - `engineering-incident-response-commander`、`engineering-technical-writer`：外层 markdown 示例改用四个反引号，避免嵌套代码块提前截断
@@ -83,4 +83,4 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 - `marketing-private-domain-operator`：首次互动数改为按用户去重计数
 - `engineering-solidity-smart-contract-engineer`：链差异列表补上 XDC
 
-待同步（27 个）：`design-inclusive-visuals-specialist`、`design-ux-architect`、`design-whimsy-injector`、`engineering-autonomous-optimization-architect`、`engineering-backend-architect`、`engineering-data-engineer`、`engineering-database-optimizer`、`engineering-devops-automator`、`engineering-email-intelligence-engineer`、`engineering-embedded-firmware-engineer`、`engineering-feishu-integration-developer`、`engineering-git-workflow-master`、`engineering-prompt-engineer`、`engineering-rapid-prototyper`、`engineering-voice-ai-integration-engineer`、`engineering-wechat-mini-program-developer`、`blender-addon-engineer`、`unreal-multiplayer-architect`、`unreal-systems-engineer`、`marketing-agentic-search-optimizer`、`marketing-ai-citation-strategist`、`marketing-carousel-growth-engine`、`marketing-seo-specialist`、`product-behavioral-nudge-engine`、`project-management-jira-workflow-steward`。其中部分本地译文可能晚于上游改动、已包含新内容，需逐个核对后再改。
+待同步（25 个）：`design-inclusive-visuals-specialist`、`design-ux-architect`、`design-whimsy-injector`、`engineering-autonomous-optimization-architect`、`engineering-backend-architect`、`engineering-data-engineer`、`engineering-database-optimizer`、`engineering-devops-automator`、`engineering-email-intelligence-engineer`、`engineering-embedded-firmware-engineer`、`engineering-feishu-integration-developer`、`engineering-git-workflow-master`、`engineering-prompt-engineer`、`engineering-rapid-prototyper`、`engineering-voice-ai-integration-engineer`、`engineering-wechat-mini-program-developer`、`blender-addon-engineer`、`unreal-multiplayer-architect`、`unreal-systems-engineer`、`marketing-agentic-search-optimizer`、`marketing-ai-citation-strategist`、`marketing-carousel-growth-engine`、`marketing-seo-specialist`、`product-behavioral-nudge-engine`、`project-management-jira-workflow-steward`。其中部分本地译文可能晚于上游改动、已包含新内容，需逐个核对后再改。
