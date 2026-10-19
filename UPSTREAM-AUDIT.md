@@ -99,4 +99,9 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 - `engineering-git-workflow-master`：新建分支改用 `git switch --no-track`，工作树用法单独成段；强推限定到自己的功能分支
 - `engineering-data-engineer`：Gold 层按显式日期窗口重算并用同一谓词 replaceWhere，补充说明
 
-待同步（11 个）：`design-ux-architect`、`design-whimsy-injector`、`engineering-autonomous-optimization-architect`、`engineering-email-intelligence-engineer`、`engineering-embedded-firmware-engineer`、`engineering-voice-ai-integration-engineer`、`blender-addon-engineer`、`unreal-multiplayer-architect`、`marketing-agentic-search-optimizer`、`marketing-carousel-growth-engine`、`marketing-seo-specialist`。其中部分本地译文可能晚于上游改动、已包含新内容，需逐个核对后再改。
+- `design-whimsy-injector`：动效 CSS 补上 `prefers-reduced-motion` 适配；彩蛋点击改用 `closest()` 判断区域
+- `design-ux-architect`：主题管理器默认跟随系统，存储不可用时不报错，点击事件改用 `closest()` 并校验主题值。上游给交付模板换成四个反引号，本地模板的代码块本就提前收尾，没有嵌套问题，不同步
+- `blender-addon-engineer`：未选中对象时取消验证；检查每个材质槽都已分配材质；导出前强制走验证；重复后缀改用正则判断
+- `engineering-embedded-firmware-engineer`：创建队列和任务失败时正确处理；SPI 示例改为带超时的轮询，并说明超时后的恢复方式
+
+待同步（7 个）：`engineering-autonomous-optimization-architect`、`engineering-email-intelligence-engineer`、`engineering-voice-ai-integration-engineer`、`unreal-multiplayer-architect`、`marketing-agentic-search-optimizer`、`marketing-carousel-growth-engine`、`marketing-seo-specialist`。其中部分本地译文可能晚于上游改动、已包含新内容，需逐个核对后再改。
