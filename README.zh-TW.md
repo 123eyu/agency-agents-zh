@@ -4,7 +4,7 @@
 
 > **328 個即插即用的 AI 專家角色** — 覆蓋公司經營（CEO/CTO/CMO/COO/CPO/CFO）、工程、設計、營銷、產品、遊戲、安全、GIS、金融等 22 個部門。不是通用提示詞模板，每個智能體都有獨立的人設、專業流程和可交付成果。支援 Claude Code / Cursor / Copilot 等 20 種 AI 程式設計工具。
 
-[agency-agents](https://github.com/msitarzewski/agency-agents) 的中文社群版。在已有上游翻譯的基礎上，新增了 66 個中國市場原創智能體（小紅書、抖音、微信、B站、飛書、釘釘等平臺運營，以及跨境電商、政務ToG、醫療合規、Qt 工業上位機、機械設計、畜禽養殖檔案核對等垂直領域）。
+[agency-agents](https://github.com/msitarzewski/agency-agents) 的中文社群版。在已有上游翻譯的基礎上，新增了 67 個中國市場原創智能體（小紅書、抖音、微信、B站、飛書、釘釘等平臺運營，以及跨境電商、政務ToG、醫療合規、Qt 工業上位機、機械設計、畜禽養殖檔案核對等垂直領域）。
 
 想更好地用起來，或想給團隊打造統一的智能體工作臺？[下載桌面客戶端](https://github.com/jnMetaCode/agency-orchestrator/releases/latest)（原生 App，免裝 Node，macOS / Windows / Linux），或線上體驗 [ao.aiolaola.com/experts](https://ao.aiolaola.com/experts)。
 
@@ -20,7 +20,7 @@
 
 | 🤖 AI 智能體 | 🌏 英文版翻譯 | 🇨🇳 中國市場原創 | 🧠 支援工具 | 🏢 部門 |
 |:---:|:---:|:---:|:---:|:---:|
-| **328** | **262** | **66** | **20 種** | **22 個** |
+| **328** | **261** | **67** | **20 種** | **22 個** |
 
 > 📖 **官方配套課程** → [AI 專家團隊實戰](https://aiolaola.com/course/ai-agency?utm_source=github&utm_campaign=agents)（35 節，免費）：手把手把這倉 328 位專家用成一支團隊——單兵點名、自動組隊、一人公司全流程，桌面端零程式碼教學。另有 [從零學會 AI 程式設計](https://aiolaola.com/?utm_source=github&utm_campaign=agents)（182 節）＋ [從零構建 AI 智能體](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=agents)（40 節）（站上共 13 門課、648 節，**全部 ¥0**——另有 AI 繪畫 / 寫小說 / 漫劇 / 量化 / DeepSeek / 深度專注 等）
 >
@@ -589,7 +589,7 @@ cp -r marketing/*.md ~/.claude/agents/
 | [法國諮詢市場專家](specialized/specialized-french-consulting-market.md) | ESN/SI 生態、Malt 平臺、薪資代管 | 法國自由職業市場導航 |
 | [韓國商務專家](specialized/specialized-korean-business-navigator.md) | 품의流程、KakaoTalk 禮儀、層級關係 | 韓國商務文化導航 |
 | [招聘專家](specialized/recruitment-specialist.md) ⭐ | 國內招聘平臺、人才評估、勞動法合規 | 招聘運營與僱主品牌 |
-| [技術翻譯專家](specialized/technical-translator-agent.md) | 中英文雙向翻譯、程式設計/AI/雲計算術語 | 技術文件翻譯 |
+| [技術翻譯專家](specialized/technical-translator-agent.md) ⭐ | 中英文雙向翻譯、程式設計/AI/雲計算術語 | 技術文件翻譯 |
 
 ### 🥽 空間計算部
 
@@ -1125,7 +1125,7 @@ DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool 
 
 ## 🇨🇳 中國市場原創智能體
 
-除翻譯外，本專案包含 **66 個原創智能體**，專為中國平臺和業務場景打造：
+除翻譯外，本專案包含 **67 個原創智能體**，專為中國平臺和業務場景打造：
 
 - **平臺運營**：小紅書、抖音、微信公眾號/影片號/小程式、B站、快手、微博、知乎
 - **企業協作**：飛書、釘釘整合開發
@@ -1191,7 +1191,7 @@ DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool 
 
 | 專案 | 定位 | 一句話 |
 |------|------|-------|
-| **本專案**（agency-agents-zh） ![](https://img.shields.io/github/stars/jnMetaCode/agency-agents-zh?style=flat&label=⭐) | 🎭 專家角色庫 | 328 個**即插即用** AI 專家，含 66 中國原創（小紅書 / 抖音 / 飛書 / 釘釘 / Qt 上位機 / 機械設計） |
+| **本專案**（agency-agents-zh） ![](https://img.shields.io/github/stars/jnMetaCode/agency-agents-zh?style=flat&label=⭐) | 🎭 專家角色庫 | 328 個**即插即用** AI 專家，含 67 中國原創（小紅書 / 抖音 / 飛書 / 釘釘 / Qt 上位機 / 機械設計） |
 | [agency-orchestrator](https://github.com/jnMetaCode/agency-orchestrator) ![](https://img.shields.io/github/stars/jnMetaCode/agency-orchestrator?style=flat&label=⭐) | 🚀 編排引擎 | 一句話 → 276 專家協作，**幾分鐘出方案**（15 種大模型 / 11 種免 key） |
 | [superpowers-zh](https://github.com/jnMetaCode/superpowers-zh) ![](https://img.shields.io/github/stars/jnMetaCode/superpowers-zh?style=flat&label=⭐) | 🧠 工作方法論 | 20 個 skills 教 AI 怎麼幹活（TDD / 除錯 / 程式碼審查等） |
 | [ai-coding-guide](https://github.com/jnMetaCode/ai-coding-guide) ![](https://img.shields.io/github/stars/jnMetaCode/ai-coding-guide?style=flat&label=⭐) | 📖 實戰教程 | 66 個 Claude Code 技巧 + 10 款工具最佳實踐 + 配置模板 |

@@ -66,6 +66,6 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 
 反向比对：本地标为"翻译"的 254 个角色中，有 3 个在上游 `652b269` 中已找不到同名文件，需确认上游是否已删除或改名，再决定保留、改标原创或去重：
 
-- `engineering/engineering-security-engineer.md`
-- `engineering/engineering-threat-detection-engineer.md`（本地另有 `security/security-threat-detection-engineer.md`，疑似上游迁移后本地遗留的重复副本）
-- `specialized/technical-translator-agent.md`
+- `engineering/engineering-security-engineer.md`：上游提交 `8237f99`（2026-06-04，新增安全部）将其改名迁移为 `security/security-architect.md` 并重新区分职责；本地两者并存。
+- `engineering/engineering-threat-detection-engineer.md`：上游同一提交 `8237f99` 将其改名迁移为 `security/security-threat-detection-engineer.md`；本地两者并存，属迁移后遗留的副本。是否删除待维护者确认。
+- ~~`specialized/technical-translator-agent.md`~~：已核实为本仓库 2026-03-26 新增（提交 `729dcda`），上游从无此路径，原先误标为"翻译"，2026-10-19 已改标为"原创"。
