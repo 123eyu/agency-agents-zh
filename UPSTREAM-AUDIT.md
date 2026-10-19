@@ -92,4 +92,11 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 - `engineering-wechat-mini-program-developer`（本地原创版本）：错误响应不是 JSON 时不再抛错导致 Promise 挂起；另外为本地独有的 401 刷新分支补上失败处理
 - `marketing-ai-citation-strategist`：上游只调整了标题层级，本地已整体重写为 v2，无需同步
 
-待同步（17 个）：`design-ux-architect`、`design-whimsy-injector`、`engineering-autonomous-optimization-architect`、`engineering-backend-architect`、`engineering-data-engineer`、`engineering-database-optimizer`、`engineering-devops-automator`、`engineering-email-intelligence-engineer`、`engineering-embedded-firmware-engineer`、`engineering-git-workflow-master`、`engineering-voice-ai-integration-engineer`、`blender-addon-engineer`、`unreal-multiplayer-architect`、`unreal-systems-engineer`、`marketing-agentic-search-optimizer`、`marketing-carousel-growth-engine`、`marketing-seo-specialist`。其中部分本地译文可能晚于上游改动、已包含新内容，需逐个核对后再改。
+- `engineering-backend-architect`：API 设计规范示例按上游换成独立的 OpenAPI 3.1 契约（含 info 与 OAuth2 安全方案），替换原来的 Express 代码
+- `engineering-devops-automator`：CPU 告警改用 AWS/EC2 命名空间、按 Auto Scaling 组筛选、周期 300 秒，缺失数据视为未知，并补充说明
+- `unreal-systems-engineer`：Nanite 支持范围改为"取决于引擎版本"；属性集示例补上头文件和 ATTRIBUTE_ACCESSORS 宏定义
+- `engineering-database-optimizer`：json_agg 用 FILTER + COALESCE 处理无评论的情况；连接池地址改为解析 URL 后改端口，不再做字符串替换
+- `engineering-git-workflow-master`：新建分支改用 `git switch --no-track`，工作树用法单独成段；强推限定到自己的功能分支
+- `engineering-data-engineer`：Gold 层按显式日期窗口重算并用同一谓词 replaceWhere，补充说明
+
+待同步（11 个）：`design-ux-architect`、`design-whimsy-injector`、`engineering-autonomous-optimization-architect`、`engineering-email-intelligence-engineer`、`engineering-embedded-firmware-engineer`、`engineering-voice-ai-integration-engineer`、`blender-addon-engineer`、`unreal-multiplayer-architect`、`marketing-agentic-search-optimizer`、`marketing-carousel-growth-engine`、`marketing-seo-specialist`。其中部分本地译文可能晚于上游改动、已包含新内容，需逐个核对后再改。
