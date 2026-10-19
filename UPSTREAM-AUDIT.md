@@ -110,4 +110,8 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 
 - `unreal-multiplayer-architect`：`_Validate()` 只拒绝不可能的输入（返回 false 会踢掉玩家），延迟导致的检查移到 `_Implementation`；GAS 示例改为 ASC 放在 PlayerState 上；网络频率改用 UE 5.5 的 setter；服务器构建脚本拆出 bat 并加 `-noclient`；预测状态类型与 RepGraph 命令名更正
 
-待同步（3 个）：`marketing-agentic-search-optimizer`、`marketing-carousel-growth-engine`、`marketing-seo-specialist`。其中部分本地译文可能晚于上游改动、已包含新内容，需逐个核对后再改。
+- `marketing-seo-specialist`（本地为重写的 v2）：上游新增"无 GSC 时的内容蚕食排查"和 hreflang 实施模板，按 v2 结构并入对应章节。上游说"不互相指回则 Google 忽略整组"、"爬虫把 `lang` 属性当独立信号"两处与 Google 官方说明不符，改为准确表述
+- `marketing-carousel-growth-engine`：发布渠道从只写 Upload-Post 改为"官方 API 或任意多平台发布服务"，追踪 ID 从 `request_id` 改为各平台帖子 ID；同时更正本地旧译文把 TikTok 写成"抖音"的错误（这些接口只发布到 TikTok）
+- `marketing-agentic-search-optimizer`：WebMCP 接口按当前草案改为 `toolname`/`tooldescription` 声明式标注与 `document.modelContext.registerTool()`，删除并不存在的 `/mcp-actions.json` 发现端点，改用 `getTools()` 核对，并补充规范参考链接
+
+**结论**：30 个有实质改动的同名角色已全部处理完毕，同步基线更新为 `652b269`。
