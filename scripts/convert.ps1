@@ -41,7 +41,7 @@ $OutDir    = if ($Out) { $Out } else { Join-Path $RepoRoot "integrations" }
 $Today     = Get-Date -Format "yyyy-MM-dd"
 
 $AgentDirs = @(
-    "academic","company","design","engineering","finance","game-development","gis","hr","legal",
+    "academic","company","design","engineering","finance","game-development","gis","healthcare","hr","legal",
     "marketing","paid-media","sales","product","project-management","research",
     "security","supply-chain","testing","support","spatial-computing","specialized"
 )

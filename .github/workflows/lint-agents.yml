@@ -10,6 +10,7 @@ on:
       - 'finance/**'
       - 'game-development/**'
       - 'gis/**'
+      - 'healthcare/**'
       - 'hr/**'
       - 'legal/**'
       - 'marketing/**'
@@ -40,7 +41,7 @@ jobs:
         run: |
           FILES=$(git diff --name-only --diff-filter=ACMR origin/${{ github.base_ref }}...HEAD -- \
             'academic/**/*.md' 'company/**/*.md' 'design/**/*.md' 'engineering/**/*.md' 'finance/**/*.md' \
-            'game-development/**/*.md' 'gis/**/*.md' 'hr/**/*.md' 'legal/**/*.md' 'marketing/**/*.md' \
+            'game-development/**/*.md' 'gis/**/*.md' 'healthcare/**/*.md' 'hr/**/*.md' 'legal/**/*.md' 'marketing/**/*.md' \
             'paid-media/**/*.md' 'product/**/*.md' 'project-management/**/*.md' 'research/**/*.md' 'sales/**/*.md' \
             'security/**/*.md' 'spatial-computing/**/*.md' 'specialized/**/*.md' 'strategy/**/*.md' \
             'supply-chain/**/*.md' 'support/**/*.md' 'testing/**/*.md')

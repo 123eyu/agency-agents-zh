@@ -28,6 +28,7 @@
 - 第十一批完整翻译开发者社区建设专家（营销部）、DX 工程师（产品部）两个角色，原文同样固定于 `652b269`。两者与本地已有的开发者布道师有部分交集，但分别聚焦社区运营与上手摩擦；上游三者并存。本地规模更新为 309（翻译 243 / 原创 66）；营销部 44、产品部 6。通用类候选至此全部完成。
 - 第十二批完整翻译网络工程师（Cisco/Juniper/Palo Alto，与本地原创的华为/华三版国内网络工程师互补）、GaussDB 专家、WordPress 性能工程师三个角色，原文同样固定于 `652b269`。本地规模更新为 312（翻译 246 / 原创 66）；工程部 71。
 - 第十三批完整翻译 Drupal 性能工程师和研究综合专家，原文同样固定于 `652b269`；新建 `research/` 部门，并同步转换、安装、lint、发布文件列表和 CI 触发范围。同时修正 Windows 版 `install.ps1`、`convert.ps1` 部门列表遗漏 `gis` 与 `security` 的问题（修复前 Windows 安装少 25 个角色）。本地规模更新为 314（翻译 248 / 原创 66），部门 21 个；工程部 72、研究部 1。
+- 第十四批完整翻译 healthcare 部门三个角色（临床证据专家、医疗创新战略师、主权卫生体系专家），原文同样固定于 `652b269`；新建 `healthcare/` 部门并同步转换、安装、lint、发布文件列表和 CI 触发范围。三个角色开头注明海外监管语境的适用范围，并指向本地原创的医疗健康营销合规师。本地规模更新为 317（翻译 251 / 原创 66），部门 22 个；医疗健康部 3。
 
 ## 后续优先级
 
@@ -35,7 +36,7 @@
 
 本批 4 个角色已通过 AO 现有 `dist/cli/install.js` 收集器识别；工程部 Cursor dry-run 返回 47 个且未写入配置。角色库自身计数与 Cursor 转换均为 283 个。
 
-AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，尚未发版）：说明文档按完整文件名匹配，跳过隐藏文件与隐藏目录，并新增安全分类与 dry-run 回归用例。7 项安装器测试与测试类型检查通过；修复版扫描本库识别 314 个角色，包含全部 12 个安全角色。
+AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，尚未发版）：说明文档按完整文件名匹配，跳过隐藏文件与隐藏目录，并新增安全分类与 dry-run 回归用例。7 项安装器测试与测试类型检查通过；修复版扫描本库识别 317 个角色，包含全部 12 个安全角色。
 
 修复前，AO 收集器排除文件的正则是 `/^(README|CONTRIBUTING|LICENSE|SECURITY)/i`，会误伤全部 `security-*` 角色，且未跳过全部隐藏目录。已发布的 App / npm 包在 AO 下次发版前仍是旧行为。README 生态表中 AO 的"276 专家"待 AO 发版后再更新。
 
@@ -45,7 +46,7 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 | P2 | 检查 Gemini CLI / OpenCode / Hermes 适配 | 本库 Gemini 仍为扩展、Hermes 为 skills；AO 自有 Gemini 安装器已指向 .gemini/agents。OpenCode 的本库实现实际已使用复数 agents，旧的是脚本头部说明；不能据此认定运行路径有缺陷。工具格式仍需按具体实现核查。 |
 | P1 | 继续翻译剩余路径候选 | 桌面与 AI 代码安全角色已完成（第三批）；其余候选按开发场景优先，逐个读取固定 commit 的完整正文后翻译与验收。 |
 | P1 | 固定上游 commit，建立路径映射与内容哈希清单 | 先建立可复核差异，再更新同步基线；目录存在不代表正文已同步。 |
-| P2 | 引入 healthcare 部门（research 已完成） | 需同步转换、安装、lint、发布目录与名单；医疗内容需明确适用语境，不能直接替换成中国法规结论。 |
+| P2 | 引入 healthcare / research 部门（均已完成） | 需同步转换、安装、lint、发布目录与名单；医疗内容需明确适用语境，不能直接替换成中国法规结论。 |
 | P2 | 评估 Kimi / Osaurus / Vibe / DeepSeek Harness 适配 | 上游提供入口，本地暂未支持；工具数量更多不代表能力覆盖上游，需按工具逐项对比。 |
 | P2 | 评估 divisions.json / tools.json / runbooks.json | 上游已采用元数据与团队清单，本地仍有多份目录硬编码；有利于减少遗漏。 |
 | P3 | 并行转换与安装 | 先保证筛选、格式兼容与可回归验证，再优化执行耗时。 |
@@ -57,6 +58,3 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 - `engineering/engineering-section-508-specialist.md`
 - `engineering/engineering-servicenow-developer-mentor.md`
 - `engineering/engineering-uswds-developer.md`
-- `healthcare/healthcare-clinical-evidence-agent.md`
-- `healthcare/healthcare-innovation-strategist.md`
-- `healthcare/healthcare-sovereign-health-systems-agent.md`

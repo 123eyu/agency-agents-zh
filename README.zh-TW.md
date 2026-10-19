@@ -2,7 +2,7 @@
 
 🌐 [簡體中文](README.md) | **繁體中文** | [English (upstream)](https://github.com/msitarzewski/agency-agents)
 
-> **314 個即插即用的 AI 專家角色** — 覆蓋公司經營（CEO/CTO/CMO/COO/CPO/CFO）、工程、設計、營銷、產品、遊戲、安全、GIS、金融等 21 個部門。不是通用提示詞模板，每個智能體都有獨立的人設、專業流程和可交付成果。支援 Claude Code / Cursor / Copilot 等 20 種 AI 程式設計工具。
+> **317 個即插即用的 AI 專家角色** — 覆蓋公司經營（CEO/CTO/CMO/COO/CPO/CFO）、工程、設計、營銷、產品、遊戲、安全、GIS、金融等 22 個部門。不是通用提示詞模板，每個智能體都有獨立的人設、專業流程和可交付成果。支援 Claude Code / Cursor / Copilot 等 20 種 AI 程式設計工具。
 
 [agency-agents](https://github.com/msitarzewski/agency-agents) 的中文社群版。在已有上游翻譯的基礎上，新增了 66 個中國市場原創智能體（小紅書、抖音、微信、B站、飛書、釘釘等平臺運營，以及跨境電商、政務ToG、醫療合規、Qt 工業上位機、機械設計、畜禽養殖檔案核對等垂直領域）。
 
@@ -20,9 +20,9 @@
 
 | 🤖 AI 智能體 | 🌏 英文版翻譯 | 🇨🇳 中國市場原創 | 🧠 支援工具 | 🏢 部門 |
 |:---:|:---:|:---:|:---:|:---:|
-| **314** | **248** | **66** | **20 種** | **21 個** |
+| **317** | **251** | **66** | **20 種** | **22 個** |
 
-> 📖 **官方配套課程** → [AI 專家團隊實戰](https://aiolaola.com/course/ai-agency?utm_source=github&utm_campaign=agents)（35 節，免費）：手把手把這倉 314 位專家用成一支團隊——單兵點名、自動組隊、一人公司全流程，桌面端零程式碼教學。另有 [從零學會 AI 程式設計](https://aiolaola.com/?utm_source=github&utm_campaign=agents)（182 節）＋ [從零構建 AI 智能體](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=agents)（40 節）（站上共 13 門課、648 節，**全部 ¥0**——另有 AI 繪畫 / 寫小說 / 漫劇 / 量化 / DeepSeek / 深度專注 等）
+> 📖 **官方配套課程** → [AI 專家團隊實戰](https://aiolaola.com/course/ai-agency?utm_source=github&utm_campaign=agents)（35 節，免費）：手把手把這倉 317 位專家用成一支團隊——單兵點名、自動組隊、一人公司全流程，桌面端零程式碼教學。另有 [從零學會 AI 程式設計](https://aiolaola.com/?utm_source=github&utm_campaign=agents)（182 節）＋ [從零構建 AI 智能體](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=agents)（40 節）（站上共 13 門課、648 節，**全部 ¥0**——另有 AI 繪畫 / 寫小說 / 漫劇 / 量化 / DeepSeek / 深度專注 等）
 >
 > 🌍 Also available in [English](https://aiolaola.com/en?utm_source=github&utm_campaign=agents) · [日本語](https://aiolaola.com/ja?utm_source=github&utm_campaign=agents) · [Español](https://aiolaola.com/es?utm_source=github&utm_campaign=agents) · [한국어](https://aiolaola.com/ko?utm_source=github&utm_campaign=agents) · [繁體中文](https://aiolaola.com/zh-Hant?utm_source=github&utm_campaign=agents)
 
@@ -662,6 +662,16 @@ cp -r marketing/*.md ~/.claude/agents/
 | [心理學家](academic/academic-psychologist.md) | 行為心理、人格理論 | 角色心理塑造、動機設計 |
 | [學習規劃師](academic/academic-study-planner.md) ⭐ | 考研/考公/法考備考、學習方法論 | 個性化學習計劃與備考規劃 |
 
+### 🏥 醫療健康部
+
+面向醫療科技團隊的臨床證據、戰略敘事與政府衛生體系對接。內容基於美國、歐盟及新興市場的監管語境，國內使用請注意適用範圍。
+
+| 智能體 | 專長 | 適用場景 |
+|--------|------|----------|
+| [臨床證據專家](healthcare/healthcare-clinical-evidence-agent.md) | 臨床論斷分級、證據標準、決策支援定位 | 醫療 AI 對外材料審核 |
+| [醫療創新戰略師](healthcare/healthcare-innovation-strategist.md) | 敘事架構、資歷錨點、監管應對 | 醫療科技融資與對外敘事 |
+| [主權衛生體系專家](healthcare/healthcare-sovereign-health-systems-agent.md) | UHC 職責契合、政府合作、雙市場順序 | 新興市場衛生專案與政府合作 |
+
 ### 🔍 研究部
 
 面向文獻綜述與證據綜合的研究方法支援。
@@ -1050,7 +1060,7 @@ NousResearch 的開源 AI 智能體框架，支援技能系統、子代理編排
 > ./scripts/install.sh --tool hermes --category engineering --category design
 > ```
 >
-> 可選分類：`academic, blender, company, design, engineering, finance, game-development, gis, godot, hr, legal, marketing, paid-media, product, project-management, research, roblox-studio, sales, security, spatial-computing, specialized, supply-chain, support, testing, unity, unreal-engine`。
+> 可選分類：`academic, blender, company, design, engineering, finance, game-development, gis, godot, healthcare, hr, legal, marketing, paid-media, product, project-management, research, roblox-studio, sales, security, spatial-computing, specialized, supply-chain, support, testing, unity, unreal-engine`。
 >
 > Hermes CLI 本身沒有此限制，全量安裝可以繼續使用。
 </details>
@@ -1170,7 +1180,7 @@ DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool 
 
 | 專案 | 定位 | 一句話 |
 |------|------|-------|
-| **本專案**（agency-agents-zh） ![](https://img.shields.io/github/stars/jnMetaCode/agency-agents-zh?style=flat&label=⭐) | 🎭 專家角色庫 | 314 個**即插即用** AI 專家，含 66 中國原創（小紅書 / 抖音 / 飛書 / 釘釘 / Qt 上位機 / 機械設計） |
+| **本專案**（agency-agents-zh） ![](https://img.shields.io/github/stars/jnMetaCode/agency-agents-zh?style=flat&label=⭐) | 🎭 專家角色庫 | 317 個**即插即用** AI 專家，含 66 中國原創（小紅書 / 抖音 / 飛書 / 釘釘 / Qt 上位機 / 機械設計） |
 | [agency-orchestrator](https://github.com/jnMetaCode/agency-orchestrator) ![](https://img.shields.io/github/stars/jnMetaCode/agency-orchestrator?style=flat&label=⭐) | 🚀 編排引擎 | 一句話 → 276 專家協作，**幾分鐘出方案**（15 種大模型 / 11 種免 key） |
 | [superpowers-zh](https://github.com/jnMetaCode/superpowers-zh) ![](https://img.shields.io/github/stars/jnMetaCode/superpowers-zh?style=flat&label=⭐) | 🧠 工作方法論 | 20 個 skills 教 AI 怎麼幹活（TDD / 除錯 / 程式碼審查等） |
 | [ai-coding-guide](https://github.com/jnMetaCode/ai-coding-guide) ![](https://img.shields.io/github/stars/jnMetaCode/ai-coding-guide?style=flat&label=⭐) | 📖 實戰教程 | 66 個 Claude Code 技巧 + 10 款工具最佳實踐 + 配置模板 |
@@ -1197,7 +1207,7 @@ MIT License — 自由使用，商業或個人均可。
 
 <div align="center">
 
-**314 個 AI 專家角色，20 種工具支援，即裝即用**
+**317 個 AI 專家角色，20 種工具支援，即裝即用**
 
 [⭐ Star 本專案](https://github.com/jnMetaCode/agency-agents-zh) · [提交 Issue](https://github.com/jnMetaCode/agency-agents-zh/issues) · [貢獻程式碼](https://github.com/jnMetaCode/agency-agents-zh/pulls)
 

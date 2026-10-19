@@ -29,6 +29,14 @@
 | 首席财务官 | `company/chief-financial-officer.md` |
 | 幕僚长 | `company/chief-of-staff.md` |
 
+## 🏥 医疗健康部 (3)
+
+| 中文名 | 文件路径 |
+|--------|----------|
+| 临床证据专家 | `healthcare/healthcare-clinical-evidence-agent.md` |
+| 医疗创新战略师 | `healthcare/healthcare-innovation-strategist.md` |
+| 主权卫生体系专家 | `healthcare/healthcare-sovereign-health-systems-agent.md` |
+
 ## 🔍 研究部 (1)
 
 | 中文名 | 文件路径 |
