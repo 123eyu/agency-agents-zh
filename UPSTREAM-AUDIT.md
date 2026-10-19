@@ -108,4 +108,6 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 - `engineering-email-intelligence-engineer`：IMAP 拉取检查状态与返回结构；重建线程前拒绝缺失/重复的 Message-ID 和循环回复链；只去掉与父消息重复的引用行
 - `engineering-voice-ai-integration-engineer`：ffprobe/ffmpeg 参数防止文件名被当成选项；时长与分块参数校验；分块改为重新编码为 16kHz 单声道 PCM；合并时保留说话人；SRT 时间戳按毫秒取整并拒绝零时长字幕
 
-待同步（4 个）：`unreal-multiplayer-architect`、`marketing-agentic-search-optimizer`、`marketing-carousel-growth-engine`、`marketing-seo-specialist`。其中部分本地译文可能晚于上游改动、已包含新内容，需逐个核对后再改。
+- `unreal-multiplayer-architect`：`_Validate()` 只拒绝不可能的输入（返回 false 会踢掉玩家），延迟导致的检查移到 `_Implementation`；GAS 示例改为 ASC 放在 PlayerState 上；网络频率改用 UE 5.5 的 setter；服务器构建脚本拆出 bat 并加 `-noclient`；预测状态类型与 RepGraph 命令名更正
+
+待同步（3 个）：`marketing-agentic-search-optimizer`、`marketing-carousel-growth-engine`、`marketing-seo-specialist`。其中部分本地译文可能晚于上游改动、已包含新内容，需逐个核对后再改。
