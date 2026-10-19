@@ -104,4 +104,8 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 - `blender-addon-engineer`：未选中对象时取消验证；检查每个材质槽都已分配材质；导出前强制走验证；重复后缀改用正则判断
 - `engineering-embedded-firmware-engineer`：创建队列和任务失败时正确处理；SPI 示例改为带超时的轮询，并说明超时后的恢复方式
 
-待同步（7 个）：`engineering-autonomous-optimization-architect`、`engineering-email-intelligence-engineer`、`engineering-voice-ai-integration-engineer`、`unreal-multiplayer-architect`、`marketing-agentic-search-optimizer`、`marketing-carousel-growth-engine`、`marketing-seo-specialist`。其中部分本地译文可能晚于上游改动、已包含新内容，需逐个核对后再改。
+- `engineering-autonomous-optimization-architect`：路由函数校验预算参数、累计已花费用、超支即停止，不再在返回结果后启动付费的影子测试；补充"扣费后才停止、并非硬上限"的说明
+- `engineering-email-intelligence-engineer`：IMAP 拉取检查状态与返回结构；重建线程前拒绝缺失/重复的 Message-ID 和循环回复链；只去掉与父消息重复的引用行
+- `engineering-voice-ai-integration-engineer`：ffprobe/ffmpeg 参数防止文件名被当成选项；时长与分块参数校验；分块改为重新编码为 16kHz 单声道 PCM；合并时保留说话人；SRT 时间戳按毫秒取整并拒绝零时长字幕
+
+待同步（4 个）：`unreal-multiplayer-architect`、`marketing-agentic-search-optimizer`、`marketing-carousel-growth-engine`、`marketing-seo-specialist`。其中部分本地译文可能晚于上游改动、已包含新内容，需逐个核对后再改。
