@@ -29,6 +29,7 @@
 - 第十二批完整翻译网络工程师（Cisco/Juniper/Palo Alto，与本地原创的华为/华三版国内网络工程师互补）、GaussDB 专家、WordPress 性能工程师三个角色，原文同样固定于 `652b269`。本地规模更新为 312（翻译 246 / 原创 66）；工程部 71。
 - 第十三批完整翻译 Drupal 性能工程师和研究综合专家，原文同样固定于 `652b269`；新建 `research/` 部门，并同步转换、安装、lint、发布文件列表和 CI 触发范围。同时修正 Windows 版 `install.ps1`、`convert.ps1` 部门列表遗漏 `gis` 与 `security` 的问题（修复前 Windows 安装少 25 个角色）。本地规模更新为 314（翻译 248 / 原创 66），部门 21 个；工程部 72、研究部 1。
 - 第十四批完整翻译 healthcare 部门三个角色（临床证据专家、医疗创新战略师、主权卫生体系专家），原文同样固定于 `652b269`；新建 `healthcare/` 部门并同步转换、安装、lint、发布文件列表和 CI 触发范围。三个角色开头注明海外监管语境的适用范围，并指向本地原创的医疗健康营销合规师。本地规模更新为 317（翻译 251 / 原创 66），部门 22 个；医疗健康部 3。
+- 第十五批完整翻译 Section 508 无障碍专家、ServiceNow 开发导师、USWDS 开发工程师三个角色，原文同样固定于 `652b269`；两个美国联邦专属角色开头注明适用范围。本地规模更新为 320（翻译 254 / 原创 66）；工程部 75。至此本报告列出的路径候选已全部翻译完成。
 
 ## 后续优先级
 
@@ -36,7 +37,7 @@
 
 本批 4 个角色已通过 AO 现有 `dist/cli/install.js` 收集器识别；工程部 Cursor dry-run 返回 47 个且未写入配置。角色库自身计数与 Cursor 转换均为 283 个。
 
-AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，尚未发版）：说明文档按完整文件名匹配，跳过隐藏文件与隐藏目录，并新增安全分类与 dry-run 回归用例。7 项安装器测试与测试类型检查通过；修复版扫描本库识别 317 个角色，包含全部 12 个安全角色。
+AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，尚未发版）：说明文档按完整文件名匹配，跳过隐藏文件与隐藏目录，并新增安全分类与 dry-run 回归用例。7 项安装器测试与测试类型检查通过；修复版扫描本库识别 320 个角色，包含全部 12 个安全角色。
 
 修复前，AO 收集器排除文件的正则是 `/^(README|CONTRIBUTING|LICENSE|SECURITY)/i`，会误伤全部 `security-*` 角色，且未跳过全部隐藏目录。已发布的 App / npm 包在 AO 下次发版前仍是旧行为。README 生态表中 AO 的"276 专家"待 AO 发版后再更新。
 
@@ -44,8 +45,8 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 |--------|------|----------------|
 | P2 | 角色库独立脚本的部门、单角色、角色清单筛选与 dry-run | 上游 README 已提供这些入口；本库脚本没有。配套 agency-orchestrator 的 ao install 已有 category 与 dryRun，不应当作 App 缺失能力重复开发。先补角色内容与同步链路，再按独立脚本用户需求安排。 |
 | P2 | 检查 Gemini CLI / OpenCode / Hermes 适配 | 本库 Gemini 仍为扩展、Hermes 为 skills；AO 自有 Gemini 安装器已指向 .gemini/agents。OpenCode 的本库实现实际已使用复数 agents，旧的是脚本头部说明；不能据此认定运行路径有缺陷。工具格式仍需按具体实现核查。 |
-| P1 | 继续翻译剩余路径候选 | 桌面与 AI 代码安全角色已完成（第三批）；其余候选按开发场景优先，逐个读取固定 commit 的完整正文后翻译与验收。 |
-| P1 | 固定上游 commit，建立路径映射与内容哈希清单 | 先建立可复核差异，再更新同步基线；目录存在不代表正文已同步。 |
+| P1 | 翻译全量比对新发现的 8 个角色，并处理 3 个上游已不存在的本地翻译角色 | README 摘录的候选已全部完成；按下方全量比对结果继续。删除或改标前需确认上游历史。 |
+| P1 | 建立内容哈希清单，复核已有同名角色的正文差异 | 已固定 `652b269` 并完成路径级全量比对；目录存在不代表正文已同步，同名角色的正文变化仍需逐项比较。 |
 | P2 | 引入 healthcare / research 部门（均已完成） | 需同步转换、安装、lint、发布目录与名单；医疗内容需明确适用语境，不能直接替换成中国法规结论。 |
 | P2 | 评估 Kimi / Osaurus / Vibe / DeepSeek Harness 适配 | 上游提供入口，本地暂未支持；工具数量更多不代表能力覆盖上游，需按工具逐项对比。 |
 | P2 | 评估 divisions.json / tools.json / runbooks.json | 上游已采用元数据与团队清单，本地仍有多份目录硬编码；有利于减少遗漏。 |
@@ -53,8 +54,23 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 
 ## 已确认的路径候选
 
-以下路径出现在本次读取的上游 README 中，本地没有同路径文件，且已排除 5 个已知映射。仍需人工检查是否存在其他同义角色；这不是完整上游文件清单。
+原 README 摘录的候选已在第三至十五批全部翻译完成。
 
-- `engineering/engineering-section-508-specialist.md`
-- `engineering/engineering-servicenow-developer-mentor.md`
-- `engineering/engineering-uswds-developer.md`
+### 2026-10-19 全量文件树比对（固定 commit `652b269`）
+
+通过 GitHub API 获取上游 `652b269` 的完整文件树（未截断），逐个比对角色路径。上游 282 个角色路径中，本地缺少同路径文件的有 15 个：其中 5 个已在 UPSTREAM.md 记录为路径映射，`specialized/chief-financial-officer.md`、`specialized/specialized-chief-of-staff.md` 已迁移到本地 `company/`。真正缺失的有 8 个（此前的 README 摘录未覆盖到）：
+
+- `academic/academic-statistician.md`
+- `game-development/economy-designer.md`
+- `specialized/healthcare-aging-parent-care-companion.md`
+- `specialized/resume-tailor.md`
+- `specialized/specialized-codebase-archaeologist.md`
+- `specialized/specialized-fedramp-rmf-compliance.md`
+- `specialized/specialized-focus-music-architect.md`
+- `specialized/specialized-master-plan-architect.md`
+
+反向比对：本地标为"翻译"的 254 个角色中，有 3 个在上游 `652b269` 中已找不到同名文件，需确认上游是否已删除或改名，再决定保留、改标原创或去重：
+
+- `engineering/engineering-security-engineer.md`
+- `engineering/engineering-threat-detection-engineer.md`（本地另有 `security/security-threat-detection-engineer.md`，疑似上游迁移后本地遗留的重复副本）
+- `specialized/technical-translator-agent.md`

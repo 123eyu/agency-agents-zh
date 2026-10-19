@@ -1,6 +1,6 @@
 # Agency Agents 智能体完整名单
 
-> 本文档最后更新于 2026-10-17，记录项目中所有 317 个 AI 智能体的完整信息。
+> 本文档最后更新于 2026-10-17，记录项目中所有 320 个 AI 智能体的完整信息。
 
 ---
 
@@ -12,13 +12,13 @@
 │                  AI 智能体专家团队                                │
 ├─────────────────────────────────────────────────────────────────┤
 │  项目规模                                                       │
-│  ├── AI 智能体：317 个                                          │
-│  ├── 英文版翻译：251 个                                         │
+│  ├── AI 智能体：320 个                                          │
+│  ├── 英文版翻译：254 个                                         │
 │  ├── 中国市场原创：66 个                                        │
 │  └── 支持工具：20 种                                            │
 ├─────────────────────────────────────────────────────────────────┤
 │  部门分类：22 个                                                │
-│  ├── 公司经营部 (7)        工程部 (72)                          │
+│  ├── 公司经营部 (7)        工程部 (75)                          │
 │  ├── 设计部 (11)           营销部 (44)                          │
 │  ├── 付费媒体部 (7)        销售部 (9)                           │
 │  ├── 金融部 (9)            人力资源部 (2)                       │
@@ -98,6 +98,9 @@
 | `engineering-gaussdb-expert` | GaussDB 专家 | 华为 GaussDB OLTP 的分布键与分布表设计、UStore/AStore、分布式执行计划与金融级高可用 | 翻译 |
 | `engineering-drupal-performance` | Drupal 性能工程师 | Drupal 10/11 的缓存标签与上下文、BigPipe、Views 与查询优化、Core Web Vitals 与 PHP-FPM 调优 | 翻译 |
 | `engineering-wordpress-performance` | WordPress 性能工程师 | Core Web Vitals、对象/页面缓存、WP_Query 与 autoload 优化、插件开销审计与 PHP-FPM 调优 | 翻译 |
+| `engineering-section-508-specialist` | Section 508 无障碍专家 | 美国联邦 Section 508（WCAG 2.0 AA 法定基线）与 ADA 合规、屏幕阅读器与键盘测试、ARIA 整改与 VPAT/ACR | 翻译 |
+| `engineering-servicenow-developer-mentor` | ServiceNow 开发导师 | ServiceNow 脚本开发与逐步排障：Script Include/GlideAjax、GlideAggregate、ACL、区分 OOTB 与自定义 | 翻译 |
+| `engineering-uswds-developer` | USWDS 开发工程师 | 美国政府网站设计系统：设计令牌主题化、官方组件、.gov 横幅与机构标识、Drupal/WordPress 集成 | 翻译 |
 | `engineering-rag-pipeline-engineer` | RAG 管线工程师 | 文档切分、混合检索、重排与检索质量评测 | 翻译 |
 | `engineering-identity-access-engineer` | 身份与访问工程师 | OAuth/OIDC、SSO、SCIM、会话与多租户授权 | 翻译 |
 | `engineering-payments-billing-engineer` | 支付与计费工程师 | 幂等支付、可靠回调、订阅计费与对账 | 翻译 |
@@ -594,14 +597,14 @@
 
 | 部门 | 数量 | 占比 |
 |------|------|------|
-| 工程部 (Engineering) | 72 | 22.7% |
-| 专项部 (Specialized) | 58 | 18.3% |
-| 营销部 (Marketing) | 44 | 13.9% |
-| 游戏开发部 (Game Development) | 20 | 6.3% |
+| 工程部 (Engineering) | 75 | 23.4% |
+| 专项部 (Specialized) | 58 | 18.1% |
+| 营销部 (Marketing) | 44 | 13.8% |
+| 游戏开发部 (Game Development) | 20 | 6.2% |
 | GIS 部 (GIS) | 13 | 4.1% |
 | 安全部 (Security) | 12 | 3.8% |
-| 设计部 (Design) | 11 | 3.5% |
-| 测试部 (Testing) | 10 | 3.2% |
+| 设计部 (Design) | 11 | 3.4% |
+| 测试部 (Testing) | 10 | 3.1% |
 | 金融部 (Finance) | 9 | 2.8% |
 | 销售部 (Sales) | 9 | 2.8% |
 | 公司经营部 (Company) | 7 | 2.2% |
@@ -616,15 +619,15 @@
 | 人力资源部 (HR) | 2 | 0.6% |
 | 法务部 (Legal) | 2 | 0.6% |
 | 研究部 (Research) | 1 | 0.3% |
-| **总计** | **317** | **100%** |
+| **总计** | **320** | **100%** |
 
 ### 按来源统计
 
 | 来源 | 数量 | 占比 |
 |------|------|------|
-| 英文版翻译 | 251 | 79.2% |
-| 中国市场原创 | 66 | 20.8% |
-| **总计** | **317** | **100%** |
+| 英文版翻译 | 254 | 79.4% |
+| 中国市场原创 | 66 | 20.6% |
+| **总计** | **320** | **100%** |
 
 ---
 

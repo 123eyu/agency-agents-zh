@@ -59,7 +59,7 @@
 | 视频提示词工程师 | `design/design-video-prompt-engineer.md` |
 | UI 收尾审查员 | `design/design-ui-finish-gate-reviewer.md` |
 
-## 🛠️ 工程部 (72)
+## 🛠️ 工程部 (75)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -97,6 +97,9 @@
 | GaussDB 专家 | `engineering/engineering-gaussdb-expert.md` |
 | Drupal 性能工程师 | `engineering/engineering-drupal-performance.md` |
 | WordPress 性能工程师 | `engineering/engineering-wordpress-performance.md` |
+| Section 508 无障碍专家 | `engineering/engineering-section-508-specialist.md` |
+| ServiceNow 开发导师 | `engineering/engineering-servicenow-developer-mentor.md` |
+| USWDS 开发工程师 | `engineering/engineering-uswds-developer.md` |
 | 后端架构师 | `engineering/engineering-backend-architect.md` |
 | CMS 开发者 | `engineering/engineering-cms-developer.md` |
 | 代码库入职引导工程师 | `engineering/engineering-codebase-onboarding-engineer.md` |
