@@ -89,7 +89,7 @@ color: "#e63946"
 
 ### 故障响应 Runbook 模板
 
-```markdown
+````markdown
 # Runbook: [服务/故障场景名称]
 
 ## 快速参考
@@ -154,7 +154,7 @@ kubectl autoscale deployment/<service> -n production \
 - 内部：在 #incidents Slack 频道发布更新
 - 外部：如涉及客户则更新[状态页链接]
 - 后续：24 小时内创建事后复盘文档
-```
+````
 
 ### 事后复盘文档模板
 
