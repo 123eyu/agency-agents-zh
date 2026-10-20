@@ -8,7 +8,7 @@
 - **同步基线**：2026-10-19，上游 [`652b269`](https://github.com/msitarzewski/agency-agents/tree/652b2692f8d8ec2b1f1a38e559073e287dfdc469)（上一个基线为 2026-06-16 的 `3f78a30`）。
 - **本地实际角色数**：**328**，其中目录标注翻译 **261**、原创 **67**。来源分类以 [AGENT-LIST.md](AGENT-LIST.md) 为准，不等同于当前上游覆盖数。
 - **覆盖状态**：**角色层面已追平 `652b269`**。路径上，上游全部角色都有本地对应（含已记录的路径映射）；正文上，`3f78a30` 之后上游改过的同名角色已逐个比对并同步，过程与例外见 [差异审计](UPSTREAM-AUDIT.md)。上游的 README、CONTRIBUTING 与 integrations 文档按本地项目自行维护，不逐字同步。
-- **遗留事项**：`engineering/engineering-security-engineer.md` 与 `engineering/engineering-threat-detection-engineer.md` 在上游已改名迁入 `security/`，本地新旧两份并存，是否删除旧副本待定。
+- **遗留事项**：`engineering/engineering-security-engineer.md` 与 `engineering/engineering-threat-detection-engineer.md` 在上游已改名迁入 `security/`，本地新旧两份并存。Agency Orchestrator 的 6 个工作流仍按旧路径引用它们，因此暂时保留旧文件并在开头注明新路径；待 AO 改用 `security/` 路径并发版后再删除。
 - **本次完成**：根据 [issue #97](https://github.com/jnMetaCode/agency-agents-zh/issues/97) 标题补充嵌入式算法、嵌入式应用两个原创角色；同步简繁 README、名单、速查表与包描述，修正部门和来源计数，并将计数检查接入 CI。
 
 ## 翻译覆盖
