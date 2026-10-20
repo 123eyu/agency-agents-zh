@@ -101,6 +101,28 @@ for (const file of ["README.md", "README.zh-TW.md"]) {
   }
 }
 
+// 三个反引号的代码块里再出现 ```lang 时，它只是普通内容，紧接着的 ``` 会把外层提前关掉；
+// 外层要用更多反引号（````markdown）
+for (const p of agentPaths) {
+  const lines = readFileSync(join(root, p), "utf8").split("\n");
+  for (let i = 0; i < lines.length; i++) {
+    const open = lines[i].match(/^ {0,3}(`{3,})/);
+    if (!open) continue;
+    const n = open[1].length;
+    let j = i + 1;
+    for (; j < lines.length; j++) {
+      const close = lines[j].match(/^ {0,3}(`{3,})\s*$/);
+      if (close && close[1].length >= n) break;
+      const inner = lines[j].match(/^ {0,3}(`{3,})\S/);
+      if (inner && inner[1].length >= n) {
+        problems.push(`${p}:${i + 1} 代码块内嵌套了 ${lines[j].trim()}（第 ${j + 1} 行），外层需改用 ${"`".repeat(n + 1)}`);
+        break;
+      }
+    }
+    i = j;
+  }
+}
+
 if (problems.length) {
   console.error(`❌ 角色计数不一致（实际 ${actual} 个）：`);
   problems.forEach((p) => console.error("   - " + p));
