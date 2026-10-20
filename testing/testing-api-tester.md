@@ -169,15 +169,15 @@ test.describe('User API Comprehensive Testing', () => {
   test.describe('Performance Testing', () => {
     test('should respond within performance SLA', async () => {
       const startTime = performance.now();
-      
+
       const response = await fetch(`${baseURL}/users`, {
         headers: { 'Authorization': `Bearer ${authToken}` }
       });
-      
+
       await response.arrayBuffer(); // 把响应体的传输时间也计入延迟
       const endTime = performance.now();
       const responseTime = endTime - startTime;
-      
+
       expect(response.status).toBe(200);
       expect(responseTime).toBeLessThan(200); // 低于 200ms 的 SLA
     });

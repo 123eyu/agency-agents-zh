@@ -122,6 +122,12 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 
 同步时发现 `security-appsec-engineer` 与 `security-threat-intelligence-analyst` 的代码块比上游旧得多（npm audit 的 `moderate` 级别会导致旧代码抛异常；IOC 导出未做 CSV 转义），说明部分译文早于 `3f78a30`。因此改为直接拿上游最新版逐个比对代码块里的标识符（忽略注释、字符串与 markdown 模板），这两个文件已整块重同步。
 
+**代码块嵌套修复**：`specialized-developer-advocate` 的两个模板、`specialized-workflow-architect` 的一个模板外层只用了三个反引号，内层 ```bash/```json 会把外层提前关掉，GitHub 上显示错乱；已按上游改为四个反引号，并在 check-counts 中加入检查。
+
+**已重同步**：`testing-performance-benchmarker`（k6 脚本：业务检查纳入阈值、token 缺失视为失败、报告不再因缺指标出错）、`testing-api-tester`（密码改从环境变量读取、SQL 注入参数 URL 编码、并发测试按单个请求统计延迟）。
+
+**核实后不算落后**：`specialized-developer-advocate`（差异只是本地把示例字符串值译成了中文）、`specialized-mcp-builder`（本地在 `95ebeb1` 中另行扩写，代码与上游不同源）。
+
 **仍落后于上游、待重同步的译文**（上游代码里有、本地缺失的标识符比例由高到低）：`specialized-developer-advocate`、`testing-performance-benchmarker`、`specialized-mcp-builder`、`testing-api-tester`、`specialized-model-qa`、`unity-multiplayer-engineer`、`accounts-payable-agent`、`support-analytics-reporter`、`support-finance-tracker`、`identity-graph-operator`、`testing-test-results-analyzer`、`supply-chain-strategist`、`lsp-index-engineer`、`testing-tool-evaluator`、`support-support-responder`、`recruitment-specialist`。`marketing-private-domain-operator` 与 `engineering-wechat-mini-program-developer` 的差异来自本地另行编写的内容，不算落后。
 
 **精编版待补全**：`engineering-identity-access-engineer`、`engineering-payments-billing-engineer`、`engineering-rag-pipeline-engineer`、`testing-test-automation-engineer` 目前是约 60 行的中文精编版，上游原文 196–450 行，代码示例基本未保留，计划补成完整翻译。
