@@ -11,6 +11,7 @@ OUT="$TARGET/CATALOG.md"
 
 dept_name() {
   case "$1" in
+    company)             echo "🏢 Gestão da Empresa" ;;
     academic)            echo "📖 Acadêmico" ;;
     design)              echo "🎨 Design" ;;
     engineering)         echo "🛠️ Engenharia" ;;
@@ -30,11 +31,13 @@ dept_name() {
     testing)             echo "🧪 Testes" ;;
     gis)                 echo "🗺️ GIS" ;;
     security)            echo "🛡️ Segurança" ;;
+    healthcare)          echo "🏥 Saúde" ;;
+    research)            echo "🔍 Pesquisa" ;;
     *)                   echo "$1" ;;
   esac
 }
 
-DEPT_ORDER="academic design engineering finance game-development hr legal marketing paid-media product project-management sales spatial-computing specialized supply-chain support testing gis security"
+DEPT_ORDER="company academic design engineering finance game-development hr legal marketing paid-media product project-management sales spatial-computing specialized supply-chain support testing gis security healthcare research"
 
 cat > "$OUT" <<'HEADER_EOF'
 # Catálogo de agentes

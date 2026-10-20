@@ -16,6 +16,7 @@ fi
 
 dept_name() {
   case "$1" in
+    company)             echo "🏢 Управление компанией" ;;
     academic)            echo "📖 Академический" ;;
     design)              echo "🎨 Дизайн" ;;
     engineering)         echo "🛠️ Инжиниринг" ;;
@@ -35,11 +36,13 @@ dept_name() {
     testing)             echo "🧪 Тестирование" ;;
     gis)                 echo "🗺️ ГИС" ;;
     security)            echo "🛡️ Безопасность" ;;
+    healthcare)          echo "🏥 Здравоохранение" ;;
+    research)            echo "🔍 Исследования" ;;
     *)                   echo "$1" ;;
   esac
 }
 
-DEPT_ORDER="academic design engineering finance game-development hr legal marketing paid-media product project-management sales spatial-computing specialized supply-chain support testing gis security"
+DEPT_ORDER="company academic design engineering finance game-development hr legal marketing paid-media product project-management sales spatial-computing specialized supply-chain support testing gis security healthcare research"
 
 cat > "$OUT" <<'HEADER_EOF'
 # Каталог агентов

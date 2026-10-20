@@ -16,6 +16,7 @@ fi
 
 dept_name() {
   case "$1" in
+    company)             echo "🏢 회사 경영" ;;
     academic)            echo "📖 학술" ;;
     design)              echo "🎨 디자인" ;;
     engineering)         echo "🛠️ 엔지니어링" ;;
@@ -35,11 +36,13 @@ dept_name() {
     testing)             echo "🧪 테스팅" ;;
     gis)                 echo "🗺️ GIS" ;;
     security)            echo "🛡️ 보안" ;;
+    healthcare)          echo "🏥 헬스케어" ;;
+    research)            echo "🔍 리서치" ;;
     *)                   echo "$1" ;;
   esac
 }
 
-DEPT_ORDER="academic design engineering finance game-development hr legal marketing paid-media product project-management sales spatial-computing specialized supply-chain support testing gis security"
+DEPT_ORDER="company academic design engineering finance game-development hr legal marketing paid-media product project-management sales spatial-computing specialized supply-chain support testing gis security healthcare research"
 
 cat > "$OUT" <<'HEADER_EOF'
 # 에이전트 카탈로그

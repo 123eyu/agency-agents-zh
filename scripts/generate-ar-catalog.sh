@@ -16,6 +16,7 @@ fi
 
 dept_name() {
   case "$1" in
+    company)             echo "🏢 إدارة الشركة" ;;
     academic)            echo "📖 أكاديمي" ;;
     design)              echo "🎨 التصميم" ;;
     engineering)         echo "🛠️ الهندسة" ;;
@@ -35,11 +36,13 @@ dept_name() {
     testing)             echo "🧪 الاختبار" ;;
     gis)                 echo "🗺️ نظم المعلومات الجغرافية" ;;
     security)            echo "🛡️ الأمن" ;;
+    healthcare)          echo "🏥 الرعاية الصحية" ;;
+    research)            echo "🔍 البحث" ;;
     *)                   echo "$1" ;;
   esac
 }
 
-DEPT_ORDER="academic design engineering finance game-development hr legal marketing paid-media product project-management sales spatial-computing specialized supply-chain support testing gis security"
+DEPT_ORDER="company academic design engineering finance game-development hr legal marketing paid-media product project-management sales spatial-computing specialized supply-chain support testing gis security healthcare research"
 
 cat > "$OUT" <<'HEADER_EOF'
 # كتالوج الوكلاء
