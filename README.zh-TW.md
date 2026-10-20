@@ -107,13 +107,13 @@
 <table>
 <tr>
 <td width="25%">
-  <a href="https://www.packyapi.ai/register?aff=js5W">
+  <a href="https://www.packyapi.ai/register?aff=Zpx1">
     <img src="assets/sponsor-packycode.jpeg" alt="PackyCode — 穩定高效的 API 中轉服務，統一域名與金鑰接入主流大模型，97% 可用性，多分組低至 2 折，提供 Codex / Claude Code 高速通道" width="100%">
   </a>
 </td>
 <td width="75%" valign="middle">
 
-感謝 [PackyCode](https://www.packyapi.ai/register?aff=js5W) 贊助了本專案！PackyCode 是一家穩定、高效的 API 中轉服務商，一句話接入主流大模型。統一域名、統一金鑰、智慧容災切換，97% 可用性。人民幣 1:1 儲值，無匯率、無手續費坑，多分組折扣低至 2 折起，提供專屬 Codex / Claude Code 高速通道。支援 Stripe、支付寶、微信、銀行卡、對公付款，對公付款可開票。🎁 **新使用者透過[此連結](https://www.packyapi.ai/register?aff=js5W)註冊，首儲立享折扣，另贈 $1 免費體驗額度！**
+感謝 [PackyCode](https://www.packyapi.ai/register?aff=Zpx1) 贊助了本專案！PackyCode 是一家穩定、高效的 API 中轉服務商，一句話接入主流大模型。統一域名、統一金鑰、智慧容災切換，97% 可用性。人民幣 1:1 儲值，無匯率、無手續費坑，多分組折扣低至 2 折起，提供專屬 Codex / Claude Code 高速通道。支援 Stripe、支付寶、微信、銀行卡、對公付款，對公付款可開票。🎁 **新使用者透過[此連結](https://www.packyapi.ai/register?aff=Zpx1)註冊，首儲立享折扣，另贈 $1 免費體驗額度！**
 
 </td>
 </tr>
