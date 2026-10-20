@@ -111,7 +111,7 @@
 | `engineering-fpga-digital-design-engineer` | FPGA/ASIC 数字设计工程师 | FPGA 与 ASIC 数字前端设计专家——精通 Verilog/SystemVerilog、Vivado/Quartus、AXI/AHB 总线 | 原创 |
 | `engineering-iot-solution-architect` | IoT 方案架构师 | 物联网端到端方案设计专家——精通设备接入、边缘计算、云平台、OTA、设备管理、数据管道 | 原创 |
 | `engineering-incident-response-commander` | 故障响应指挥官 | 专精于生产环境故障管理、结构化响应协调、事后复盘、SLO/SLI 跟踪和 on-call 流程设计 | 翻译 |
-| `engineering-threat-detection-engineer` | 威胁检测工程师 | 专精于 SIEM 规则开发、MITRE ATT&CK 覆盖度映射、威胁狩猎、告警调优和检测即代码流水线 | 翻译 |
+| `engineering-threat-detection-engineer` | 威胁检测工程师（工程侧） | 专精于 SIEM 规则开发、MITRE ATT&CK 覆盖度映射、威胁狩猎、告警调优和检测即代码流水线 | 翻译 |
 | `engineering-solidity-smart-contract-engineer` | Solidity 智能合约工程师 | 精通 EVM 智能合约架构、Gas 优化、可升级代理模式、DeFi 协议开发和安全优先合约设计 | 翻译 |
 | `engineering-network-engineer-china` | 国内网络工程师 | 面向国产网络设备的企业网工程专家——精通华为 VRP、华三 Comware、锐捷 RGOS，覆盖园区网/数据中心/广域网的 VLAN、STP、OSPF、BGP、VXLAN 设计与排障，熟悉信创国产化替代与等保 2.0 合规组网 | 原创 |
 | `engineering-wechat-mini-program-developer` | 微信小程序开发者 | 专注微信小程序全栈开发的工程专家，精通 WXML/WXSS/WXS、微信原生API、微信支付集成 | 原创 |
@@ -428,7 +428,7 @@
 | `specialized-ai-policy-writer` | AI 治理政策专家 | 面向中国企业和机构的 AI 治理与合规专家 | 原创 |
 | `specialized-risk-assessor` | 企业风险评估师 | 面向中国企业的全面风险管理专家 | 原创 |
 | `specialized-meeting-assistant` | 会议效率专家 | 面向中国企业的会议管理与效率提升专家 | 原创 |
-| `recruitment-specialist` | 招聘专家 | 招聘运营与人才获取专家，精通国内主流招聘平台、人才评估体系和劳动法合规 | 原创 |
+| `recruitment-specialist` | 人才获取专家 | 招聘运营与人才获取专家，精通国内主流招聘平台、人才评估体系和劳动法合规 | 原创 |
 | `specialized-civil-engineer` | 土木工程师 | 精通全球标准的土木与结构工程专家，覆盖 Eurocode、DIN、ACI、AISC 等多国标准 | 翻译 |
 | `specialized-french-consulting-market` | 法国咨询市场专家 | 法国 ESN/SI 自由职业生态导航专家，精通利润模型、平台机制、薪资代管 | 翻译 |
 | `specialized-korean-business-navigator` | 韩国商务专家 | 韩国商务文化导航专家，精通决策流程、社交智慧、KakaoTalk 商务礼仪 | 翻译 |
@@ -594,7 +594,7 @@
 | `security-penetration-tester` | 渗透测试员 | 进攻性安全专家，开展授权的渗透测试、红队行动以及面向网络、Web 应用和云基础设施的漏洞评估。 | 翻译 |
 | `security-secrets-credential-engineer` | 密钥与凭据治理工程师 | 负责密钥与凭据的检测、预防、托管、轮换和泄露响应，推行短期、最小权限凭据。 | 翻译 |
 | `security-senior-secops` | 高级安全运营工程师 | 防御型应用安全专家。在做任何事之前，先扫描每一次代码提交，检查密钥泄露和敏感数据暴露；随后依据组织的安全标准实现或审计各项安全控制。 | 翻译 |
-| `security-threat-detection-engineer` | 威胁检测工程师 | 资深检测工程师，专注于 SIEM 规则开发、MITRE ATT&CK 覆盖映射、威胁狩猎、告警调优，以及面向安全运营团队的 detection-as-code（检测即代码）流水线。 | 翻译 |
+| `security-threat-detection-engineer` | 威胁检测工程师（安全运营） | 资深检测工程师，专注于 SIEM 规则开发、MITRE ATT&CK 覆盖映射、威胁狩猎、告警调优，以及面向安全运营团队的 detection-as-code（检测即代码）流水线。 | 翻译 |
 | `security-threat-intelligence-analyst` | 威胁情报分析师 | 网络威胁情报专家，负责追踪对手团伙、将攻击活动映射到 MITRE ATT&CK、产出可落地的情报报告，并构建能抓住真实威胁的检测规则。 | 翻译 |
 
 ---

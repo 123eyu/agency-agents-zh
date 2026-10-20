@@ -816,12 +816,14 @@ HEREDOC
   if [[ "$tool" == "all" || "$tool" == "aider" ]]; then
     mkdir -p "$OUT_DIR/aider"
     cp "$AIDER_TMP" "$OUT_DIR/aider/CONVENTIONS.md"
-    info "已写入 integrations/aider/CONVENTIONS.md"
+    chmod 644 "$OUT_DIR/aider/CONVENTIONS.md"  # mktemp 建的文件是 600，复制后会沿用
+    info "已写入 $OUT_DIR/aider/CONVENTIONS.md"
   fi
   if [[ "$tool" == "all" || "$tool" == "windsurf" ]]; then
     mkdir -p "$OUT_DIR/windsurf"
     cp "$WINDSURF_TMP" "$OUT_DIR/windsurf/.windsurfrules"
-    info "已写入 integrations/windsurf/.windsurfrules"
+    chmod 644 "$OUT_DIR/windsurf/.windsurfrules"
+    info "已写入 $OUT_DIR/windsurf/.windsurfrules"
   fi
 
   echo ""

@@ -612,7 +612,7 @@ cp -r marketing/*.md ~/.claude/agents/
 | [土木工程師](specialized/specialized-civil-engineer.md) | Eurocode/DIN/ACI/GB 多標準結構分析 | 土木與結構工程設計 |
 | [法國諮詢市場專家](specialized/specialized-french-consulting-market.md) | ESN/SI 生態、Malt 平臺、薪資代管 | 法國自由職業市場導航 |
 | [韓國商務專家](specialized/specialized-korean-business-navigator.md) | 품의流程、KakaoTalk 禮儀、層級關係 | 韓國商務文化導航 |
-| [招聘專家](specialized/recruitment-specialist.md) ⭐ | 國內招聘平臺、人才評估、勞動法合規 | 招聘運營與僱主品牌 |
+| [人才獲取專家](specialized/recruitment-specialist.md) ⭐ | 國內招聘平臺、人才評估、勞動法合規 | 招聘運營與僱主品牌 |
 | [技術翻譯專家](specialized/technical-translator-agent.md) ⭐ | 中英文雙向翻譯、程式設計/AI/雲計算術語 | 技術文件翻譯 |
 | [商業戰略家](specialized/business-strategist.md) | 競爭分析、市場進入、商業模式設計 | 戰略規劃與重大業務決策 |
 | [運營經理](specialized/operations-manager.md) | 精益/六西格瑪、產能規劃、KPI 治理 | 業務運營流程最佳化 |

@@ -166,10 +166,13 @@ if [[ $# -gt 0 ]]; then
 else
   for dir in "${AGENT_DIRS[@]}"; do
     if [[ -d "$dir" ]]; then
-      # 只扫描一级目录下的 .md 文件，跳过子目录（如 strategy/playbooks/）
+      # strategy/ 只扫描一级目录，跳过 playbooks/ 等非角色子目录；
+      # 其他部门递归扫描，否则 game-development/<引擎>/ 下的角色会漏检
+      depth=()
+      [[ "$dir" == "strategy" ]] && depth=(-maxdepth 1)
       while IFS= read -r f; do
         files+=("$f")
-      done < <(find "$dir" -maxdepth 1 -name "*.md" -type f | sort)
+      done < <(find "$dir" ${depth[@]+"${depth[@]}"} -name "*.md" -type f | sort)
     fi
   done
   # 排除非角色文件

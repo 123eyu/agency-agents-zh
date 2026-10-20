@@ -135,7 +135,7 @@
 | Solidity 智能合约工程师 | `engineering/engineering-solidity-smart-contract-engineer.md` |
 | SRE (站点可靠性工程师) | `engineering/engineering-sre.md` |
 | 技术文档工程师 | `engineering/engineering-technical-writer.md` |
-| 威胁检测工程师 | `engineering/engineering-threat-detection-engineer.md` |
+| 威胁检测工程师（工程侧） | `engineering/engineering-threat-detection-engineer.md` |
 | 语音 AI 集成工程师 | `engineering/engineering-voice-ai-integration-engineer.md` |
 | 国内网络工程师 | `engineering/engineering-network-engineer-china.md` |
 | 微信小程序开发者 | `engineering/engineering-wechat-mini-program-developer.md` |
@@ -343,7 +343,7 @@
 | 信贷经理助手 | `specialized/loan-officer-assistant.md` |
 | LSP 索引工程师 | `specialized/lsp-index-engineer.md` |
 | 提示词工程师 | `specialized/prompt-engineer.md` |
-| 招聘专家 | `specialized/recruitment-specialist.md` |
+| 人才获取专家 | `specialized/recruitment-specialist.md` |
 | 报告分发师 | `specialized/report-distribution-agent.md` |
 | 销售数据提取师 | `specialized/sales-data-extraction-agent.md` |
 | AI 治理政策专家 | `specialized/specialized-ai-policy-writer.md` |
@@ -441,5 +441,5 @@
 | 渗透测试员 | `security/security-penetration-tester.md` |
 | 密钥与凭据治理工程师 | `security/security-secrets-credential-engineer.md` |
 | 高级安全运营工程师 | `security/security-senior-secops.md` |
-| 威胁检测工程师 | `security/security-threat-detection-engineer.md` |
+| 威胁检测工程师（安全运营） | `security/security-threat-detection-engineer.md` |
 | 威胁情报分析师 | `security/security-threat-intelligence-analyst.md` |
