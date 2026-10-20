@@ -90,6 +90,9 @@ ORDER BY month DESC;
 ```
 
 ### 客户细分分析
+
+输入的行可能是单个订单明细。计算时对收入求和，计算购买频率时按客户统计不重复的订单 ID。
+
 ```python
 import pandas as pd
 import numpy as np
@@ -106,7 +109,7 @@ def customer_segmentation_analysis(df):
     current_date = df['date'].max()
     rfm = df.groupby('customer_id').agg({
         'date': lambda x: (current_date - x.max()).days,  # 最近一次消费（Recency）
-        'order_id': 'count',                               # 消费频率（Frequency）
+        'order_id': 'nunique',                             # 消费频率（Frequency）：不重复订单数
         'revenue': 'sum'                                   # 消费金额（Monetary）
     }).rename(columns={
         'date': 'recency',
@@ -131,10 +134,10 @@ def customer_segmentation_analysis(df):
             return 'Potential Loyalists'
         elif row['rfm_score'] in ['512', '511', '422', '421', '412', '411', '311']:
             return 'New Customers'
-        elif row['rfm_score'] in ['155', '154', '144', '214', '215', '115', '114']:
-            return 'At Risk'
-        elif row['rfm_score'] in ['155', '154', '144', '214', '215', '115', '114']:
+        elif row['r_score'] <= 2 and row['f_score'] == 5:
             return 'Cannot Lose Them'
+        elif row['r_score'] <= 2 and row['f_score'] in (3, 4):
+            return 'At Risk'
         else:
             return 'Others'
 
@@ -157,6 +160,8 @@ def generate_customer_insights(rfm_df):
     }
     return insights
 ```
+
+示例中的流失规则把"最近购买间隔大（R 为 1–2）、频率最高（F 为 5）"的流失客户，与其他高频流失客户（F 为 3–4）区分开，不考虑消费金额档位。原来两个分支的取值列表完全相同，导致 `Cannot Lose Them` 永远走不到。这里的阈值只是示例，不是通用的营销活动标准，需要结合你的客户生命周期验证。
 
 ### 营销效果仪表盘
 ```javascript

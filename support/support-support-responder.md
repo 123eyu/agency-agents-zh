@@ -258,8 +258,9 @@ class SupportAnalytics:
             (self.data['created_date'] >= datetime.now() - timedelta(days=7))
         ]['customer_id'].unique()
 
-        # 超过 SLA 的未解决工单客户
+        # 状态已知为未解决、且已超过 SLA 的工单客户
         overdue_tickets = self.data[
+            self.data['status'].notna() &
             (self.data['status'] != 'resolved') &
             (self.data['created_date'] <= datetime.now() - timedelta(hours=48))
         ]['customer_id'].unique()

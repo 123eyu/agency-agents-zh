@@ -115,3 +115,13 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 - `marketing-agentic-search-optimizer`：WebMCP 接口按当前草案改为 `toolname`/`tooldescription` 声明式标注与 `document.modelContext.registerTool()`，删除并不存在的 `/mcp-actions.json` 发现端点，改用 `getTools()` 核对，并补充规范参考链接
 
 **结论**：30 个有实质改动的同名角色已全部处理完毕，同步基线更新为 `652b269`。
+
+### 2026-10-20 同步 `652b269` → `4e3ac3c`，并按代码块全量比对
+
+上游新增 63 次提交，改动 26 个角色文件，均为示例代码与少量正文修正，已全部同步（含 `specialized/supply-chain-strategist` → 本地 `supply-chain/`）。
+
+同步时发现 `security-appsec-engineer` 与 `security-threat-intelligence-analyst` 的代码块比上游旧得多（npm audit 的 `moderate` 级别会导致旧代码抛异常；IOC 导出未做 CSV 转义），说明部分译文早于 `3f78a30`。因此改为直接拿上游最新版逐个比对代码块里的标识符（忽略注释、字符串与 markdown 模板），这两个文件已整块重同步。
+
+**仍落后于上游、待重同步的译文**（上游代码里有、本地缺失的标识符比例由高到低）：`specialized-developer-advocate`、`testing-performance-benchmarker`、`specialized-mcp-builder`、`testing-api-tester`、`specialized-model-qa`、`unity-multiplayer-engineer`、`accounts-payable-agent`、`support-analytics-reporter`、`support-finance-tracker`、`identity-graph-operator`、`testing-test-results-analyzer`、`supply-chain-strategist`、`lsp-index-engineer`、`testing-tool-evaluator`、`support-support-responder`、`recruitment-specialist`。`marketing-private-domain-operator` 与 `engineering-wechat-mini-program-developer` 的差异来自本地另行编写的内容，不算落后。
+
+**精编版待补全**：`engineering-identity-access-engineer`、`engineering-payments-billing-engineer`、`engineering-rag-pipeline-engineer`、`testing-test-automation-engineer` 目前是约 60 行的中文精编版，上游原文 196–450 行，代码示例基本未保留，计划补成完整翻译。

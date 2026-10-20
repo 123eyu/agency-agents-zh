@@ -81,7 +81,9 @@ jobs:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }   # 拉取完整历史，旧的泄露也能被发现
       - uses: gitleaks/gitleaks-action@v2
-        env: { GITLEAKS_CONFIG: .gitleaks.toml }  # 白名单放行已知公开的测试样本
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 该 action 扫描 pull_request 事件时需要
+          GITLEAKS_CONFIG: .gitleaks.toml            # 白名单放行已知公开的测试样本
 ```
 
 ### 静态 key → 动态、短期凭据

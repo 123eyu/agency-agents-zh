@@ -265,7 +265,7 @@ slos:
       - severity: page
         short_window: 5m
         long_window: 1h
-        burn_rate: 14.4x  # 预算将在 2 小时内耗尽
+        burn_rate: 14.4x  # 预算约 2 天耗尽（每小时消耗 2%）
       - severity: ticket
         short_window: 30m
         long_window: 6h

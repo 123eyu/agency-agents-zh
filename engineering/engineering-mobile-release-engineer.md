@@ -65,7 +65,8 @@ platform :android do
       aab: lane_context[SharedValues::GRADLE_AAB_OUTPUT_PATH],
       release_status: "draft"                        # 由人推进到分阶段正式发布
     )
-    upload_symbols_to_crashlytics                    # 用于反混淆的 mapping.txt
+    # mapping.txt 由 Crashlytics Gradle 插件在 release 构建时上传；
+    # upload_symbols_to_crashlytics 只处理 iOS 的 dSYM
   end
 end
 ```
