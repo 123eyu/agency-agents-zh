@@ -159,10 +159,15 @@ class LSPOrchestrator {
       return [];
     }
 
-    return client.sendRequest('textDocument/definition', {
+    const result = await client.sendRequest<Location | Location[] | LocationLink[] | null>('textDocument/definition', {
       textDocument: { uri },
       position
     });
+    if (result === null) return [];
+    const definitions = Array.isArray(result) ? result : [result];
+    return definitions.map(definition => 'targetUri' in definition
+      ? { uri: definition.targetUri, range: definition.targetSelectionRange }
+      : definition);
   }
 }
 ```
@@ -191,8 +196,9 @@ class GraphBuilder {
     const symbolPromises = files.map(file =>
       this.extractSymbols(file).then(symbols => {
         for (const sym of symbols) {
+          const symbolId = `sym:${JSON.stringify([file, sym.range.start.line, sym.range.start.character, sym.name])}`;
           graph.addNode({
-            id: `sym:${sym.name}`,
+            id: symbolId,
             kind: sym.kind,
             file: file,
             range: sym.range
@@ -201,7 +207,7 @@ class GraphBuilder {
           // 添加包含关系边
           graph.addEdge({
             source: `file:${file}`,
-            target: `sym:${sym.name}`,
+            target: symbolId,
             type: 'contains'
           });
         }
@@ -221,12 +227,12 @@ class GraphBuilder {
 ### 导航索引格式
 
 ```jsonl
-{"symId":"sym:AppController","def":{"uri":"file:///src/controllers/app.php","l":10,"c":6}}
-{"symId":"sym:AppController","refs":[
+{"symId":"sym:[\"src/controllers/app.php\",10,6,\"AppController\"]","def":{"uri":"file:///src/controllers/app.php","l":10,"c":6}}
+{"symId":"sym:[\"src/controllers/app.php\",10,6,\"AppController\"]","refs":[
   {"uri":"file:///src/routes.php","l":5,"c":10},
   {"uri":"file:///tests/app.test.php","l":15,"c":20}
 ]}
-{"symId":"sym:AppController","hover":{"contents":{"kind":"markdown","value":"```php\nclass AppController extends BaseController\n```\n主应用控制器"}}}
+{"symId":"sym:[\"src/controllers/app.php\",10,6,\"AppController\"]","hover":{"contents":{"kind":"markdown","value":"```php\nclass AppController extends BaseController\n```\n主应用控制器"}}}
 {"symId":"sym:useState","def":{"uri":"file:///node_modules/react/index.d.ts","l":1234,"c":17}}
 {"symId":"sym:useState","refs":[
   {"uri":"file:///src/App.tsx","l":3,"c":10},
@@ -273,7 +279,7 @@ echo '{"jsonrpc":"2.0","id":0,"method":"initialize","params":{"capabilities":{}}
 
 ## 沟通风格
 
-- **协议细节要精确**："LSP 3.17 的 textDocument/definition 返回 Location | Location[] | null"
+- **协议细节要精确**："LSP 3.17 的 textDocument/definition 返回 Location | Location[] | LocationLink[] | null"
 - **关注性能**："通过并行 LSP 请求把图谱构建时间从 2.3 秒降到了 340ms"
 - **用数据结构思考**："用邻接表做 O(1) 的边查找，不用邻接矩阵"
 - **验证假设**："TypeScript LSP 支持层级符号，但 PHP 的 Intelephense 不支持"

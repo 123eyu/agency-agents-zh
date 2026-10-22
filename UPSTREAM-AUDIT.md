@@ -128,6 +128,56 @@ AO 修复已于 2026-10-17 提交到 agency-orchestrator `main`（`efa8839`，�
 
 **核实后不算落后**：`specialized-developer-advocate`（差异只是本地把示例字符串值译成了中文）、`specialized-mcp-builder`（本地在 `95ebeb1` 中另行扩写，代码与上游不同源）。
 
-**仍落后于上游、待重同步的译文**（上游代码里有、本地缺失的标识符比例由高到低）：`specialized-developer-advocate`、`testing-performance-benchmarker`、`specialized-mcp-builder`、`testing-api-tester`、`specialized-model-qa`、`unity-multiplayer-engineer`、`accounts-payable-agent`、`support-analytics-reporter`、`support-finance-tracker`、`identity-graph-operator`、`testing-test-results-analyzer`、`supply-chain-strategist`、`lsp-index-engineer`、`testing-tool-evaluator`、`support-support-responder`、`recruitment-specialist`。`marketing-private-domain-operator` 与 `engineering-wechat-mini-program-developer` 的差异来自本地另行编写的内容，不算落后。
+**初始比对候选（历史清单，当前进度见下文）**（上游代码里有、本地缺失的标识符比例由高到低）：`specialized-developer-advocate`、`testing-performance-benchmarker`、`specialized-mcp-builder`、`testing-api-tester`、`specialized-model-qa`、`unity-multiplayer-engineer`、`accounts-payable-agent`、`support-analytics-reporter`、`support-finance-tracker`、`identity-graph-operator`、`testing-test-results-analyzer`、`supply-chain-strategist`、`lsp-index-engineer`、`testing-tool-evaluator`、`support-support-responder`、`recruitment-specialist`。`marketing-private-domain-operator` 与 `engineering-wechat-mini-program-developer` 的差异来自本地另行编写的内容，不算落后。
 
-**精编版待补全**：`engineering-identity-access-engineer`、`engineering-payments-billing-engineer`、`engineering-rag-pipeline-engineer`、`testing-test-automation-engineer` 目前是约 60 行的中文精编版，上游原文 196–450 行，代码示例基本未保留，计划补成完整翻译。
+**2026-10-20 中断任务续接**：
+
+- `specialized-model-qa`：核对未提交的重同步改动，保留中文文档字符串；PSI 尾部分箱、常数基线与输入校验，校准检验失效条件及多输出 SHAP 说明均已补齐。6 个 Python 代码块语法检查通过；排除注释和文档字符串后，AST 与缓存上游一致。未据此宣称已运行统计依赖或完成数值验证。
+- `unity-multiplayer-engineer`：补回完整的 LobbyManager 房间创建、查询与心跳示例，及 NetworkVariable 设计参考中的逐帧更新反例。新增两块除中文注释外与缓存上游一致。保留本地已翻译的其他代码；上游玩家控制器中未使用且未定义类型的 `Queue<InputPayload>` 字段未照搬。Lobby 示例注明初始化前提与生产环境仍需补齐的生命周期处理。未进行 Unity SDK 编译与联机测试。
+
+- `accounts-payable-agent`：移除旧版特定支付插件配置与推广链接，改用上游通用 `payments` 适配器；补充金额、限额与供应商校验，汇总仅计入已完成付款并按币种分开。新增说明强调持久化幂等与未知状态下不能盲目跨通道重付。4 个 TypeScript 块语法检查通过，模拟适配器下验证非法金额、超限、未批准供应商、已付款拦截、正常发送与多币种汇总。未连接真实支付通道。
+
+### 2026-10-21 续接：分析、财务与身份图谱
+
+- `support-analytics-reporter`：SQL 日期统一为 PostgreSQL 写法，收入与增长比率避免整数截断与零分母；RFM 使用百分位评分以兼容相同取值与小客群；营销归因按 conversion_id 分区、按 touchpoint_id 稳定排序，双触点各分配 50%，ROI 的转化数按每行计数求和。
+- `support-finance-tracker`：部门预算差异率按汇总额计算而非平均百分比；无预算基线单独标记；现金流改用自然月份、列表构建 DataFrame，累计现金包含当月净流量；正负现金流情景上下限保持顺序并注明不是统计置信区间；IRR 检查收敛状态、残差与根有效性，保留零 IRR。
+- `identity-graph-operator`：补齐 math/re 导入，规则迭代器先实体化；拒绝负数、布尔值及非有限权重和非法比较分数；缺失证据保留在总权重分母中，避免少数字段匹配虚增置信度；归一化后空字段不计分。保留中文文档字符串，并注明电话字符清洗不是完整 E.164 校验。
+
+**验证**：4 个 Python 代码块语法通过；排除文档字符串与自然语言字符串后，AST 与缓存上游一致。身份匹配的空白/缺失证据、迭代器规则、归一化、非法权重及非法分数实测通过。IRR 的失败分支及零值显示以模拟求解器验证，未运行 SciPy 数值计算。4 个 SQL 查询使用 SQLite 执行并适配 PostgreSQL 日期表达式，覆盖零基线、非整数比率、汇总预算差异、双触点多次转化收入守恒与转化数求和；不是 PostgreSQL 集成测试。本机未安装 pandas、SciPy 等依赖，RFM 和完整现金流运行尚待验证。3 个角色 lint、328 个角色计数与 diff 空白检查通过。
+
+上述六项已完成本轮重同步，另外六项已在下节续接处理。
+
+### 2026-10-21 续接：完成剩余六个候选
+
+- `testing-test-results-analyzer`：覆盖率报告按嵌套 JSON 对象读取，校验所有百分比与文件映射；无测量值时报错，不凭覆盖率虚构风险等级。补上报告输入示例与项目适配器说明。
+- `supply-chain-strategist`：EOQ 校验需求和成本，在连续最优值相邻的可行整数中按实际成本选最优解，避免简单四舍五入误选。其余 Python 块核对后仅有原有中文翻译差异，无需重写。
+- `lsp-index-engineer`：定义查询支持 null、Location、Location[] 与 LocationLink[]；图谱符号 ID 包含文件、位置与名称，避免同名符号覆盖。导航格式示例与协议说明同步更新。
+- `testing-tool-evaluator`：按实际存在的功能类别归一化权重，空需求拒绝评分；性能计时改用单调时钟，HTTP 错误计入失败惩罚与失败数；TCO 校验采用年限和用户数，并列分数使用最小排名。
+- `support-support-responder`：空工单集不冒充 0% 首次解决率；趋势按自然日/月/周比较，区分稳定与证据不足，避免跨年混淆、缺期猜测及旧版 dt.week；主动外联时间比较保持时区一致。
+- `recruitment-specialist`：招聘渠道成本和转化率使用有效正分母，无证据保留为空，综合排序将缺失值放在末尾；零分母返回 None，区别于有分母但转化为零。
+
+**验证**：本批 8 个 Python 块语法通过，排除文档字符串与自然语言字符串后 AST 与缓存上游一致。标准库隔离运行覆盖率报告的有效/缺失/非法值测试；使用 NumPy 标量接口替身验证 EOQ 离散最优选择、工具评分权重归一化与 TCO 参数；招聘安全除法测试通过。LSP TypeScript 语法与模拟客户端行为通过，覆盖返回类型归一化和跨文件/不同位置同名符号唯一性。6 个角色 lint、328 个角色计数与 diff 空白检查通过。尚未执行 pandas 完整数据流、真实 HTTP 性能测试或实际语言服务器集成测试。
+
+**状态**：初始代码差异队列已逐项核对，包含本轮重同步和此前记录的不适用项；不代表上游所有正文与所有运行环境已全面验收。四个中文精编版的补全情况见下节。
+
+### 2026-10-21 补全四个精编版
+
+`engineering-identity-access-engineer`、`engineering-payments-billing-engineer`、`engineering-rag-pipeline-engineer` 与 `testing-test-automation-engineer` 已补为完整中文版本，恢复全部 19 个上游代码块与原有中文验收约束，不增加角色数量。覆盖身份协议/会话/多租户隔离、支付幂等/持久收件箱/对账、RAG 切分/入库/混合检索/重排/评测，以及 Playwright 用例/认证夹具/配置/CI。
+
+**来源验证**：缓存原文的 Git blob 与 `652b2692f8d8ec2b1f1a38e559073e287dfdc469` 树逐一匹配，且这四个文件在到 `4e3ac3ca6604c75113f52c695dbddcc7af928b46` 的比较中均未改动；来源不再只依赖 main 页面。
+
+**本地说明与修正**：保留原精编版中的权限、恢复与验收约束；上游 RAG 示例将递归字符切分称为语义切分、将串行批次称为并行且声称固定性能倍数，中文注释与文档字符串已纠正。后置切分与 ColBERT 晚交互明确区分。补充未实现适配器、依赖版本、英文全文检索配置、授权过滤、重试计数更新和基准阈值的适用范围。WebAuthn 计数回退标为调查信号，不直接断言凭据克隆。PCI 范围表保留上游类别示例，并说明需按实际数据路径核实。
+
+**验证**：6 个 Python 块语法通过，除中文文档字符串外 AST 与固定原文一致；TypeScript 语法通过。模拟接口验证 PKCE 参数、并发回调只交换一次、新登录不替换进行中事务的 nonce；支付业务幂等键稳定、验签拒绝、存储失败返回 503、重复接收和履约后崩溃重放；RAG 嵌入结果恢复顺序、重复索引拒绝、重排排序与阈值、重试上限。支付对账 SQL 在 SQLite 上验证平账、差额与缺少账本条目。Playwright CI 片段 YAML 解析与四分片/失败产物条件通过。模拟适配器验证不等同于真实 IdP、支付渠道、模型、pgvector 或浏览器集成测试。
+
+**当前状态**：初始代码差异队列和四个精编版补全均已完成本轮处理；角色仍为 328 个。依赖实际服务的集成测试、全量运行验证与发布另行推进，未宣称完成。
+
+### 2026-10-21 交付前检查
+
+- npm 使用临时缓存执行打包预演，328 个角色均在发布文件列表内，包含 healthcare/research；未触发发布，也未改动用户 npm 缓存权限。
+- AO 当前源码的角色收集与 Cursor dry-run 均识别 328 个角色，未写用户工具配置。此结果不代表已安装的旧版 App 自动更新。
+- 全量转换覆盖 18 种转换格式（另 2 种工具直接读取 Markdown）。初轮输出发现 Salesforce 架构师与法国咨询市场专家采用一级章节标题，导致 OpenClaw SOUL.md 为空。两份角色新增总标题，正文标题层级统一下移，代码模板内部保持逐字不变；重新转换后，人设、沟通与规则正确进入 SOUL.md。
+- 全库 lint 为 0 错误、34 个推荐章节警告。警告仍保留，未将其描述成全库零问题。
+- 328 份 Codex TOML、Gemini 配置 JSON、转换产物的 4592 份 YAML frontmatter 均可解析；OpenClaw 的 SOUL/AGENTS/IDENTITY 三类文件各 328 份且非空。18 种格式各处理 328 个角色，共 5904 次角色转换。
+
+版本号仍为 1.4.0。上述检查为本地预演，尚未提交本轮内容、推送标签、发布 npm 或重打包 AO；正式发布须单独安排版本与发布动作。

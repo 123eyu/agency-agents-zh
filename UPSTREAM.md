@@ -2,7 +2,7 @@
 
 记录本项目对应的上游 [agency-agents](https://github.com/msitarzewski/agency-agents) 版本，方便同步更新。
 
-## 当前状态（2026-10-19 核对）
+## 当前状态（2026-10-21 核对）
 
 - **上游仓库**：https://github.com/msitarzewski/agency-agents
 - **同步基线**：2026-10-20，上游 [`4e3ac3c`](https://github.com/msitarzewski/agency-agents/tree/4e3ac3c)（此前为 2026-10-19 的 `652b269`、2026-06-16 的 `3f78a30`）。
@@ -116,3 +116,14 @@
 | `specialized/specialized-focus-music-architect.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/specialized/specialized-focus-music-architect.md) |
 | `specialized/healthcare-aging-parent-care-companion.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/specialized/healthcare-aging-parent-care-companion.md) |
 | `specialized/specialized-fedramp-rmf-compliance.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/652b2692f8d8ec2b1f1a38e559073e287dfdc469/specialized/specialized-fedramp-rmf-compliance.md) |
+
+## 2026-10-21 四个精编版补全
+
+第二批四个精编版已恢复完整章节与代码示例，并保留本地验收说明。原文 blob 与固定 `652b269` 树匹配，至 `4e3ac3c` 未变；来源及验证结果见 [审计记录](UPSTREAM-AUDIT.md)。角色总数不变。
+
+| 本地文件 | 上游 Git blob（校验原文，不是中文文件哈希） |
+|----------|------------------------------------------|
+| `engineering/engineering-identity-access-engineer.md` | `51c01ce994e46ccfc29d51b093acf9a8d77f50a8` |
+| `engineering/engineering-payments-billing-engineer.md` | `4ffffc09e63586aced1c715607d11bf6eb13b036` |
+| `engineering/engineering-rag-pipeline-engineer.md` | `6f468dc0fd516ed825966de2d0bd6af2247e2d7d` |
+| `testing/testing-test-automation-engineer.md` | `59650291b60ed280f8f5d5da69f15fec2aea3dca` |

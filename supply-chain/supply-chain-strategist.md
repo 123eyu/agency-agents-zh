@@ -87,10 +87,17 @@ class InventoryManager:
         EOQ = sqrt(2 * D * S / H)
         """
         d = self.params.annual_demand
+        if d <= 0:
+            raise ValueError("Discrete-unit EOQ requires positive annual demand")
         s = self.params.order_cost
         h = self.params.unit_price * self.params.holding_cost_rate
+        if not np.isfinite([d, s, h]).all() or s < 0 or h <= 0:
+            raise ValueError("EOQ needs finite demand/costs and positive holding cost")
         eoq = np.sqrt(2 * d * s / h)
-        return round(eoq)
+        # 最小化实际的离散订货成本与持有成本之和，
+        # 不能简单四舍五入（相邻整数的分界点是 sqrt(n*(n+1))）。
+        candidates = {max(1, int(np.floor(eoq))), max(1, int(np.ceil(eoq)))}
+        return min(candidates, key=lambda q: (d * s / q + h * q / 2, q))
 
     def calculate_safety_stock(self) -> float:
         """
