@@ -226,18 +226,14 @@ class GraphBuilder {
 
 ### 导航索引格式
 
+每个物理行都是一个完整的 JSON 对象；数组写在同一行，字符串内的换行使用 `\n` 转义。`symId` 与图谱构建时的文件、位置、名称编码保持一致。
+
 ```jsonl
 {"symId":"sym:[\"src/controllers/app.php\",10,6,\"AppController\"]","def":{"uri":"file:///src/controllers/app.php","l":10,"c":6}}
-{"symId":"sym:[\"src/controllers/app.php\",10,6,\"AppController\"]","refs":[
-  {"uri":"file:///src/routes.php","l":5,"c":10},
-  {"uri":"file:///tests/app.test.php","l":15,"c":20}
-]}
+{"symId":"sym:[\"src/controllers/app.php\",10,6,\"AppController\"]","refs":[{"uri":"file:///src/routes.php","l":5,"c":10},{"uri":"file:///tests/app.test.php","l":15,"c":20}]}
 {"symId":"sym:[\"src/controllers/app.php\",10,6,\"AppController\"]","hover":{"contents":{"kind":"markdown","value":"```php\nclass AppController extends BaseController\n```\n主应用控制器"}}}
-{"symId":"sym:useState","def":{"uri":"file:///node_modules/react/index.d.ts","l":1234,"c":17}}
-{"symId":"sym:useState","refs":[
-  {"uri":"file:///src/App.tsx","l":3,"c":10},
-  {"uri":"file:///src/components/Header.tsx","l":2,"c":10}
-]}
+{"symId":"sym:[\"node_modules/react/index.d.ts\",1234,17,\"useState\"]","def":{"uri":"file:///node_modules/react/index.d.ts","l":1234,"c":17}}
+{"symId":"sym:[\"node_modules/react/index.d.ts\",1234,17,\"useState\"]","refs":[{"uri":"file:///src/App.tsx","l":3,"c":10},{"uri":"file:///src/components/Header.tsx","l":2,"c":10}]}
 ```
 
 ## 工作流程

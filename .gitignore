@@ -5,3 +5,6 @@ integrations/
 
 # macOS
 .DS_Store
+
+# Python 回归测试缓存
+__pycache__/
